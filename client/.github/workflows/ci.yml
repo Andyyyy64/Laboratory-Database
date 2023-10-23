@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - feature/**  
+      - develop     
+
+  pull_request:
+    branches:
+      - develop     
+      - main        
+
+jobs:
+  lint-and-test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'  # Node.jsのバージョンを18に設定
+
+    - name: Cache Node.js modules
+      uses: actions/cache@v2
+      with:
+        path: ~/.npm  # npmのキャッシュディレクトリ
+        key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-node-
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Lint code with ESLint
+      run: npm run lint  # ESLintによるリントを実行
+
+    - name: Run build
+      run: npm run build
