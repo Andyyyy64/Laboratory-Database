@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - feature/**  
+      - develop     
+
+  pull_request:
+    branches:
+      - develop     
+      - main        
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'
+
+    # clientディレクトリの処理
+    - name: Cache Node.js modules for client
+      uses: actions/cache@v2
+      with:
+        path: client/.npm  # client側のnpmキャッシュ
+        key: ${{ runner.OS }}-node-${{ hashFiles('client/**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-node-
+
+    - name: Install client dependencies
+      run: npm i
+      working-directory: ./client
+
+    - name: Lint client code
+      run: npm run lint
+      working-directory: ./client
+
+    - name: Build client
+      run: npm run build
+      working-directory: ./client
+
+    # serverディレクトリの処理
+    - name: Cache Node.js modules for server
+      uses: actions/cache@v2
+      with:
+        path: server/.npm  # server側のnpmキャッシュ
+        key: ${{ runner.OS }}-node-${{ hashFiles('server/**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-node-
+
+    - name: Install server dependencies
+      run: npm i
+      working-directory: ./server
+
+    - name: Lint server code
+      run: npm run lint
+      working-directory: ./server
+
+    - name: Build server
+      run: npm run build
+      working-directory: ./server
