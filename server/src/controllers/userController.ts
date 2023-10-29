@@ -18,6 +18,7 @@ type UserType = {
   labo_id?: number;
   is_varified: boolean;
   verificationCode: number;
+  created_at: Date;
 };
 
 export const registerUser = async (req: Request, res: Response) => {
@@ -55,20 +56,20 @@ export const registerUser = async (req: Request, res: Response) => {
     );
 
     const transporter = nodemailer.createTransport({
-        service: "Gmail",
-        auth: {
-            user: process.env.GMAIL_USER,
-            pass: process.env.GMAIL_PASSWORD
-        }
-    })
+      service: "Gmail",
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASSWORD,
+      },
+    });
 
     await transporter.sendMail({
-        from: process.env.GMAIL_USER,
-        to: email,
-        subject: "メールアドレス確認のための認証コードです",
-        text: `認証コードは ${verificationCode} です。`,
-    })
-    
+      from: process.env.GMAIL_USER,
+      to: email,
+      subject: "メールアドレス確認のための認証コードです",
+      text: `認証コードは ${verificationCode} です。`,
+    });
+
     const user: UserType = await db.get(
       "SELECT * FROM users WHERE email = $1",
       [email]
@@ -77,6 +78,40 @@ export const registerUser = async (req: Request, res: Response) => {
     res
       .status(200)
       .json({ message: "ユーザー登録が完了しました。", user: user });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const updateUser = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const { grade, field_of_interest, labo_id } = req.body;
+
+  try {
+    await db.run(
+      "UPDATE users SET grade = $1, field_of_interest = $2, labo_id = $3 WHERE id = $4",
+      [grade, field_of_interest, labo_id, id]
+    );
+
+    const user: UserType = await db.get("SELECT * FROM users WHERE id = $1", [
+      id,
+    ]);
+
+    res
+      .status(200)
+      .json({ message: "ユーザー情報を更新しました。", user: user });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const deleteUser = async (req: Request, res: Response) => {
+  const { id } = req.params;
+
+  try {
+    await db.run("DELETE FROM users WHERE id = $1", [id]);
+
+    res.status(200).json({ message: "ユーザーを削除しました。" });
   } catch (err) {
     console.log(err);
   }

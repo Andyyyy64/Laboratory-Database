@@ -16,6 +16,7 @@ type UserType = {
   labo_id: number;
   is_verified: boolean;
   verification_code: number;
+  created_at: Date;
 };
 
 const secretKey = process.env.JWT_SECRET_KEY ?? "";
