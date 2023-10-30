@@ -1,43 +1,27 @@
-### React + TypeScript + Vite + tailwind.css + MUI(material-ui)
+# React + TypeScript + Vite
 
-## 具体的な要件定義:
-1. 認証とユーザー管理:
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-   - 学生と教授は大学のメールアドレスを使用して登録できる
-   - 三年生以下は希望のフィールドと興味のある分野を記入できる(任意)
-   - 三年生以上の学生は登録時に所属研究室とフィールドを選択する(必須)
-   - ユーザープロフィールには、名前(学生id)、メール、ユーザーID、所属研究室（該当する場合）が含まれる
-2. 研究室ページ:
+Currently, two official plugins are available:
 
-   - 各研究室ページには、研究内容、教授の情報、所属生徒のリスト、コメントセクションなどが表示される
-   - コメント機能は、ログインしたユーザーのみ利用可能
-3. 検索とChatbot:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-   - ユーザーは、研究内容や技術に基づいて研究室を検索の検索などができる
-4. 管理者機能:
+## Expanding the ESLint configuration
 
-   - 研究室の情報の追加、更新、削除
-   - 不適切なコメントの削除機能
-   - また、ユーザーは研究室の追加を要請ができる
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## ディレクトリ構成:
-```
-src/
-|-- components/             
-|-- pages/
-         |-- login/    
-         |-- register/
-         |-- labs/                # labs/ と labs/[id] でルーティング
-         |-- profile
-         |-- chat
-|-- contexts/               
-|-- hooks/                  
-|-- api/                    
-|-- types/                  
-|-- App.tsx                 
-|-- index.css
-|-- main.tsx               
+- Configure the top-level `parserOptions` property like this:
+
+```js
+   parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+   },
 ```
 
-
-
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
