@@ -3,6 +3,8 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import authRouter from './routes/authRoutes';
 import userRouter from './routes/userRoutes';
+import laboRouter from './routes/laboRoutes';
+import commentRouter from './routes/commentRoutes';
 
 dotenv.config();
 
@@ -20,6 +22,8 @@ app.use(express.urlencoded({ extended: true })); // parse incoming request with 
 
 app.use('/auth', authRouter);
 app.use('/user', userRouter);
+app.use('/labo', laboRouter);
+app.use('/comment', commentRouter);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

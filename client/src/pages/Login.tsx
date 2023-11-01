@@ -33,18 +33,26 @@ export const Login: React.FC = () => {
   }
 
   return (
-    <>
-      <div className="bg-teal-50 flex aspect-auto h-screen w-screen overflow-hidden flex flex-col justify-center">
+    <div className="bg-cover w-32 h-screen md:w-screen flex flex-row space-x-72 bg-[url('./assets/background.png')]" >
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
 
-        <form onSubmit={handleLogin} className="p-10">
-          <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value as string)} className="border rounded-lg py-3 px-3 mt-4 bg-sky-200 border-emerald-200 placeholder-white-500 text-white" /><br />
-          <input type="password" placeholder="Password" value={pwd} onChange={e => setPwd(e.target.value as string)} className="border rounded-lg py-3 px-3 mt-4 bg-sky-200 border-emerald-200 placeholder-white-500 text-white" /><br />
-          <button className="m-5 bg-teal-500" type="submit">Login</button>
-        </form>
+      <div className="pt-56 pl-8 space-y-8">
+          <form onSubmit={handleLogin} className="space-y-8">
+            <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value as string)} className="border rounded-lg pr-28 py-3 px-3 mt-4 bg-sky-200 border-emerald-200 placeholder-white-500 text-black shadow-lg" /><br />
+            <input type="password" placeholder="Password" value={pwd} onChange={e => setPwd(e.target.value as string)} className="border rounded-lg pr-28 py-3 px-3 mt-4 bg-sky-200 border-emerald-200 placeholder-white-500 text-black shadow-lg" /><br />
+            <button className="m-5 pr-28 bg-teal-500 shadow-lg" type="submit">Login</button>
+          </form>
 
-        <h1 className="p-10 bg-cyan-500">Don't have an account?</h1>
-        <Link to="/register">Sign Up</Link>
+          <h3 className="p-6 bg-cyan-500 shadow-lg">Don't have an account?</h3>
+          <Link className="m-5 pr-16 py-3 px-4 bg-cyan-300 shadow-lg" to="/register">Create Account</Link>
       </div>
-    </>
+
+      
+      
+    </div>
+
   );
 };
