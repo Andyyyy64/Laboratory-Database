@@ -1,0 +1,1069 @@
+[
+    {
+        "labo_id": 1,
+        "name": "量子アルゴリズム、応用数学を基本においた数値計算",
+        "professor": "浅井　信吉",
+        "professor_email": "nasai@u-aizu.ac.jp",
+        "research_field": "量子アルゴリズム、応用数学、数値計算",
+        "description": "量子コンピュータによる計算を想定したアルゴリズムについて学び、より効率的な計算アルゴリズム、新たなモデリング手法による計算方法、新しい計算問題の開拓など一つのテーマを相談の上設定して取り組む。",
+        "prerequisites": "事前に面談のうえ、登録するようにしてください。",
+        "room_number": "303C",
+        "student_field": [
+            "CS、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 2,
+        "name": "Adaptive Neuromorphic Prosthetic Robot Hand/適応型ニューロモーフィック義手ロボット",
+        "professor": "ベン アブダラ　アブデラゼク",
+        "professor_email": "benab@u-aizu.ac.jp",
+        "research_field": "義肢、センサーとメカトロニクス、筋電リアルタイムニューロモーフィック義手",
+        "description": "義肢は、切断や神経障害を持つ人々の生活の質を著しく向上させます。センサーとメカトロニクス技術の急速な進化により、義肢装具は広範な治療ソリューションになりつつある。しかし、異なる感覚入力を組み合わせて複雑なタスクを正確に実行する生体エージェントとは異なり、ほとんどの義肢は単一感覚入力を使用しており、その精度と使いやすさに影響を及ぼしている。さらに、現在の義肢（腕や脚など）を制御するために使用されている方法は、一般的に、自然な動きが制限され、長い訓練手順を要する逐次制御に依存しています。本研究は、感覚統合と触覚フィードバックを備えた先進的な筋電リアルタイム・ニューロモーフィック義手の開発に関するものである。",
+        "prerequisites": "前提条件: Python言語、C言語",
+        "room_number": "202A",
+        "student_field": [
+            "CS、SY、IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 3,
+        "name": "Forensic authorship analysis",
+        "professor": "ブレイク　ジョン",
+        "professor_email": "jblake@u-aizu.ac.jp",
+        "research_field": "Forensic Linguistics, Authorship Analysis, AI-generated Text Detection",
+        "description": "Machine Learning Approach for Detecting AI-Generated TextThe advent of artificial intelligence has raised new challenges in determining the authenticity and origin of textual content. Our project focuses on developing a cutting-edge machine learning approach that can effectively detect AI-generated text. By leveraging advanced algorithms and computational techniques, we aim to enhance the identification and classification of AI-generated content, enabling us to better understand its impact on various applications.eXplainable AI (XAI) Approach for Detecting AI-Generated Text        In order to build trust and transparency in AI systems, explainability plays a crucial role. Our team is dedicated to exploring XAI techniques specifically tailored for detecting AI-generated text. By providing interpretable insights and explanations for the detection process, we aim to empower users and stakeholders to make informed decisions regarding the authenticity and reliability of textual content. Corpus Tool for Authorship Analysis This project focuses on developing a besoke corpus tool for forensic linguists that facilitates the comparison and contrast of similarities between or among datasets. This tool aims to streamline the analysis of linguistic patterns, aiding in the investigation of authorship and uncovering valuable insights from textual data. Our goal is to provide forensic linguists with a robust and user-friendly resource that enhances their ability to analyze and interpret complex language-related phenomena.",
+        "prerequisites": "",
+        "room_number": "265",
+        "student_field": [
+            "IT-SPR、IT-CMV、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 4,
+        "name": "日常生活環境において各種生体信号の検出・蓄積・解析に関する基盤研究開発",
+        "professor": "陳　文西",
+        "professor_email": "wenxi@u-aizu.ac.jp",
+        "research_field": "生体信号、IoT、AI、ビッグデータ解析",
+        "description": "方向と目標：１． 日常生活を全く影響することなく全自動的に各種生体信号を計測できる方法と装置（IoT）の研究開発。２． AIやDLなど最新のアルゴリズムを開発し、老人ホーム、病院、私宅から長期にわたって収集した大量の生体データ（ビッグデータ）を解析し、臨床診断やウェルネス管理に有用な情報を掘り出す。研究課題：① 各種生体信号（心電、脳波、脈波、呼吸、体温、血圧、体動など）の計測手法（浴槽、ベッド、トイレ、洗面台、食卓など）の研究開発。② 異なる時間スケール（心拍、30秒エポック、分、時間、日、週、月、季節、年）でのビッグデータ解析アルゴリズム（睡眠品質と状態、慢性疾患進行状態、心身健康状態・快適性などの定量評価）の研究開発。③ 長期にわたって各種生体信号収集・保存のための大規模データウェアハウスの構築。④ 上記各種アルゴリズムのマイコン組み込みとサーバ実装。",
+        "prerequisites": "成績表をご提示の上、具体的な卒論研究テーマは、各人の興味適性、研究進捗と将来進路に応じて、勉学内容と研究内容を随時最適化調整。",
+        "room_number": "326C",
+        "student_field": [
+            "IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 5,
+        "name": "Neuromorphic Computing on FPGA",
+        "professor": "DANG Nam Khanh",
+        "professor_email": "khanh@u-aizu.ac.jp",
+        "research_field": "Neuromorphic Computing, FPGA",
+        "description": "学生はFPGA上でニューロモーフィック・コンピューティング・アーキテクチャを設計する。この分野は、生物学的な脳にインスパイアされた新世代のニューラルネットワーク技術である。",
+        "prerequisites": "ハードウェア設計（FPGAまたはVLSI）の知識、Verilog HDLの基本的な知識",
+        "room_number": "204-I",
+        "student_field": [
+            "CS、SY"
+        ]
+    },
+    {
+        "labo_id": 6,
+        "name": "Software platform for Neuromorphic Computing",
+        "professor": "DANG Nam Khanh",
+        "professor_email": "khanh@u-aizu.ac.jp",
+        "research_field": "Neuromorphic Computing, Software Development",
+        "description": "このプロジェクトでは、STDP学習メカニズムを使って義肢アプリケーションを訓練するためのソフトウェアプラットフォームを開発する。",
+        "prerequisites": "Python言語またはプログラミング一般の知識、生物学的学習プロセスへの興味",
+        "room_number": "204-I",
+        "student_field": [
+            "CS、SY"
+        ]
+    },
+    {
+        "labo_id": 7,
+        "name": "Genetic Algorithm for Large-scale Taskmapping",
+        "professor": "DANG Nam Khanh",
+        "professor_email": "khanh@u-aizu.ac.jp",
+        "research_field": "Optimization, Neuromorphic Computing",
+        "description": "ニューロモーフィック・コンピューティングのマッピングを対象とした研究で、数千から数百万のニューロンで構成されるシステムのための解を生成するPythonベースのマッピング・ツールを設計する。",
+        "prerequisites": "Python言語またはプログラミング、最適化への興味",
+        "room_number": "204-I",
+        "student_field": [
+            "CS、SY"
+        ]
+    },
+    {
+        "labo_id": 8,
+        "name": "宇宙開発（月惑星探査参画・機械学習＆リモートセンシングデータ解析・ソフトウエア開発）",
+        "professor": "出村　裕英",
+        "professor_email": "demura@u-aizu.ac.jp",
+        "research_field": "宇宙開発、月惑星探査、機械学習、リモートセンシング、ソフトウエア開発",
+        "description": "月惑星探査機「はやぶさ2」「はやぶさ」「かぐや」などの月惑星探査機が取得した画像データなどを解析するツール、機械学習に基づく自動分類やデータ作成、探査機運用支援ツール等を開発する。また、自ら開発したツールや既存のツールを用いて探査データの解析を行い、地球惑星科学に関する新たな知見を得る。",
+        "prerequisites": "研究テーマに関連する基礎知識および研究意欲",
+        "room_number": "302C",
+        "student_field": [
+            "IT-SPR、IT-CMV、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 9,
+        "name": "Data Series Markup Expert Interface for Data Trend Textual Description Generator",
+        "professor": "ピシキン　エフゲニー",
+        "professor_email": "pyshe@u-aizu.ac.jp",
+        "research_field": "ソフトウェアインターフェース開発、データグラフのトレンド記述",
+        "description": "Mobile App for Charts Based Trend Textual Description Generator projectに関連した研究。専門家がデータグラフの領域をマークアップできるUIの開発に焦点を当てている。",
+        "prerequisites": "関連する基礎知識および研究意欲",
+        "room_number": "342-B",
+        "student_field": [
+            "IT-SPR、IT-CMV、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 10,
+        "name": "Differentiable SDF and applications",
+        "professor": "ファヨール　ピエール アラン",
+        "professor_email": "fayolle@u-aizu.ac.jp",
+        "research_field": "コンピュータグラフィックス、幾何学的モデリング、微分可能なプログラミング",
+        "description": "3Dオブジェクトのジオメトリを表現するためのアプローチとして、Signed Distance Function (SDF) を考慮する。このプロジェクトの主な目的は、Jax、Torch、TensorFlowなどの自動微分のための既存のフレームワークに基づいて、微分可能なSDFのモデリングのためのフレームワークを開発し、潜在的な応用を調査することである。",
+        "prerequisites": "関連する基礎知識および研究意欲",
+        "room_number": "323-C",
+        "student_field": [
+            "CS、IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 11,
+        "name": "Numerical hydrodynamical simulation",
+        "professor": "藤本　裕輔",
+        "professor_email": "fujimoto@u-aizu.ac.jp",
+        "research_field": "数値流体力学シミュレーション",
+        "description": "Numerical simulation is a powerful tool. For example, where and how stars form from the interstellar gas in a galaxy is one of the biggest mysteries in Astronomy and Astrophysics, and numerical hydrodynamical simulations of the interstellar gas have been widely used to understand the evolution of the interstellar gas and the formation of stars in the galactic disc. In this project, students will develop their own simulation code with certain programming languages such as C or C++, and then they will analyse and visualise the simulation output data with certain software such as Numpy and Matplotlib based on Python.",
+        "prerequisites": "関連する基礎知識および研究意欲",
+        "room_number": "226B",
+        "student_field": [
+            "CS"
+        ]
+    },
+    {
+        "labo_id": 12,
+        "name": "計算機を用いた物理学研究",
+        "professor": "藤津 明",
+        "professor_email": "a-fujitu@u-aizu.ac.jp",
+        "research_field": "素粒子物理学、ひも理論、力学、電磁気学、線形代数、微分積分、量子力学、複素関数論",
+        "description": "最初に素粒子物理学の教科書を用いて基礎を学び、次に、ひも理論などを研究する。",
+        "prerequisites": "力学、電磁気学、線形代数、微分積分、量子力学、複素関数論の履修を要求",
+        "room_number": "207F",
+        "student_field": [
+            "CS"
+        ]
+    },
+    {
+        "labo_id": 13,
+        "name": "Recommendation Systems with integration of ChatGPT",
+        "professor": "ハマダ モハメド",
+        "professor_email": "hamada@u-aizu.ac.jp",
+        "research_field": "Eコマースレコメンデーション、教育用推薦システム、ソーシャルメディアコンテンツ推薦、仕事推薦システム",
+        "description": "ChatGPTを統合した4つのプロジェクト: Eコマースレコメンデーションの向上、ChatGPT駆動の教育推薦システム、ソーシャルメディアコンテンツ推薦、履歴書と求人説明のマッチングによる仕事推薦の改善。",
+        "prerequisites": "関連する基礎知識および研究意欲",
+        "room_number": "346C",
+        "student_field": [
+            "CS、IT-SPR、IT-CMV、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 14,
+        "name": "Free research on Basic or Applied Sciences",
+        "professor": "ハミード サジ",
+        "professor_email": "saji@u-aizu.ac.jp",
+        "research_field": "基礎科学または応用科学に関する自由研究",
+        "description": "植物-昆虫相互作用、植物成長実験、バイオマテリアルズなどのテーマで、生徒の興味に基づいた研究課題を発見し取り組む。",
+        "prerequisites": "関連する基礎知識および研究意欲",
+        "room_number": "224-B",
+        "student_field": [
+            "CS"
+        ]
+    },
+    {
+        "labo_id": 15,
+        "name": "計算社会科学・人工生命に関わる諸研究",
+        "professor": "橋本 康弘",
+        "professor_email": "hashimo@u-aizu.ac.jp",
+        "research_field": "文化遺伝子の生成と伝播、インフォデミクスの抑制、情報可視化、企業共同研究",
+        "description": "ソーシャルメディアの文化遺伝子、フェイクニュースの広がりと対策、集団現象の視覚化、企業との共同研究プロジェクトに取り組む。",
+        "prerequisites": "大学院進学を前提とした指導、企業との共同研究に積極的に取り組める方",
+        "room_number": "346A",
+        "student_field": [
+            "CS、IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 16,
+        "name": "産学連携によるデータサイエンス関連の研究",
+        "professor": "畠 圭佑",
+        "professor_email": "hata@u-aizu.ac.jp",
+        "research_field": "データサイエンス",
+        "description": "外部企業と共同研究によるデータサイエンス関連の研究。テーマはテレビメディア、野生動物の生態調査、自治体のDXなど多岐にわたる。PythonやMATLABを使用。",
+        "prerequisites": "自己管理力、自発的に動けること",
+        "room_number": "UBIC",
+        "student_field": []
+    },
+    {
+        "labo_id": 17,
+        "name": "メディアアート、XRコンテンツ関係",
+        "professor": "畠 圭佑",
+        "professor_email": "hata@u-aizu.ac.jp",
+        "research_field": "メディアアート、XRコンテンツ開発",
+        "description": "自由な創作活動後、展示会出展。社会におけるデジタルコンテンツの役割やニーズを研究。",
+        "prerequisites": "アーティスト思考、自発的なコンテンツ開発",
+        "room_number": "UBIC",
+        "student_field": []
+    },
+    {
+        "labo_id": 18,
+        "name": "月惑星探査データ解析・可視化ツールの開発",
+        "professor": "平田 成",
+        "professor_email": "naru@u-aizu.ac.jp",
+        "research_field": "宇宙科学、データ解析",
+        "description": "MMX、はやぶさ2、かぐや等の月惑星探査機のデータ解析ツール開発。宇宙科学に関する新知見を得る。",
+        "prerequisites": "alpsグループによる共同指導。面談を経て配属。",
+        "room_number": "207C",
+        "student_field": [
+            "IT-SPR、IT-CMV、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 19,
+        "name": "リモートセンシング、徘徊老人向け危険警報システム、視線追跡システム",
+        "professor": "久田 泰広",
+        "professor_email": "hisada@u-aizu.ac.jp",
+        "research_field": "リモートセンシング、危険警報システム、視線追跡システム",
+        "description": "リモートセンシング、老人向け危険警報システムと健康管理システム、視線追跡システムの開発と応用に関する研究。",
+        "prerequisites": "受入れ学生数の上限: 4名",
+        "room_number": "326-A",
+        "student_field": [
+            "SY、IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 20,
+        "name": "月惑星探査データの解析技術、着陸障物の自動検出、クレーターの分類",
+        "professor": "本田 親寿",
+        "professor_email": "chonda@u-aizu.ac.jp",
+        "research_field": "月惑星探査、着陸障物検出、クレーター分類",
+        "description": "月惑星探査データの解析、着陸障物や地形の自動検出、クレーターの分類に関する研究。",
+        "prerequisites": "受入れ学生数の上限: 4名",
+        "room_number": "243-F",
+        "student_field": [
+            "IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 21,
+        "name": "計算機物理学とシミュレーション",
+        "professor": "本間 道雄",
+        "professor_email": "m-honma@u-aizu.ac.jp",
+        "research_field": "計算機物理学、シミュレーション",
+        "description": "自然科学全般に関する問題の数値計算やコンピュータシミュレーションによる解析。",
+        "prerequisites": "受入れ学生数の上限: 4名",
+        "room_number": "204H",
+        "student_field": [
+            "CS"
+        ]
+    },
+    {
+        "labo_id": 22,
+        "name": "JAVAプログラミング教育支援システム",
+        "professor": "程 同軍",
+        "professor_email": "t-huang@u-aizu.ac.jp",
+        "research_field": "JAVAプログラミング、教育支援システム",
+        "description": "Javaプログラミングの教育支援システムの研究開発。",
+        "prerequisites": "受入れ学生数の上限: 4名",
+        "room_number": "208",
+        "student_field": [
+            "CN、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 23,
+        "name": "環境音や効果音の生成、3Dサウンドシステム開発",
+        "professor": "黄 捷",
+        "professor_email": "j-huang@u-aizu.ac.jp",
+        "research_field": "環境音生成、効果音生成、3Dサウンドシステム",
+        "description": "環境音や効果音の生成、3Dサウンドシステムの開発に関する研究。",
+        "prerequisites": "受入れ学生数の上限: 4名",
+        "room_number": "126B",
+        "student_field": [
+            "IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 24,
+        "name": "水中無線通信システム、MIMOレーダセンシングシステム",
+        "professor": "Idnin Pasya Bin Ibrahim",
+        "professor_email": "idnin@u-aizu.ac.jp",
+        "research_field": "水中無線通信、MIMOレーダセンシング",
+        "description": "水中無線通信システムとMIMOレーダセンシングシステムの開発と評価。",
+        "prerequisites": "受入れ学生数の上限: 4名",
+        "room_number": "122C",
+        "student_field": [
+            "IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 25,
+        "name": "池本淳一研究室",
+        "professor": "池本 淳一",
+        "professor_email": "jikemoto@u-aizu.ac.jp",
+        "research_field": "ICTを用いた地域課題・社会問題の解決",
+        "description": "社会学における研究成果を踏まえた上で、ICTを用いた地域課題（観光含む）・社会問題の解決を行います。具体的には、4年生の夏季休暇までに制作物（デジタルゲーム、デジタルクラフト、電子工作など）を完成させ、卒業論文作成時点まで改良とメンテナンスを重ねることで、具体的かつ効果的に社会貢献しうるICTの利活用について研究していきます。",
+        "prerequisites": "面談には以下の３つのレポートを事前に提出してもらいます。①「これまでに自分が取り組んできた地域・観光活動とその効果」または「取り組んでみたい地域課題や観光振興及びその理由」（1000字以上）②「これまでに制作したアプリや作品」または「卒業論文で製作したいアプリや作品に関する構想」（製作に必要な技術についても言及してください）に関する解説（1000字以上）③「配属後に取り組みたい具体的な研究内容と研究スケジュール」（2000字以上）",
+        "room_number": "244A",
+        "student_field": []
+    },
+    {
+        "labo_id": 26,
+        "name": "荊雷研究室",
+        "professor": "荊 雷",
+        "professor_email": "leijing@u-aizu.ac.jp",
+        "research_field": "インテリジェントセンシング手法、AI動作認識システム、人間と機器の交互方式の研究",
+        "description": "さまざまなセンシング技術やセンサデータ融合手法の開発、AIシステムの研究開発を進めています。特に、手足の触覚を計測するインテリジェントセンシング手法、人間動作の自動認識システムの開発、新しいセンシング技術とAI手法を活用した人間と機器の交流方法に関する研究を行っています。",
+        "prerequisites": "関連知識：電子工学、組み込み開発、FPGA、データ処理、ビッグデータ分析、機械学習、データベース、サーバーマネジメント。特に、組み込み、FPGAに経験がある方、AIの勉強に興味がある方を募集しています。",
+        "room_number": "343B",
+        "student_field": [
+            "SY",
+            "CN",
+            "IT-SPR",
+            "IT-CMV",
+            "SE-DE"
+        ]
+    },
+    {
+        "labo_id": 27,
+        "name": "可知靖之研究室",
+        "professor": "可知 靖之",
+        "professor_email": "kachi@u-aizu.ac.jp",
+        "research_field": "リーマンのゼータ函数、特殊函数、耐量子暗号",
+        "description": "リーマンのゼータ函数や特殊函数、1の冪根の和、耐量子暗号への応用を目指した多項式の数学などを研究しています。主に、数学と暗号理論への応用に焦点を当てた研究を行っています。",
+        "prerequisites": "純粋数学に興味がある方、理学部数学科と同水準の数学を用いる研究を行います。",
+        "room_number": "203C",
+        "student_field": [
+            "CS"
+        ]
+    },
+    {
+        "labo_id": 28,
+        "name": "安全な組込みシステムの設計および障害診断手法に関する研究",
+        "professor": "北道　淳司",
+        "professor_email": "kitamiti@u-aizu.ac.jp",
+        "research_field": "組込みシステム",
+        "description": "組込みシステムは身の回りおいて多く稼働している．家電製品から交通システム，飛行機の制御システムなども組込みシステムに含まれる．冗長構成を利用したOSやミドルウエアを含むハードウエア，ソフトウエアシステムの設計に関する研究や，STAMP/STPAと呼ばれる最近注目されている障害診断手法を発展させ組込みシステムの障害診断をサポートするツールを開発する研究などを行っている．ハードウエアに関する内容として低消費電力設計に関する研究も含まれる．",
+        "prerequisites": "定員を3名としているが，希望者多数の場合は4名まで受け入れる．",
+        "room_number": "222A",
+        "student_field": [
+            "CS、SY、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 29,
+        "name": "宇宙惑星探査",
+        "professor": "北里　宏平",
+        "professor_email": "kitazato@u-aizu.ac.jp",
+        "research_field": "宇宙探査",
+        "description": "近年の日本における宇宙惑星探査の発展は目覚ましく，世界初の小惑星サンプルリターンを成功させた「はやぶさ」や月の高精度な地図を作成した「かぐや」などによって数多くの科学成果があげられてきました．また，現在運用中の「はやぶさ2#」や2024年度打ち上げ予定の火星衛星探査「MMX」などもあり，宇宙惑星探査における研究開発は今後もさらに拡大していくと期待されます．当研究室は，日本の宇宙惑星探査プロジェクトに参画し，探査機に搭載する観測装置の開発や，探査機が取得したデータの分析に取り組んでいます．卒業研究においてもそれらに関連した研究に取り組んでもらうことを期待しており，具体的には以下のようなテーマを想定しています．        ・はやぶさ2近赤外分光計の観測データを用いた小惑星の水・鉱物分布に関する研究・N体シミュレーションコードREBOUNDを用いた小惑星の軌道進化に関する研究・未知なる小惑星の発見を市民科学によって実現するためのウェブアプリケーション開発・デジタル望遠鏡を用いた小惑星の測光観測・宇宙教育を目的としたVR/ARコンテンツの開発        宇宙，データ分析，数理モデルに興味のある学生さんを歓迎します．",
+        "prerequisites": "宇宙，データ分析，数理モデルに興味のある学生さんを歓迎します．",
+        "room_number": "243-E",
+        "student_field": [
+            "IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 30,
+        "name": "社会経済諸問題を扱った社会科学の実証研究",
+        "professor": "小暮　克夫",
+        "professor_email": "kkogure@u-aizu.ac.jp",
+        "research_field": "社会経済",
+        "description": "日本や世界が抱える社会経済諸問題に社会科学のアプローチから切り込む。各自がそれぞれの興味・関心に応じて、社会的意義・政策的含意を持つ研究テーマを設定して、主体的に研究していく。研究テーマの設定・遂行に必要な各種スキル（アイデアの見つけ方、先行研究・理論的枠組みの検討、実証リサーチデザイン、データ分析、結果の解釈、論文執筆、プレゼンテーションなど）は、その都度身につけていく。主体的な研究活動を通じて、社会的スキルも身につけ、卒業後の進路選択・長期的なキャリア形成についても考えていく。",
+        "prerequisites": "3年次に総務省統計局等が開催している「統計分析コンペティション」に参加していただきます。",
+        "room_number": "248J",
+        "student_field": []
+    },
+    {
+        "labo_id": 31,
+        "name": "IoTデバイス・システムに向けた回路の設計技術とそのアルゴリズムの研究開発",
+        "professor": "小平　行秀",
+        "professor_email": "kohira@u-aizu.ac.jp",
+        "research_field": "IoTデバイス・システム",
+        "description": "近年，IoTデバイスやそれを用いたシステムの開発が注目を集め，IoTデバイス・システムが活用されています．IoTデバイス・システムでは，温度などの環境をセンシングし，そのセンシングしたデータを用いて機器を制御し，消費するエネルギーなどの最適化・作業時間の効率化などを自動で行うシステムの開発が進められています．今後，IoTデバイスの数が倍増するという予測もされています．IoTデバイスで中心的な役割を果たすのが，デジタル集積回路とそれらを接続するプリント基板回路です．短時間で，性能が良い回路を設計するためには，回路の自動設計するためのアルゴリズムの研究開発が不可欠です．当研究室では，IoTデバイスを開発するための要素技術を研究開発することを目標にしています．研究開発している要素技術は，以下の通りです．・デジタル集積回路の自動設計技術と低電力化技術・プリント基板回路(≒IoTデバイス)の自動設計技術と低電力化技術・最先端プロセスにおける集積回路の設計技術・量子コンピュータを用いたデジタル集積回路の自動設計技術        研究テーマは以下の通りです．１．一般同期回路の設計自動化に関する研究現在のデジタル集積回路では，トランジスタ数が多いもので数億から数十億にもなります．また，テクノロジーの微細化，デザインルールの煩雑化に伴い，人手のみで設計するのは不可能です．特に，テクノロジーの微細化により，配線遅延がデジタル集積回路の性能を決める大きな要因になっています．配線遅延は，レイアウト設計の工程で決まるため，レイアウト設計の重要性が増しています．また，レイアウト設計では，トランジスタ・ゲート・配線などの大規模なデータを扱うため，自動設計技術(=アルゴリズム)の優劣が設計時間に影響し，最終的にはデジタル集積回路の優劣に影響します．        一般的な集積回路では，フリップフロップなどの全ての記憶素子に同時にクロックを与えることで回路が正常に動作することを保証しています．しかし，回路が同時に動作するため，電源電圧の降下による回路の誤動作や電磁放射を多く発生するなどの問題が起きています．一般同期方式は，各記憶素子にクロックを供給するタイミングをずらすことを許容する回路設計方式です．どのようなタイミングを設定すれば，回路が正常に動作することを保証できるか，どのように高速で低消費電力な回路を得るか，既存のCADツールと協調しながらいかに一般同期方式を設計するかを研究しています．        ２．プリント基板回路の自動設計技術に関する研究IoTデバイスを含む組込み機器では，パッケージ化された複数のチップがプリント基板の上に配置され，他の機能のチップと信号のやり取りをするためにプリント基板上の配線により，他のチップの入出力端子と接続されます．設計の仕様により，この配線には，様々な制約が課されます．例えば，複数の信号を同時に到着させなければならないために配線長を揃える，プリント基板上の１部分には数本しか配線が通せないなどです．当研究室では，制約・仕様を満たす配線を自動で設計する手法を研究しています．３．プリント基板回路の低電力化技術に関する研究組込み機器では，常に全ての集積回路が動作しているということはなく，動作状態とスリープ状態を繰り返しながら回路が動作しています．また，動作状態でも，時間が掛かりエネルギーを大量に消費する処理や短時間で終了しそれほど負荷が高くない処理など，さまざまな状態があります．現在は，常に同じ電圧の電源を供給し，常に同じ周波数のクロックを供給することが多いですが，電源電圧やクロック周波数を処理の負荷に応じて動的に変化させるDynamic Voltage and Frequency Scaling (DVFS)という技術を用いると，システムで消費されるエネルギーが減少し，低電力化が実現されます．そこで，当研究室では，プリント基板回路の低電力化をめざしてDVFSを実現する方法について研究しています．    ４．次世代リソグラフィ技術に対応したレイアウト設計技術に関する研究集積回路の微細化により，1回のリソグラフィ工程では，所望のレイアウトを形成できなくなってきています．そのため，近年，レイアウト内のパタンを複数のマスクに分割し，複数回のリソグラフィ工程により所望のレイアウトを形成するマルチパターニング技術が検討されています． 複数のマスクを使用することで，形成できるレイアウトの自由度は高くなりますが，複数のマスクの位置を合わせは難しいため，回路が正常に動作する確率(=歩留り)が下がってしまいます．そこで，当研究室では，できるだけ歩留まりを下げずに，所望のレイアウトを複数のマスクに分割する手法や，マルチパターニングに向いたレイアウト設計方法について研究しています．        ５．量子コンピュータを用いたデジタル集積回路の自動設計技術デジタル集積回路の自動設計技術の中では，回路性能を向上するために，たくさんのアルゴリズムが利用されています．近年，最適化アルゴリズムの1つとして，量子コンピュータの利用が有望視されています．当研究室では，量子コンピュータを用いて，より良い性能の集積回路を設計する方法を研究しています．",
+        "prerequisites": "学生の本分が学習・研究をすることだということをわきまえ研究活動を積極的に行う人，学生時代にできるだけスキルを磨こうと考えている向上心の高い人を望みます．特に，大学院への進学希望者は歓迎します．",
+        "room_number": "105B",
+        "student_field": [
+            "SY"
+        ]
+    },
+    {
+        "labo_id": 32,
+        "name": "Developing Web Chat Application with Quantum Cryptography",
+        "professor": "レ　ドアン ホアン",
+        "professor_email": "hoangle@u-aizu.ac.jp",
+        "research_field": "コンピュータビジョン 暗号 量子計算",
+        "description": "次世代の暗号方式である、量子暗号を擬似的に実装しているチャットアプリ。量子暗号を可能にさせるプロトコルに基づいたセキュリティアルゴリズムを使用し、エンドツーエンドの暗号化で保護されたメッセージを送受信することができる。この暗号化には、量子力学の原理を利用した量子鍵配送によって得られた鍵を使用する。量子鍵配送は、送信者と受信者の間でメッセージを暗号化や復号化するための鍵を安全に共有する仕組みである。近年、インターネットの普及に伴い、オンライン上でのコミュニケーションがますます盛んになっています。その一方で、オンライン上でのプライバシーやセキュリティへの懸念が高まっています。安全なメッセージとウェブチャットアプリケーションは、プライバシーやセキュリティを保護するために不可欠な存在です。量子暗号は、従来の暗号方式よりも強力なセキュリティを提供するため、安全なメッセージとウェブチャットアプリケーションの実現に貢献する可能性があります。\nA good programing skill is required.\nFor more information, please visit Lab website: https://u-aizu.ac.jp/labs/ce-cc/.\nIn addition, students can request for an appointment to discuss on possible topics.  \n- Office: 306-A\n- Email: hoangle",
+        "prerequisites": "See project description",
+        "room_number": "306A",
+        "student_field": [
+            "CN"
+        ]
+    },
+    {
+        "labo_id": 33,
+        "name": "エッジデバイス上で巨大AIモデルの推論処理",
+        "professor": "李　鵬",
+        "professor_email": "pengli@u-aizu.ac.jp",
+        "research_field": "AI・機械学習 エッジコンピューティング ソフトウェア開発",
+        "description": "近年、AIモデルの大規模化が言語、音声、画像など対象分野によらず進んでいる。2018年にGoogleが公開した「BERT」モデルは数億のパラメータを有しており、その後2022年にOpenAIが開発した「GPT-4」モデルのパラメータ数は1000億以上という驚異的な規模に達している。本例が示すように、今日、巨大AIモデルの時代が到来していることは明らかである。巨大AIの研究分野では、新たなモデルやアルゴリズムの開発に焦点が当たり、数多くの研究成果が日々発表されている。しかしながら、巨大AIモデルをさまざまな実応用に供するには、効率的かつ信頼性の高い推論処理をサポートするAI基盤ソフトウェアの研究が不可欠である。本研究の目的は、スマートフォンなどの汎用CPUやGPUを備えたエッジデバイス上で巨大AIモデルの推論を効率的に実行可能とする手法の研究開発である。\n \n\n研究室番号：206B/SY、CN、IT-SPR、IT-CMV\nメールアドレス ：pengli\n",
+        "prerequisites": "",
+        "room_number": "206B",
+        "student_field": [
+            "SY、CN、IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 34,
+        "name": "Facial Expressions, Motion, and Their Applications",
+        "professor": "李 想",
+        "professor_email": "xiangli@u-aizu.ac.jp",
+        "research_field": "コンピュータビジョン コンピュータグラフィックス オーディオ・音声処理",
+        "description": "顔の表情、動き、およびその応用\n- Applying facial expression techniques from the real world to the virtual world by using computer vision\n  コンピュータビジョンを使用して、実世界からの顔の表情技術を仮想世界に適用する\n- Generating facial expressions for building the characteristics of a virtual character according to the narrative and with the help of rendering (Computer Graphics)\n  ナラティブに従って、レンダリング（コンピュータグラフィックス）を用いて、仮想キャラクターの特徴を構築するための顔の表情を生成する\n- Intelligent Character Design and Interaction (plus Prompt Engineering)\n  インテリジェントなキャラクターデザインとインタラクション (プラス プロンプトエンジニアリング)\n- 3D Modeling and Motion\n  3D モデリングとモーション\n- Voice/Audio/Music Processing and Production\n  音声/オーディオ/音楽の処理と制作\n- Prototype Development and Applications\n  プロトタイプの開発とアプリケーション",
+        "prerequisites": "",
+        "room_number": "247-C",
+        "student_field": [
+            "CS、IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 35,
+        "name": "Screen-Based Eye Tracking Applications",
+        "professor": "リングル　ウイリアム",
+        "professor_email": "lingle@u-aizu.ac.jp",
+        "research_field": "人間-コンピュータインタラクション アイトラッキング 実験心理学",
+        "description": "Students in this lab will develop and implement experimental studies using high precision eye-tracking technology. Using screen-based eye tracking methods, students will learn to record, analyze, and interpret eye position data from volunteer participants who are looking at a screen while doing a task. Examples include: looking at pictures with different content or image properties, using websites or screen-based applications which require actions and responses from users, and reading sentences and responding to question prompts using a keyboard or button box.\n\nSuitable students must be comfortable using English for both spoken and written communication, have a sincere interest in eye-tracking research methodologies, and have evidence of diligent academic work.\nStudents are not expected to have previous knowledge of eye-tracking applications but should be familiar with the scientific method and basics of experimental study design.\nStudents interested in applying to this lab should contact Prof. Lingle in English at: lingle@u-aizu.ac.jp\n研究室番号：263\nメールアドレス ：lingle\n",
+        "prerequisites": "",
+        "room_number": "263",
+        "student_field": []
+    },
+    {
+        "labo_id": 36,
+        "name": "Neural Network Learning for Forecasting Tasks",
+        "professor": "劉　勇",
+        "professor_email": "yliu@u-aizu.ac.jp",
+        "research_field": "機械学習・データサイエンス 予測モデリング ニューラルネットワーク",
+        "description": "In machine learning, artificial neural networks are a family of statistical learning algorithms inspired by biological neural networks, and used to estimate or approximate functions that can depend on a large number of inputs.\n\nNeural networks have been applied to many forecasting tasks. However, most of these applications assumed a predefined network architecture including connectivity and node transfer functions, and used a training algorithm, such as back-propagation algorithm, to learn weights. The issue of designing a near optimal network architecture remains open.\n\nThis project has a clear emphasis on experimental studies. The students will use some real data, such as stock market index data sets of Tokyo Price Index (TOPIX) and Dow Jones. From the experiments, the students will learn how to pre-process the data, partition the data into training and testing parts, and design an optimal neural network to learn from the data.\nStudents need to study machine learning  programming in this project.",
+        "prerequisites": "",
+        "room_number": "102B",
+        "student_field": [
+            "CS、IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 37,
+        "name": "Deep Learning based Spoken Language Processing / 深層学習に基づいた音声言語処理",
+        "professor": "マルコフ　コンスタンティン",
+        "professor_email": "markov@u-aizu.ac.jp",
+        "research_field": "深層学習 音声処理 自然言語処理",
+        "description": "Spoken language processing technology is one of the main components of the human-machine interface. The three main components of the spoken language technology include speech recognition, speech synthesis and natural language processing (NLP). Speech recognition transforms the human speech into text which can be processed by NLP and the result can be transformed again into human speech by speech synthesis.\n\nIn order to be able to develop speech processing applications, students will study the underlying technology which is based on signal processing, machine learning, statistics and probability theory. Students will learn how to build deep neural network models for various spoken language processing tasks.\n\nPossible GT theme topics include, but are not limited to:\n1. Speech recognition.\n2. Emotion estimation from speech.\n3. Speech synthesis.\n4. Speaker identification / diarization.\n5. Pronunciation evaluation.\n6. Audio event detection and segmentation.\n7. Dialog systems, chat bots, etc.\n8. Recommendation systems.\nFor questions, please, contact me at markov@u-aizu.ac.jp or at my office 126-C.",
+        "prerequisites": "",
+        "room_number": "126-C",
+        "student_field": [
+            "CS、IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 38,
+        "name": "並列コンピュータにおける高速計算に関する研究",
+        "professor": "松本　和也",
+        "professor_email": "kazuya-m@u-aizu.ac.jp",
+        "research_field": "並列計算 高性能計算 コンピュータアーキテクチャ アルゴリズムとデータ構造",
+        "description": "1. 行列計算（数値線形代数）に関する高性能実装の研究開発。様々なアプリケーションプログラムにおいて、連立一次方程式を解いたり、行列の性質を利用して変形操作を行ったりすることが求められます。行列計算の演算の種類は多様であり演算によっては多大な計算量を必要なものがあり、その高性能計算に関する研究は長い歴史があります。この研究では、それらの既存の研究を踏まえた上で行列計算を高速に行うためのアルゴリズムや高性能実装についての研究を行います。\n\n2. グラフ探索アルゴリズムの高性能実装の研究開発。ソーシャルデータといったビッグデータの解析のためには、解析対象を点や辺としたグラフに対する探索処理が必要です。データ量が膨大になるほど探索時間も膨大となり、その探索を高速に行うことが求められます。この研究では各種のグラフ探索を高速に行う高性能な実装の実現を目指します。\n\n3. 自動性能最適化・自動性能チューニングに関する研究。プログラムの性能は同じ処理を行うとしても実装の仕方によって大きく変わってきます。特に現在のコンピュータは複雑でありコンピュータの挙動を完璧に予測することが難しく、プログラムの性能最適化・性能チューニングは困難なものになりがちです。この研究では高性能実装を実現するための性能チューニングをソフトウェアにより行わせる、自動チューニングと呼ばれる技術に関する研究を行います。研究としては、自動チューニングをより効率的に行いチューニング時間を短縮する手法の研究、自動チューニングを容易にするためのドメイン特化言語（DSL）の研究開発などが考えられます。\n\n4. 何か高速化したいプログラムの高速化。皆さんが高速化したいと思っているプログラムの高速化を行っていただきます。ただし、対象によっては研究に向かない可能性もあるので、それを実際に研究テーマとするかについては一緒に議論することになると思います。過去の卒論での研究例としては、ソート、3DCG、機械学習・深層学習に関する処理の高速化などがあります。\n\n現時点での知識量や経験は特に問いません。ただし、どの研究テーマを選んでもプログラミングをすることは避けられないと思っていてください。研究を進める上で身につけていただきたい知識としては、並列計算、アルゴリズムとデータ構造、数学（特に線形代数）、数値解析、コンピュータアーキテクチャといったものです。その他、テーマによっては言語処理系（コンパイラ）、メタヒューリスティクス、機械学習、深層学習の知識も必要になるかもしれません。\n\n研究で使用するプログラミング言語はC、C++が多いです。それに加えて並列計算のための言語拡張（CUDA、OpenCL、OpenMP、MPIなど）を使用することになると思います。また、何かしらのスクリプト言語（Ruby、シェルスクリプトなど）を使用することもありえます。また、数値計算ソフトウェアはFORTRANで書かれていることが多く、FORTRANのコードを読む必要があることも（テーマによっては書くことも）あるかもしれません。なお、GPUやマルチコアCPUで動作するソフトウェアの高速化に関する研究であり、ハードウェア関係の研究を望む方向きではないのでご注意ください。\nとっつきにくい研究かもしれませんが、性能（計算時間）という指標があるので研究結果は明確です。コンピュータを効率的に利用し高速に計算できるようにすることに興味がありましたら、応募いただければと思います。\n\nメールアドレスは kazuya-m@u-aizu.ac.jp\nですので、お気軽に質問や面談希望のメールをください。",
+        "prerequisites": "",
+        "room_number": "242A",
+        "student_field": [
+            "CS、SY、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 39,
+        "name": "システムの解析に関する研究  / CM分類に関わる基礎研究",
+        "professor": "森　和好",
+        "professor_email": "k-mori@u-aizu.ac.jp",
+        "research_field": "システム工学 機械学習 データサイエンス",
+        "description": "(1)安定化補償器のパラメトリゼーションに関する基礎研究\n\n当研究室では、最近、一般的な線形システムに関する安定化補償器のパラメト\nリゼーションの理論を開発しました。しかし、現状ではパラメータの数が、最\n小ではなく不要なものを含む場合があります不要なパラメータがある場合には、\nそれを減らすことが望ましく、それを減らすシステムまたは理論を開発します。\n当研究室では、最近、一般的な線形システムに関する安定化補償器のパラメト\nリゼーションの理論を開発しました。しかし、現状ではパラメータの数が、最\n小ではなく不要なものを含む場合があります不要なパラメータがある場合には、\nそれを減らすことが望ましく、それを減らすシステムまたは理論を開発します。\n\n\n(2)代数的に記述した線形システムに関する研究\n\n代数的に記述された線形システムを扱い、安定化問題等の理論を開発する研究\nを行います。数学的な記述を用いて、普遍的な理論を開発します。\n\n(3)線形システムや数理科目(離散系論、高校数学等)に関わる論理性\nを重視した学習システムに関する研究\n\n線形システム、離散系論、高校数学等の科目に関する学習システムを開発しま\nす。学習システムにおいては論理構成を重視したものを開発します。さらに、\nこのシステムの動画化も検討します。\n\n(4)CM分類に関わる基礎研究\n\n当研究室ではテレビのCMを集めるシステムを構築しています。たとえば、ニュー\nラルネット等を使って、CMを自動的に集め、製品種目別、出演俳優別などに自\n動的に振り分け、その上でCMの放送回数を自動カウントできればと考えていま\nす。卒業論文では、そのようなシステムの一部分の構築、またはそのための基\n礎研究を行います。\n\n \n当研究室では、広い意味における線形システムの理論と応用に関する研究、数\n理科目関わる論理性を重視した教育用システムに関する研究、テレビコマーシャ\nルの分類に関する研究を行っています。また、当研究室では、論理的思考と批\n判的思考(クリティカルシンキング)ができ、計算機環境の整備を自身でできる\nようになる活動を、卒業論文に係る活動として行います。そのために、本読み\nゼミを実施し、さらに、卒論等で記述しているプログラムをゼミ等で説明発表\nをする必要があります。当研究室は、大学院進学希望者を優先します。さらに、\nパソコンを部品から組み立てる公開講座を行っています。必須ではありません\nが、そのような活動に興味あると助かります(現時点で組み立てができる必要\nはなく、パソコンの中身に興味があれば(or興味を持ちたければ)十分です)",
+        "prerequisites": "",
+        "room_number": "247B",
+        "student_field": [
+            "CS、CN、IT-SPR、IT-CMV、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 40,
+        "name": "Behavior-capture AI for Computer Games & Simulations",
+        "professor": "モズゴボイ　マキシム",
+        "professor_email": "mozgovoy@u-aizu.ac.jp",
+        "research_field": "人工知能 ゲームデザイン シミュレーション",
+        "description": "Video games and simulations are inhabited both by human-controlled and computer-controlled characters, guided by artificial intelligence algorithms. Traditionally, these algorithms are designed by hand. However, it is very difficult to create a good algorithm for complex human-like characters who should be interesting opponents for real people.\n\nWe study game AI systems that can learn from real people and repeat learned human behavior. We want to show that such systems can behave like humans and be fun opponents to play with. Currently we are experimenting with relatively simple sports games, such as tennis, fighting, and soccer.\n\nCheck out our former lab members' graduation works at https://wiki.rt247a.ddns.me/graduation-works",
+        "prerequisites": "",
+        "room_number": "247-A",
+        "student_field": [
+            "IT-SPR、IT-CMV、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 41,
+        "name": "実践的な情報セキュリティの研究",
+        "professor": "中村　章人",
+        "professor_email": "nakamura@u-aizu.ac.jp",
+        "research_field": "情報セキュリティ コンピュータネットワーク クラウドコンピューティング",
+        "description": "【背景】\n現在、情報セキュリティはITシステムにおける最も重要な要求の一つである。しかし、企業ネットワークやサーバへの侵入、マルウェアの感染、情報漏えいなどの事件が後を絶たない。その理由は、セキュリティ対策には幅広く高度な専門知識が必要であること、システム構成情報やアクセスログなどの大量の情報を扱うこと、関連業務の多くを依然として人手に頼っていることなどである。タイムリーで効果的なセキュリティ対策を効率的に実施できるしくみが求められている。\n\n【キーワード】\n脆弱性管理、ネットワーク監視、リスク評価、マルウェア、システムテスト、オープンソースインテリジェンス、サイバー犯罪対策、オープンデータ、クラウドコンピューティング、Webサービス、セマンティックWeb\n\n【ゴール】\n- コンピュータで処理可能な、信頼できるセキュリティ知識を構築する。\n- 管理対象のコンピュータ（複数、異種混在）のセキュリティ状態を正確に把握する。\n- システム管理者やユーザが行動を起こせるような気づきと指標を与える。\n- パッチの適用やバージョンアップなど、システム管理作業を可能な限り自動化する。\n- 複雑なシステムが攻撃や障害に対してどう振る舞うかをテストできる。\n\n【チャレンジ/課題】\n- セキュリティ知識のモデルと表現方法の確立、データベースへの格納およびWebサービスによるアクセス・検索メカニズムの構築。\n- 管理対象のコンピュータで使われているソフトウェアの脆弱性診断方法とリスク評価方法の確立。\n- ネットワーク接続された複雑なシステムのテスト方法の確立。\n- システム管理ツールの開発と、クラウドへの配備・運用。既存の設定管理ツールとの連携。\n- SNSなどを利用したサイバー犯罪行為の検知と防御手法の確立。\n\n【アプローチ】\n- 政府やベンダ、コミュニティが日々努力して作っているオープンデータを最大限に活用する。\n- 米国NISTやW3Cなどの国際的な標準規格を採用して、互換性や相互運用性を高める。\n- 最新のIT技術・環境を活用し、創意と工夫をこらしてモノをつくる。理論も重要だが、実践を重要視する。\n\n【期待されるアウトプット】\n- プロダクト（オープンソースソフトウェア、オープンデータ）\n- Webサービス（クラウド上にシステムを配備して運用）\n- 研究発表（論文、口頭発表）\n- コンテストや競技会への参加\n\n【本テーマに取り組むメリット】\n- 情報セキュリティを深く学ぶ。セキュリティのわかる人材は不足しており、貴重である。\n- データの価値がわかる。今、データは新しい石油と言われている。データの重要性を認識し、活用して価値を引き出す能力はビジネスチャンスを広げる。\n- 最新のコンピューティング環境を知る。モバイルからクラウドまで、現在のコンピューティング環境はさまざまなプラットフォームが混在し、相互に連携して機能する。バックエンドからフロントエンドまで一貫したシステムを設計できるのが今時のソフトウェアアーキテクト。\n- モダンなソフトウェア開発を知る。最近のソフトウェア開発では、統合開発環境（Eclipseなど）、ビルドプロセス自動化（MavenやGradleなど）、コードリポジトリと問題管理（GitHubなど）、テスト自動化と継続的インテグレーション（JUnitやJenkinsなど）といったツールやサービスが使われる。また、小さなゴールの達成を繰り返していくアジャイルなプロセスが取られる。これらのツールや手法を使いこなし、チームで開発するのが今のITエンジニアの常識。\n- 相談は随時受け付けます。メールで事前に連絡の上、オフィス（研究棟 342-A）に来てください。単に「話を聞きたい」という要求は受け付けません。\n- ここでの説明は情報セキュリティに焦点を絞っていますが、オープンデータの利活用やセマンティックWebに関連する他のテーマに取り組みたい場合も相談に応じます",
+        "prerequisites": "",
+        "room_number": "342A",
+        "student_field": [
+            "CS、CN、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 42,
+        "name": "高性能計算(High Performance Computing;HPC)とその応用",
+        "professor": "中里　直人",
+        "professor_email": "nakasato@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "宇宙や地球における自然現象は様々な物理過程が複雑にいりくんでいるため、観測データを理解するには数値シミュレーションが欠かせない研究手法となっています。私は、シミュレーション天文学およびシミュレーションを高速化する様々な手法を研究しています。\n\n様々な事象を詳細に理解するためには、より高精度・高解像度のシミュレーションが必要になります。それらを達成するためには、アセンブラによるプログラミング、プログラムの並列化、SIMDベクトル化、専用計算機の利用など様々な計算高速化手法が必要です。私の研究室では、様々なシミュレーション高速化技法について研究します。具体的には：\n\n1. OpenMP/CUDA/OpenCL/MPI等による並列計算\n2. HPC用プロセッサの研究開発\n3. HPC用プロセッサにおけるプログラミング\n4. FPGAによるリコンフィギャラブルコンピューティング\n5. MLの数値計算や数値モデリングへの応用\n\n等の方法によって、新たな高速計算手法の確立をめざします。具体的に、テーマの例は以下の通りです：\n\n1. N体計算による重力シミュレーションの高速化:宇宙における万有引力の計算は多くの応用がありその高速化をおこないます\n2. 流体シミュレーション:粒子シミュレーションにより宇宙あるいは身近な構造物の動きをシミュレーションします\n3．数値演算アルゴリズムの開発とGPU/FPGAでの性能評価:GPU/FPGAを使ったアプリケーションの性能評価をします\n4. HPC用プロセッサのソフトウエア開発:HPCのためのプログラミング環境を研究します\n5. 機械学習による数値計算近似：ニューラルネットワークによる様々な近似手法を数値計算やシミュレーションに適用します\n6. 多倍長精度演算の応用:倍精度より高精度な演算手法を高速化しそれを物理学や天文学上の問題へ応用します\n7. 数値演算の実装と最適化:浮動小数点演算演算をFPGA/GPUに実装することで演算アルゴリズムを検証します\n8. 並列計算のためのDomain Specific Languageの開発:並列計算を簡単にプログラムするためのプログラミングモデルや言語を研究開発します\n\nこれらに限らず、計算の高速化をキーワードとして研究テーマを決定します。天文や宇宙、および、数値シミュレーション、GPU、FPGA、高速計算手法、機械学習等に興味のある学生を歓迎します。",
+        "prerequisites": "高性能計算 天文学 機械学習",
+        "room_number": "242B",
+        "student_field": [
+            "CS、SY"
+        ]
+    },
+    {
+        "labo_id": 43,
+        "name": "人体の動きの科学的解析",
+        "professor": "中澤　謙",
+        "professor_email": "nakazawa@u-aizu.ac.jp",
+        "research_field": "バイオメカニクス 人間工学 コンピュータビジョン",
+        "description": "光学式モーションキャプチャーシステム・床反力計・アイトラッカー等を用いて、歩く・走る・跳ぶ・掴む・見る等の人体の動きを対象として測定・評価し、科学的に解析していきます。人体の動きを科学的に解析することは、以下のことに役立ちます。\n\n①ヒトの動作の本質的理解\n目標とする動作に共通する特徴をみつけだすことによって、様々な個人の動作を評価し、指導・改善に活かすことができます。\n\n②ヒトの動作の客観的評価\n言葉では完全に記述することが難しいヒトの動作を数値化し、客観的に表現することができます。ヒトの動作を数値化し、客観的に表現することによって、主観と実際の動きを効率よく一致させていくことが可能になります。\n\n宇宙情報科学研究センター（ARC-Space）教員との共同指導になります。\n科学にはつねに「確かさ」が求められます。データにシンプルに語らせるために、データ計測スキルや分析スキルを確実に身につけていくことが求められます。また、「データ」から真実を正しく読み取る「眼」を養うことも必要になります。",
+        "prerequisites": "",
+        "room_number": "244C",
+        "student_field": []
+    },
+    {
+        "labo_id": 44,
+        "name": "災害対応ロボット，サービスロボット，屋外移動ロボット，工場用ロボットに必要な技術の研究 / Development of technologies for Disaster Response Robots,  Service Robots, Field Robots, and Manufacturing Robotic Systems",
+        "professor": "成瀬　継太郎",
+        "professor_email": "naruse@u-aizu.ac.jp",
+        "research_field": "ロボティクス センサ技術 コンピュータビジョン",
+        "description": "タイトルのロボットに対して，移動機構，センサ情報処理，制御，情報システム，プランニング，コンピュータビジョンなどの必要な要素技術の研究を行う．/ Develpment of control methods of mobility, mdeling of sensory data, information systems for robots, planning, computer vision, etc.",
+        "prerequisites": "",
+        "room_number": "322B",
+        "student_field": [
+            "IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 45,
+        "name": "1. Application of Optimization Methods (evolutionary algorithms, genetic algorithms, and others)",
+        "professor": "西舘　陽平",
+        "professor_email": "nisidate@u-aizu.ac.jp",
+        "research_field": "計算科学 アルゴリズム理論 最適化技術",
+        "description": "Optimization is an essential task for computational science.\nMany real world problems can be formulated as the minimization/maximization problems\nof complex functions.\n\nIn this research, you will assemble several benchmarking problems for function\noptimization and try to apply evolutionary algorithms, genetic algorithms, etc.\n\n1. Investigate benchmarking functions (e.g., http://infinity77.net/global_optimization/test_functions.html#test-functions-index)\n2. Try to apply evolutionary algorithms, genetic algorithms, etc.\n3. Analyze characteristics of test functions, and optimization algorithms.\n修士まで研究を続けたい人におすすめします\nIt would be suitable for students who want to continue it in master study",
+        "prerequisites": "",
+        "room_number": "323-B",
+        "student_field": [
+            "CS、IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 46,
+        "name": "コンピュータグラフィックスの並列処理",
+        "professor": "西村　憲",
+        "professor_email": "nisim@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "Parallel Processing for Computer Graphics\nレイトレーシング法などを使った\n写実的なグラフィックス画像の生成を高速化するために、\nFPGAを使って専用ハードウェアを構築したり、\nあるいはGPU上で動く並列プログラムを開発する。\nまた、GPUを使った物理シミュレーションとその可視化、\nポストエフェクトによる写実性の向上、\n効率的なWebベースレンダリングについても検討する。",
+        "prerequisites": "",
+        "room_number": "327-B",
+        "student_field": [
+            "SY、IT-SPR、IT-CMV、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 47,
+        "name": "映像符号化のためのハードウェア・アーキテクチャ構成法の研究",
+        "professor": "新田　高庸",
+        "professor_email": "koyo@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "現在，インターネットを流れるデータの約8割は映像データと言われています．映像データはそのままでは膨大なデータ量となるため，圧縮して送信・蓄積されますが，このときの圧縮方法は，相互接続性を保証するため，国際標準で規定されています．最新の映像符号化規格である VVC (Versatile Video Coding) は 2020年7月に標準化されました．VVC で符号化するために必要となる演算量は膨大で，最新の CPU や GPU を用いても映像を実時間で符号化することは困難です．そのため，ハードウェア化が必須となります．そこで，VVC をはじめとする映像符号化について，ハードウェア・アーキテクチャの構成法を検討します．",
+        "prerequisites": "",
+        "room_number": "222Ｂ",
+        "student_field": [
+            "CS、SY、CN、IT-SPR"
+        ]
+    },
+    {
+        "labo_id": 48,
+        "name": "●社会的なデータの統計分析を主にやっております。",
+        "professor": "大藤　建太",
+        "professor_email": "o-fu@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "・市場調査データ（市販）や食に関する調査データを統計分析し、示唆を抽出、それをわかりやすくプレゼンテーションにまとめる、といった研究をしております。\n○これまでの卒研の内容\n・研究室（３０８－Ｅ）の本棚の図書タイトルを一望してもらうと、研究内容が概観できると思いますのでおすすめです。\n・本棚には、過去４年分くらいの先輩の卒論もファイリングしてありますので、それも見てもらえればと思います。\n○配属に際して\n・面談では主に、いままでの成績と、自分で取り組んでいることの２点を、だいたい２０～３０分かけてお伺いします。\n・定員は、システム上は４名ですが、１人１人の学生とよく向き合いたいので、ことしは３名にさせていただきたいと思います。",
+        "prerequisites": "",
+        "room_number": "307-B",
+        "student_field": [
+            "CS、SY、CN、IT-SPR、IT-CMV、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 49,
+        "name": "<<惑星の表層環境・内部構造を知るための研究を行います！>>",
+        "professor": "小川　佳子",
+        "professor_email": "yoshiko@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "<惑星リモートセンシングデータ解析、 探査観測データ可視化システム開発、惑星物質移動数値シミュレーション>\n惑星の表層環境・内部構造の研究とは…\n「地表にある地形の侵食や風化を調べたり、\n　地下深部の層構造を明らかにしたりする\n　(そしてその原因について理解する)」\nことです。\n太陽系に惑星が生まれてから現在に至るまでの進化の過程\nを探る大きな手がかりを得ることができます。\n\n惑星の表層環境・内部構造、つまり 惑星の「なりたち」を知るために、\nリモートセンシングデータ解析、 探査観測データ可視化システム開発、物質移動の数値シミュレーション、\nなどの手法を用います。\n\n〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜\n具体的には、日本の月探査機「かぐや」や地球観測衛星「だいち」、海外の火星探査機「マーズ・レコネッサンス・オービター」などによって取得される観測データに関わる、\n以下のような研究を行っています。\n〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜\n\n※興味のある人はまずメールでご連絡ください。下記各項目の詳しい内容についてお話しします。質問・相談など随時受け付けます。\n\n■(A) データ解析：惑星リモートセンシング\n\n◎A1. 月探査機「かぐや」のデータを用いた解析\n鉱物情報の抽出や宇宙風化の評価などによる、月表層物質の分布および進化の解明\n(スペクトルデータ解析・画像解析・ディープラーニング)\n\n◎A2. 地球観測衛星「だいち」のデータを用いた解析\n地表変動量に基づく活火山モニタリングや、水分量推定による湿原水環境評価など\n(位相干渉解析・画像解析)\n\n◎A3. 火星探査機「MRO」等のデータを用いた解析\n水質変成鉱物探索および複数観測器データの補間・統合による火星含水指標作りなど\n(スペクトルデータ解析・スパースモデリング)\n\n■(B) システム開発：惑星探査データ・地球観測データの可視化、天体に応じたウェブ地理情報システム(Web-GIS)開発\n\n※ 地理情報システム(GIS: Geographic Information System)とは「地理的位置を手がかりに、位置に関する情報を持ったデータ(空間データ)を総合的に管理・加工し、視覚的に表示し、高度な分析や迅速な判断を可能にする技術」<国土地理院HPより>. これらの表示・分析をウェブ上で可能にするのが、Web-GISです!\n\n◎B1. 月ウェブ地理情報システムの開発\n日本自前の月探査機「かぐや」のデータを搭載し、ウェブ上で月の科学データを簡単に閲覧し基礎解析まで可能なWeb-GIS『月光』(http://fructus.u-aizu.ac.jp/gekko_info/index.html)の構築・拡張\n\n◎B2. 火星ウェブ地理情報システムの開発\nこれまで国際的に最も多様で多量の探査データが蓄積されてきた惑星：火星を対象とした、特に含水鉱物情報の表示に適した、Web-GISの構築\n\n◎B3. 地球自然防災・減災のためのモニタリングシステムの開発\n日本自前の地球観測衛星「だいち」の解析データや日本各地の地震観測網データおよびGNSS観測データを複合的に利用した、特に火山防災に焦点を当てた、新しい地球地理情報システムの構築および同モバイルGISの試作\n\n■(C) 惑星物質移動の数値シミュレーション\n\n◎C1. 火山活動を引き起こす地球地下マグマだまりのモデル化および地殻変動の数値シミュレーション\n\n◎C2. 火星の水質変成に関連した地下・表層水移動の数値シミュレーション\n\n〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜\n月惑星科学、あるいは、リモートセンシング・データ処理・アルゴリズム開発に興味のある学生を歓迎します。同じテーマで複数名から希望を頂いた場合は院進学志望者を優先いたします。また、コミュニケーション力も重視します。\n〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜\n\n※卒論の成果は学会(日本地球惑星科学連合大会、日本惑星科学会秋季講演会、宇宙科学情報解析シンポジウムなど)で発表して頂くことを目指します！！\n配属希望者は説明会実施後、面談を経て配属を決定します。\nメールにて面談希望時間，希望テーマをお知らせください。その際，メールの宛先は alps@u-aizu.ac.jp としてください。共同指導教員宛に同報されます。\n面談は主にお昼休みに行う予定です。\n研究グループの情報\nhttps://arcspace.jp/\n個人HP\nhttp://www.u-aizu.ac.jp/research/faculty/detail?cd=90074&lng=en\nhttps://u-aizu.ac.jp/~yoshiko/\n\n※質問・相談などは随時受け付けます。興味がありましたらいつでも上記グループ宛先または私個人宛先までメールをお送りください。\n-----\nポスターを展示中です　ぜひ御覧ください！",
+        "prerequisites": "",
+        "room_number": "243-D",
+        "student_field": [
+            "IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 50,
+        "name": "経営と人の心理に関する研究",
+        "professor": "小川　千里",
+        "professor_email": "oliviaogawa@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "経営組織に関わること，人のこころに関わることについて研究します。\nたとえば，皆さんの身近で起こっている経営環境の中で，組織や集団，そして個人に生じている問題を，\n\n・マネジメントのトピック：モチベーション，リーダーシップ，キャリア，チーム，ダイバーシティなど\n\n・戦略のトピック：競争，事業構造，多角化，組織文化，ビジネスベンチャーなど\n\nから深く考え，じっくり調べて検討し，論理的に文章化できるようになることを目指します。\n\n人のこころの動きや治療，支援により関心のある人は，\n・コミュニケーションやカウンセリングのトピック：傾聴，説得，交渉，心理療法，地域援助など\n\nこころの動きを組織に応用するような研究も行えるようにします。\n・自分自身が現実現象の中に夢中になって取り組めるようなテーマを見つけて，経営学や心理学の先行研究と結合させて分析し，将来起こりうる問題を予測したりして結果を検討し，解決策を提案することを支援します。\n・会話表現や質問などのコミュニケーション，プレゼンテーション，ファシリテーションのトレーニングを通じて，考えを有効に表現・整理する力も養います。\n・3年次にはグループ研究を行って，他大学との合同ゼミに参加できるようにします。\n・仮説発見型の研究を得意とします。副指導教員は検証型の教員がつくと思いますので，多面的な視野から研究を構成できるようになるよう支援します。\n・上記のテーマに関すること×ITでできる研究も歓迎します",
+        "prerequisites": "",
+        "room_number": "248G",
+        "student_field": []
+    },
+    {
+        "labo_id": 51,
+        "name": "宇宙開発（月惑星探査参画・リモートセンシングデータ解析・月惑星観測機器開発・ソフトウエア開発），月火星箱庭構想に関する研究",
+        "professor": "大竹　真紀子",
+        "professor_email": "makiko-o@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "■地球月火星小惑星のデータ解析およびそのための機械学習基盤の開発\n地球観測衛星や月・水星などの画像データを科学的に解析する。\nまた、そのためのアルゴリズムや機械学習を応用した研究開発を行う。\n最近重視しているのは、深層学習による画像テクスチャ分類である。\n創意工夫が求められ、画像処理・認識に興味のある学生が望ましい。\n\n■月惑星リモートセンシングデータ解析の研究\n月惑星探査機や地球観測衛星のデータを解析する一般的なテーマ。\n地球の場合は全天候型の合成開口レーダーやオープンデータを\n組み合わせる。月惑星の場合は可視・近赤外波長の画像・スペクトル\nデータと地形データ等を組み合わせる。機械学習による半自動マッピング\nも取り入れる。人工知能や解析アルゴリズム開発に興味のある学生が望ましい。\n\n■月惑星観測機器開発\n衛星もしくは着陸機に搭載される観測機器やローバ技術に関する基礎開発を行う。\nハードウエアやその制御等システムに興味関心があり、息の長い開発を様々な立場の\n人と協調して進めていけるような学生が望ましい。\n\n■月惑星観測機器関連ソフトウエアの開発\n月面での観測を行う分光カメラなど観測機器の運用やデータ解析の支援を行う\nソフトウェアの開発を行う。ウエブサーバ、データベース、OpenGLなどによる\nCG表現、データ処理高速化などに興味のある学生が望ましい。\n\n■月惑星iOSアプリ開発\n月惑星データを扱うツールの開発を行う。\niPhone/iPadで共通に動作するアプリケーション開発を念頭に、フットワークが\n軽いアイデアマン、様々な立場の人と協調して開発していけるような学生が望ましい。\n学生研究室（223B）にて，ARC-Space（月惑星班）の研究紹介・卒論配属募集の\nポスターを掲示しています。詳しいContentや研究室の雰囲気に関する問い合わせ・見学は\nいつでも受け付けています。\n大竹個人のメールアドレス（ makiko-o@u-aizu.ac.jp ）、もしくは研究グループ\n教員共同メールアドレス（ alps@u-aizu.ac.jp ）のどちらでも構いません。\n連絡をお待ちしています",
+        "prerequisites": "",
+        "room_number": "302B",
+        "student_field": [
+            "IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 52,
+        "name": "Hardware/Software Interaction and Co-Design",
+        "professor": "大井　仁",
+        "professor_email": "hitoshi@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "Topics of past/current students theses:\n- Heterogeneous Multi-Core\n- Security in the Internet of Things\n- Virtualization Overhead in a Java Application Server\n- Inter-Domain (VM) Network Overhead and Optimization\n- Sensor Network Communication Algorithm\n\nSuggested Topics for new students:\n- Linux File Systems\n- Inter-Domain Communication in Virtualized Systems\n- Hardware Acceleration of Java Virtual Machine\n- Heterogeneous Multi-Core Systems\n- Power/Energy Efficient Systems \n- RISC-V: open-source and free instruction set architecture (ISA) for performance improvement and hardware-assisted security enhancement\n\n\n\nResearch Page\nhttp://www.u-aizu.ac.jp/~hitoshi/RESEARCH/\n\nArchive of Past Theses:\nhttps://sites.google.com/a/oslab.biz/public/Home/theses-1\n\nWe plan to participate the Open Campus Fall\nhttp://opencampus.oslab.biz/\nPlease contact by email for any inquiry",
+        "prerequisites": "",
+        "room_number": "242C",
+        "student_field": [
+            "SY"
+        ]
+    },
+    {
+        "labo_id": 53,
+        "name": "スポーツ傷害のリスクマネジメント",
+        "professor": "沖　和砂",
+        "professor_email": "ka-oki@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "スポーツ環境の改善・整備\n【スポーツ傷害のリスクマネジメント】\nスポーツ傷害を引き起こす要因を探求します。日本では、まだ「スポーツにケガはつきものである」という考えがあります。リスクを探り、そのリスクを低減させるための方法を見出していきます。\n\n【スポーツ環境の改善・整備】\nより安全なスポーツ環境を探求します。現存する環境の概念にとらわれず、会津大学で学んでいるコンピュータ技術を駆使し、スポーツ環境の改善・整備を検討していきます。\n研究室に興味のある学生は、面談を行いますので連絡をください（ka-oki@u-aizu.ac,jp）。",
+        "prerequisites": "",
+        "room_number": "248H",
+        "student_field": []
+    },
+    {
+        "labo_id": 54,
+        "name": "コンピュータ理工学分野からアストロバイオロジーに貢献する研究",
+        "professor": "奥平　恭子",
+        "professor_email": "okudaira@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "１　どのような研究室か？\n・コンピュータサイエンスの様々な手法を活かして、アストロバイオロジー（宇宙生物学）の研究を進めています。\n・JAXA等の宇宙ミッションへの参画。近年は、国際宇宙ステーション（ISS）上で実施してきた日本初のアストロバイオロジー実験「たんぽぽ計画」シリーズに「たんぽぽ１」から参加しています。ISS軌道上の宇宙の塵などを特殊な捕獲材（シリカエアロゲル）で捕集し、地上で複数の研究チーム（宇宙由来の有機物、地球由来の微生物、宇宙ゴミ、等）が分析を行います。試料は分析により失われたり破壊されたりするので、それらの画像や各種試料データを丁寧に取得・管理しておくことも大事なタスクです。また、作業や解析の効率化のためのソフトウェア開発などにも会津大は協力してきました。\n　参考サイト：\n　https://ja.tanpopo.space/#projects（手が回っていません・・・）\n　https://arcspace.jp/tanpopo1/index_ja.html\n　https://arcspace.jp/tanpopo2/index.html\n\n・希望があれば、JAXAや多数の研究機関メンバーで構成される定例会議へのリモート出席なども可能（月に一回のペースで、基本的には土曜日の午後にZoomでやっています）。\n\n２　研究テーマ例：\n（これまでの一例）\n・「たんぽぽ１」で捕集された固体微粒子による貫入孔画像（微粒子が捕獲材に飛び込んでできた孔の、深さ方向に連続した光学顕微鏡画像）に関する様々な研究\n　- 画像処理や機械学習による貫入孔形状タイプの自動分類方法の開発・評価\n　- モルフォロジー演算を用いた貫入孔画像に対する形状推定と体積計算・評価\n・たんぽぽ計画の試料データベースの設計・構築\n・画像解析・機械学習等による、火星上での細胞（生菌・死菌）候補の識別方法の開発・評価（「火星生命顕微鏡」ワーキンググループへの参画）\nなど\n\n（これから求めているもの）\n・「たんぽぽ計画」で捕集された微小試料データベースの改良や、機能追加を行う\n・画像処理技術を駆使して、古い地上模擬実験の動画・静止画の画質を上げ、解析を行う。また、それらをアーカイブ、データベース化して理学研究を行う\n・宇宙塵試料画像等を用いたデータサイエンスの推進（地上模擬実験データ・NASA等の類似ミッションの試料データ・「たんぽぽ計画」の試料データ　など）\n・今後は国際宇宙ステーションにとどまらず、月近傍や、より遠方の空間や天体が研究の場となる予定。そのための基礎研究を行う（宇宙飛行士が簡単に行き来できないため、船内で簡便にできる解析方法の検討・確立や、地上に送られてくる画像等のデータでいかに成果を出すかが求められる）\n\n３　配属希望の学生さんに期待することなど\n・研究テーマの強制はしません（相談して決めます）。理学寄りの研究を行なってきたため、コンピュータサイエンスで何か得意な事がある学生さんも大歓迎です！\n・複数人の教員による共同指導体制をとっているので、ゼミなどで多方面からの助言・指導が受けられます。教員もすべてに知識があるわけではないので、他の教員や先輩方に積極的に相談・質問ができる学生さんを歓迎します。また、そういう学生さんが伸びていく印象があります。（ひとりでコツコツやるのが好き、という人もOK。ただし行き詰まったら、抱え込まず、遠慮せず、教員や先輩に相談を！）\n（・色々大変なご時世ですが、院進学を希望する学生さんや、女子学生さんにもっと活躍してほしいなぁ、とひそかに期待しています）\n\n４　連絡先等\n・メールアドレス：okudaira@u-aizu.ac.jp（個人）に、alps@u-aizu.ac.jp（教員グループのメーリングリスト）をccしてください。\n　メールのタイトルは「面談希望」とし、学籍番号、氏名、面談希望日時（できれば複数の候補があるとありがたいです）の他、奥平研究室に興味があると簡単に書いてください。まだぼんやりとしたイメージでもよいので、やりたいテーマがある方はそれも書いてください。\n・居室：研究棟3階　364室（ただし、足の踏み場がないため、面談はどこかの教室で行います）\n居室（研究室番号）は364室に変わりました。147室ではありませんので、ご注意ください。",
+        "prerequisites": "",
+        "room_number": "364",
+        "student_field": [
+            "IT-SPR、IT-CMV、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 55,
+        "name": "脳機能を使う自動走行の研究",
+        "professor": "奥山　祐市",
+        "professor_email": "okuyama@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "最近は人工知能やDeep learning (深層学習)を使ったアルゴリズムが話題になっていて、コンピュータが人間が作成したような画像や文章を作り出すサービスが出始めています。これらのアルゴリズムは人間の脳の機能を真似て作られたおり、いままでのプログラミングではできなかった、人間の「学習」と「直感」を表現することができます。最先端の研究では、人間の脳の「化学反応」を真似ることにより、もっと効率的に処理できること明らかになってきました。\n\nこの研究では、既存の深層学習(DNN)や新しいスパイキングニューラルネットワーク(SNN)を使って４輪車の自動運転の制御を行い、実際に動かして評価をする研究です。自動運転などの制御を行う数式はすでに知られています。また、任意の数式をSNNで実行できることも知られています。まずは、そのふたつの事実を使い、自動制御する数式をSNNに変換して、コントローラを作ります。作成後は４輪車のシミュレータできちんと動作するかどうかを確かめてから、実際に走行するように調整します。\n\nその後は、「学習」と「直感」を組み込みます。例えば、4輪車で走ることに関しては、普通の人間の脳ある程度学習できますが、凍結路面での草稿やドリフト走行などは、その運転に相当慣れた人でないと学習できません。凍結路面での走行やドリフト走行をDNNやSNNで作った脳に学習させて、危険な路面での運転を今よりも安全で効率的に行うことを目指していきます。\n\n\n過去に学生と４輪車やドローンについて書いた関連する論文のリンクを挙げておきますので、参考にしてください。\n\nhttps://ieeexplore.ieee.org/document/9962236\nhttps://ieeexplore.ieee.org/document/10008447\nhttps://ieeexplore.ieee.org/document/10008453\nhttps://ieeexplore.ieee.org/document/9691982\nhttp://ieeexplore.ieee.org/document/4594791/\nhttp://ieeexplore.ieee.org/document/6736318/",
+        "prerequisites": "",
+        "room_number": "202C",
+        "student_field": [
+            "SY、CS、IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 56,
+        "name": "1. ビックデータとDeep Learningの応用",
+        "professor": "白　寅天",
+        "professor_email": "paikic@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "本研究室では、色んなDeep Learning (DL) Architectures,Multi-Layered Perceptron Network, Convolutional Neural Network, Recurrent Neural Network, Reinforcement Learning, Transformer, BERT, GPT-n などを利用して、文書の分類、言語のパッタンの判断、チャットボットなどを構成して来た。\nまた、続いて、このDLを利用して色んな応用を研究する。\n研究対象として、今までの文書の分類、Onotologyの生成、知能的なチャットボット、自然言語翻訳、Medical Healthcareなどの深層研究、また、状況認識などに応用する予定。",
+        "prerequisites": "",
+        "room_number": "307C",
+        "student_field": [
+            "CS、CN、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 57,
+        "name": "機械学習と計算知能に関す研究",
+        "professor": "裴　岩",
+        "professor_email": "peiyan@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "1新しい進化計算アルゴリズムの開発\nDevelopment of novel evolutionary computation algorithm\n新しい進化計算アルゴリズムの開発である．カオスのエルゴード性に基づく新しい進化計算を提案する．この考えは，カオスシステムのエルゴード特性を進化計算に組み合わせることから得られたものである．\nThis research direction is developing new EC algorithms. We propose a new EC algorithm based on chaotic ergodicity. This idea is inspired by ergodicity of chaotic systems to combine with EC.\n\n2進化計算のためのアルゴリズミックメカニズム設計理論の構築\nEstablishing theoretical fundamental of algorithmic mechanism design for evolutionary computation\nメカニズムデザイン（制度設計）とは，一言で言えば，複数の人間/エージェ ントがなんらかの社会的決定（商品・サービスの売買や政策決定など）をする 場合に, ある望ましい結果（例えば社会的な効率性／最適性）をもたらすよう な相互作用のルールを設計することです． 各エージェント（消費者や自治体住民など）は利己的であり， ルールを守ることは期待できま せん．このような状況で，ルールを守ることが各エージェントの利益となり，そ の結果，社会的に望ましい結果が得られるように，ルールを設計することが要 求されます．メカニズムデザインはミクロ経済学／ゲーム理論の一分野として研 究が行われており，近年，人工知能／エージェントの分野でも活発な研究が行 われています．\n\n3主成分分析と判別分析の理論的枠組み\nTheoretical framework of principle component analysis and discriminate analysis in machine learning \n判別分析は、事前に与えられているデータが異なるグループに分かれることが明らかな場合、新しいデータが得られた際に、どちらのグループに入るのかを判別するための基準（判別関数）を得るための手法。\n成分分析は、直交回転を用いて変数間に相関がある元の観測値を、相関の無い主成分とよばれる値に変換するための数学的な手続きのことである\n\n4カーネル法のアルゴリズムおよび応用に関する研究\nStudy on Kernel method algorithm and application\nカーネル法はパターン認識において使われる手法の一つで、 判別などのアルゴリズムに組み合わせて利用するものです。よく知られているのは、サポートベクターマシンと組み合わせて利用する方法です。\n\n5深層学習の理論とアルゴリズムに関する研究\nStudy on theory and algorithm of deep learning\n深層学習は英語ではDeep Learning です。深層学習の特徴の数段の組み合わせを考慮することでより複雑な現象を学習します ，神経網回路(ニューラル・ネットワーク)の層を重ねることで学習することが殆どです，人間の脳の仕組みに似ています 。とにかく，様々な認識タスクで大幅に良い精度を示 しており，Google, Facebook, Microsoft,…など多くの企 業が研究開発をしています。\n学生は条件が合えば基本的に歓迎します．研究テーマは計算知能と機械学習に関連した内容が多いです．私の業績で最近５年間を見ていただければ，大体のテーマ分野がお分かりいただけます．考慮する条件は，指導学生総数，研究テーマ，研究資質です．電話，電子メール，場合によっては直接面談で事前に問い合わせてください。\n研究室のYoutubeです\nhttps://www.youtube.com/channel/UCfKyBixHLi31VOiZwsNUTHA",
+        "prerequisites": "",
+        "room_number": "102C",
+        "student_field": [
+            "CS、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 58,
+        "name": "Network Infrastructure, Security and Protocol Design for the future Internet from the Space.",
+        "professor": "ファン　トゥアン アン",
+        "professor_email": "pham@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "We are looking for 2-3 students working on following two topics related to the network infrastructure and protocol design for the future Internet, in particular the satellite-based Internet, such as SpaceX Starlink.\n\n1. Laser communication link for satellite-based Internet. Especially, we focus on the design of communication technology for the connectivity between satellite and UAVs and between UAVs. In addition, we also work on the link layer protocol design to guarantee the reliable connections from the satellite to end-users.\n2. New transport protocol design for satellite-based Internet. As TCP is the most popular transport layer protocol on the Internet, how it works in the new environment when the Internet is provided from the space is an interesting question. In addition, how we could modify it to adapt effectively with that environment and to maintain a highspeed connectivity is still an open question.\n3. Novel method for secured key distribution from satellite. We are working on novel Quantum key distribution protocol, which would help to distribute secret keys to users from space.\n\nApplicants are expected to have at least B grade in all networking-related courses. In addition, good programming skills and communicative level of English are also required. You can visit the lab website: https://www.u-aizu.ac.jp/labs/ce-cc/ OR to request for an appointment with professor to have a discussion on possible topic (email: pham, office: 306C)",
+        "prerequisites": "See project description",
+        "room_number": "306C",
+        "student_field": [
+            "CN"
+        ]
+    },
+    {
+        "labo_id": 59,
+        "name": "Developing A Big Data Analytical Framework To Store, Process, and Analyze Traffic Congestion Data of Fukushima Prefecture (Joint Collaboration of University of Tokyo, the University of Hokkaido, and NICT, Japan)",
+        "professor": "ラゲ　ウダイ キラン",
+        "professor_email": "udayrage@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "Modelling traffic congestion in smart cities is a challenging problem of great concern in many real-world applications. To confront this problem, JApan Road Transport Information Center (JARTIC) has setup a nation-wide sensor work to measure traffic congestion. The data generated by this sensor work is very large and difficult to store and process in conventional database systems. To address this problem, we have purchased the traffic congestion from JARTIC.\n\nIn this thesis, students will explore Big Data Analytical Frameworks (e.g., Cassandra, Hbase, Spark, and MongoDB) and develop a framework to store traffic congestion data. In addition, students will develop knowledge discovery techniques  to extract useful information from the traffic data.\n\nRoles of each student:\n\n1) Development of Big Data Framework (Hadoop, Spark, Cassandra, HBase, and MongoDB)\n\n2) Development of Data Mining techniques for knowledge extraction\n\n3) Development of Machine Learning techniques to predict traffic congestion in Big Data\nThe students, who work well towards GT-thesis, will be given the chance to do summer internships at the University of Tokyo and NICT.\n\nThe students must be good at Python and SQL.",
+        "prerequisites": "",
+        "room_number": "145A",
+        "student_field": [
+            "CS、IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 60,
+        "name": "Computer modeling of the heart and electrocardiograms (ECG)",
+        "professor": "リズィー　マキシム",
+        "professor_email": "m-ryzhii@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "心臓と心電図 (ECG) のコンピューター モデリング\nWork with a mathematical model and software (MATLAB /Simulink) to simulate and analyze electrical signals in the heart, including electrocardiogram (ECG). The model represents the conduction system of the heart as a set of coupled differential equations. We use nonlinear equations representing natural cardiac pacemakers, and other types of quiescent excitable equations for muscles. We are working on the development of software and electronic hardware device emulator of heart operation.\nhttps://ieeexplore.ieee.org/document/8466837/\nhttps://ieeexplore.ieee.org/document/8621149/\nhttps://ieeexplore.ieee.org/document/7758102/\nhttps://ieeexplore.ieee.org/document/9158159/\nhttps://ieeexplore.ieee.org/document/9669353/\nhttps://ieeexplore.ieee.org/document/9344249/\nhttps://journals.plos.org/plosone/article?id=10.1371/journal.pone.0257935\nhttps://www.frontiersin.org/articles/10.3389/fphys.2023.1126648/full",
+        "prerequisites": "",
+        "room_number": "226C",
+        "student_field": [
+            "CS、SY、IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 61,
+        "name": "AIやIoTによる獣害対策支援",
+        "professor": "齋藤　寛",
+        "professor_email": "hiroshis@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "【背景】\n全国的にクマ、イノシシ、シカ、サルなどといった害獣による被害（人身被害、食害）が増えている中、人口減少社会にある日本では、住民や自治体による対策が今以上に困難になることが予想されます。そのため、AIやIoTを活用した獣害対策が徐々に増えていくと思われます。\n\n【目的】\nこの研究では、AIを用いて害獣（クマやイノシシ）を自動検出し、近くにいる人に警報することで危険を知らせると共に、メールにて関係者に周知するシステムを開発しています。AIモデルは、PyTorchで作り、Raspberry Pi (4やZero 2）で運用しています。\n\n【内容】\n本テーマでは、以下のどれかを行っていきます。\n・機能分散による装置の小型化\n　装置1台で全て行おうとすると装置が大きくなると共にコストも増えてしまいます。センシングや撮影、AI処理、警報機能を分けることで、こうした課題を解決していきます。なお、それぞれの接続にはWi-Fiを用います。\n・パンチルトズームカメラを用いた野生動物の自動追跡\n　動物がどの方向に移動したかを知ることで、対策も立てやすくなるし、住民の方も注意することが可能です。カメラが上下左右に移動したり、ズームすることができるパンチルトズームカメラと多物体追跡手法で動物の追跡を行っていきます。\n・小さな被写体に対するAIの検出精度向上\n　被写体が小さいと、物体検出が困難になります。これは、情報量が少ないからです。遠くに小さく写った動物をできるだけ精度よく検出するための取り組みを行っていきます。\n・追い払い機能の強化\n　音や光だけでなく、超音波やにおいなど他の手段で追い払いができないかを取り組んでいきます。\n\nどのテーマかは、希望を聞いた上で調整するつもりです。なお、それぞれのテーマで、自分の研究成果を実際の現場で試すといったフィールドワーク（実証実験）が伴います。\n\n【得られる知識やスキル】\n・ラズベリーパイの使い方\n・AIモデルの作り方\n・IoTシステムの作り方と運用の仕方\nAIとIoTを組み合わせて何かを作ってみたい、地域課題に取り組んでみたいといった方にお勧めなテーマです。",
+        "prerequisites": "",
+        "room_number": "206C",
+        "student_field": [
+            "SY"
+        ]
+    },
+    {
+        "labo_id": 62,
+        "name": "メソスケール気象に関する研究",
+        "professor": "三瓶　岳昭",
+        "professor_email": "sampe@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "計算機上での数値実験か、予測システムの精度検証などを考えている。\n並列計算機の老朽化に伴い、場合によっては内容を変更する可能性あり。",
+        "prerequisites": "",
+        "room_number": "224-C",
+        "student_field": [
+            "CS"
+        ]
+    },
+    {
+        "labo_id": 63,
+        "name": "Cloud Services Management for Real-time Industrial Digital Applications",
+        "professor": "サクセナ　ディーピカー",
+        "professor_email": "deepika@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "Digital applications like Google Workspace, E-commerce websites, and digital healthcare records are revolutionizing industries, making things like online banking, healthcare, and working from home easier. They rely on the internet and cloud technology to work well, which helps us stay connected and productive, especially during crises like the COVID-19 pandemic. However, they face challenges like handling lots of data quickly and being reliable. To solve these challenges, we will develop AI-based solutions for improving cloud resource optimization and virtual machine management to support these digital applications in real time. This proposal includes three tasks:\n\nTask 1: Develop and implement advanced Deep learning algorithms for improving digital application data analytics and prediction. We will use a real-world electronic healthcare web-access dataset or commercial website access dataset for the evaluation of the same.  (Capacity: One student)\n\n\nTask 2: Develop energy and resource-efficient optimization algorithms for cloud-based real-time processing of digital applications. We will implement a multi-objective optimization algorithm such as Multi-agent Deep Reinforcement learning-based optimization. We will use Google Cluster VM datasets or Microsoft Azure VMs datasets for experiment and evaluation (Capacity: One student)\n\n\nTask 3: Develop a mechanism for estimation of the criticality of different digital applications using use graph-based centrality measures, and assign a suitable fault-tolerance policy during real-time data processing to improve the reliability of real-time digital application processing. We will use Google Cluster VM datasets or Microsoft Azure VMs datasets for experiment and evaluation (Capacity: Two student)\nPre-requisites: Applicants should know coding in Python\n\n\nOffice Number: 303-B\nEmail:  13deepikasaxena@gmail.com, deepika@u-aizu.ac.jp\nGoogle Scholar link: https://scholar.google.com/citations?user=NajK_n8AAAAJ&hl=en",
+        "prerequisites": "",
+        "room_number": "303B",
+        "student_field": [
+            "CS"
+        ]
+    },
+    {
+        "labo_id": 64,
+        "name": "Human Activity Analysis and Recognition using Machine Learning and AI Techniques",
+        "professor": "愼 重弼",
+        "professor_email": "jpshin@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "機械学習とAI技術を使用した人間の行動の分析と認識\n1. Development of Non-touch HCI Interface using Machine Learning\n(機械学習・深層学習を用いた非接触HCIインターフェースの開発)\nWe develop a non-touch interface that enables interaction with computers and robots in situations where hygiene control is strict, such as in medical settings, or where the risk of viral infections, such as COVID-19, needs to be reduced.\n医療現場や衛生管理が厳重な場面や、コロナ感染症などのウイルス感染リスクを抑える必要がある場面での、コンピュータやロボットへのインタラクションを可能とするための非接触型インターフェースの開発を行う。カメラやセンサーから人間の動的ジェスチャーや動作パターンを機械学習、深層学習モデルによって認識し、動作パターンに応じた命令・操作を可能とするシステムを開発するのが目的である。\n\n2. Disease Diagnosis using Handwriting, Dynamic Gesture and Biological Sensor\n(手書き文字や動的ジェスチャー、生体センサーからの自動疾患診断)\nDiagnosis based on subjective assessment can often lead to misdiagnosis. Especially in the medical field, the risk of misdiagnosis must be minimized because the results of diagnosis can affect medical intervention and aftercare for patients. Therefore, the goal of this project is to develop a system that can identify differences between healthy and patients using various sensor technologies and perform a quantitative evaluation using machine learning and deep learning.\n主観的な評価による診断は、しばしは誤診を招く可能性がある。特に医療分野は、診断結果によって患者への医療介入やアフターケアに影響するため、誤診のリスクを最小限にする必要がある。そこで、さまざまなセンサー技術を用いて健常者と疾患者との違いを特定し、機械学習・深層学習による定量的な評価を行えるシステムの開発を目的とする。また、高い信頼性がある評価指数を生成するためアルゴリズムの開発手法を確立する。現在は神経疾患に関する分野に取り組んでいる。\n\n3. Daily Activity Recognition using 2D/3D Camera and Biological Sensor\n(２D/３Dカメラや生体センサーによる日常生活の行動認識)\nDevelop systems to improve our quality of life (QOL) using computer and sensor technologies that have come to exist around us. Recognize daily activities and exercise activities from biometric sensors such as smartwatches and visual information from surveillance cameras, etc., and analyze the data to reduce health risks in an aging society, such as support for health, detection of physical abnormalities due to illness, and prediction of falls by elderly people.\n身の回りに存在するようになったコンピュータやセンサー技術を用いて、私たちの生活の質（QOL）を向上させるためのシステム開発を行う。 スマートウォッチなどの生体センサーや、見守りカメラなどの視覚情報から日常生活での行動と運動活動の認識し、健康のためのサポートや病気による身体の異常検知、お年寄りの転落予測など、高齢化社会での健康リスクを減らすためにデータを分析する。さらに、監視カメラを用いて異常検知（犯罪行為や火災など）を瞬時に検出できるシステムの開発も行う。\n\n4. User Authentication using Motion, Gesture Pattern and Handwriting\n（動作パターン、ジェスチャと手書き文字を用いたユーザー認証）\nUser authentication has become a key security element enabling a wide range of applications for higher security and safety requirements.　We develop human behavior-based new user identification algorithms that are robust and cannot be reproduced by others if the event of security-related information leakage occurs. We will build a system based on gestures and handwriting using hand movements (accelerometers and gyroscopes), smartwatches and cameras, pen tablets, and wearable sensors.\nユーザー認証は、より高いセキュリティと安全性の要件のために幅広いアプリケーションを可能にする重要なセキュリティ要素になっている。　私たちは人間行動の面から、セキュリティに関する情報漏洩が生じた場合でも、他人による再現が不可能で堅牢な新しいユーザー識別アルゴリズムを開発する。手の動き（加速度計とジャイロスコープ）、スマートウォッチとカメラ、ペンタブレットとウェアラブルセンサーを使用したジェスチャーと手書き文字に基づくシステムを構築する。\n \n下のURLから面談の予約をお願いします。\n\nhttps://forms.gle/K59UAoRziSgQuxkw7\n\nもしくは、メールでの予約も可能です。\n\n意欲的かつ自ら進んで研究に取り組む学生を募集します。また、大学院進学希望者を優先します。\n不明な点があれば、jpshin@u-aizu.ac.jpへ連絡をお願いします。\n\nhttp://www.u-aizu.ac.jp/labs/is-pp/pplab/",
+        "prerequisites": "",
+        "room_number": "302A",
+        "student_field": [
+            "CS、IT-SPR、IT-CMV、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 65,
+        "name": "AI-Driven Approaches for Achieving Security and Fairness in Cyber Space",
+        "professor": "蘇　春華",
+        "professor_email": "chsu@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "This research topic explores the intersection of artificial intelligence (AI) techniques in the fields of cybersecurity and fairness. It aims to investigate how AI-driven solutions can simultaneously enhance cybersecurity measures while ensuring fairness and equity in their deployment. The primary focus of this research is to analyze the trade-offs between cybersecurity and fairness, as well as identifying innovative ways to mitigate biases and vulnerabilities that may arise in AI-powered security systems.\n\nKey components of this research may include:\n\n1. AI-Enabled Threat Detection: Investigating how AI algorithms can be used to detect and respond to cyber threats more effectively and efficiently than traditional methods.\n2. Fairness in AI Security: Examining how AI models used in cybersecurity can be designed to avoid biases in their decision-making processes, especially in threat identification and user access control.\n3. Ethical Considerations: Addressing ethical issues and potential dilemmas when deploying AI-based security measures, such as ensuring transparency, accountability, and avoiding discriminatory practices.\n4. Trade-offs Analysis: Quantifying the trade-offs between security effectiveness and fairness in AI-driven cybersecurity solutions, and developing methods to strike a balance between these objectives.\n5. Case Studies: Analyzing real-world case studies where AI has been implemented in cybersecurity contexts, highlighting success stories, challenges, and lessons learned.\n6. User Experience: Investigating how fairness and security measures impact the user experience, and finding ways to ensure that security systems do not discriminate against certain user groups.\n7. Regulatory Compliance: Assessing the alignment of AI-based cybersecurity solutions with existing and emerging regulations and standards related to both cybersecurity and fairness in AI.\n8. Bias Mitigation Strategies: Developing and evaluating strategies and techniques to mitigate bias in AI models used for security, with a focus on ensuring fairness across different demographics.\nThis research topic is timely and critical given the increasing reliance on AI in cybersecurity and the growing awareness of the importance of fairness and equity in AI systems across various domains. It addresses the need to strike a balance between robust security and ethical considerations in an increasingly interconnected and AI-driven world.",
+        "prerequisites": "",
+        "room_number": "347A",
+        "student_field": [
+            "CS、CN、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 66,
+        "name": "関数型リアクティブプログラミングのSLAM, FPGAへの応用",
+        "professor": "鈴木　大郎",
+        "professor_email": "taro@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "ここ最近、リアクティブプログラミングが注目を集めています。リアクティブプログラミングとは、時間の進行に伴って変化する外部からの信号やイベントの発生などに応じた処理を安全に行うことを目的として提案されたプログラミング手法です。\n　リアクティブプログラミングは、もともと関数型言語Haskell上に実装された言語とともに発表されました。関数型言語を用いると、リアクティブプログラミングを宣言的に記述でき、より安全性が高めることができるようになります。現在では、Haskellで実装され、Haskellベースのプログラミングを提供する関数型リアクティブプログラミング(FRP)のための言語がいくつか存在します。また、近年ではSodiumと呼ばれる関数リアクティブプログラミング言語も出てきて、C++, Javaのような身近な言語でも、関数リアクティブプログラミングに基づいたプログラムが作成できるようになってきています。これまでに、ゲーム、ロボットの制御、アニメーションなどで、簡便なプログラミングが可能であることが確かめられています。\n　本研究では、FRPの特徴を生かして、近年自動運転やロボットの自立走行のための技術として研究が進んでいるSLAMの実装と、FRPにより実装されたプログラムのFPGAへの移植に関する研究を行います。SLAMとは、自律的に移動可能なロボットや自動運転車などが自分の位置と周囲の地図作成を同時に行うための技術で、その重要度が近年高まっています。リアルタイム性が要求されるため、SLAMを高速に実行できることが重要です。そのためには、ボトルネックとなる処理を特定して、それをFPGAのようなプログラミング可能なハードウェアに移植することが有効です。\n　SLAMのどこがボトルネックとなるかをあらかじめ知ることはできません。高速なSLAMの効率的な開発のためには、SLAMの実行によって特定された処理を速やかにFPGAに移植する必要があります。しかし、通常のプログラミング言語ではハードウェアとの乖離が大きいため、FPGAへの移植が困難です。いっぽうFRPは、非同期に実行される、依存関係に基づくネットワークでプログラムのモデルを記述するので、ハードウェアとFRPの実行モデルが近いという特徴があります。この特徴を利用すれば、FRPで記述されたSLAMのプログラムを比較的簡単にFPGAに移植できることが期待されます。\n　本研究では、SLAMのアーキテクチャを解析することで、そのプログラムをFRPでモデル化する方法について研究し、そのモデルに基づいてFPRによりプログラムを実装します。また、そのプログラムをFPGAに移植する方法を研究します。\n　FRPは関数型言語の考え方に基づいているので、プログラムが仕様通りに正しく動くことの検証を等式推論をはじめとする数学的な証明で行えるようになるという利点もあります。FRPにより実装されたSLAMの振る舞いに関する性質やプログラムの正しさを、数学的に検証することが他の言語により開発されたプログラムよりも簡単になることが期待できます。このため、数学や論理に興味がある人は、大学院でプログラムの検証を支援する研究へと進むこともできます。\n関数型言語の考え方に基づくプログラミングを学ぶと，これまでに授業で習ったプログラミング言語を使うときとはまったく異なるプログラミングを体験できます．プログラミングやプログラミング言語について深く学びたいという人は特に向いていると思います。また、プログラムの正しさの検証に興味がある人にもお勧めします。",
+        "prerequisites": "",
+        "room_number": "346B",
+        "student_field": [
+            "CS、SY、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 67,
+        "name": "不揮発ロジックLSIとそのエッジAI応用に関する研究",
+        "professor": "鈴木　大輔",
+        "professor_email": "daisuke@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "大規模集積回路 (LSI: Large System Integration)はパソコンやスマートフォンを始めとする様々な機器の頭脳として重要な役割をはたしております。\n\n特に近年、電力供給の限られた小型の機器において高度な画像認識などを行ういわゆる\"エッジAI\"へのニーズが高まっています。\n\nこのようなエッジAIではバッテリーなどの限られた電力でいかに効率よく処理を行うかが求められています。一方で，揮発(電源を切ると情報が消えてしまうこと)記憶に基づく従来のでは何もしていなくても、待機電力という無駄な電力を消費し続けてしまいます。\n\nそこで本研究室では「不揮発」記憶、すなわち電源を切っても情報を保持することができ、何もしていない時は電源を切ることで待機電力を完全にカットできる特徴を持った新たなロジックLSIの実現、およびそのエッジAI応用について研究を行っています。\n\n具体的には以下の「アルゴリズム」，「アーキテクチャ」，「自動設計フロー」，「回路技術」の4つテーマに主眼を置き，研究を進めたいと考えています\n\n以下に具体的な研究テーマの例を示します。\n\n①不揮発エッジAI向けアルゴリズムの検討\nAIアルゴリズムの典型例であるConvolutional Neural Network (CNN)は高い認識精度を誇り，近年活発に研究が進められています。一方でCNNの演算を直接エッジ側で処理するには大きな計算負荷がかかってしまいます。\n\nそこで認識精度を維持しつつ1つのデータに必要な情報量を減らすことで計算負荷を減らそうという取り組みがなされています。また不揮発の特徴を最大限に活かすには、いかに空き時間を確保し電源供給を停止するかも重要な要素です。こういった不揮発ならではアルゴリズムについても併せて検討を行って言います。\n\n②不揮発エッジAIハードウェアの設計\n本テーマでは実際にエッジAIの処理を行うためのハードウェア構成について検討を行います。Cのプログラムと同様、ハードウェアも上手に設計しないと，面積や処理時間，電力が無駄になってしまいます。特に本研究では不揮発ロジックという新たな考え方での設計思想必要となり、そこが難しさでもあり楽しさともなります。\n\n\n③不揮発集積回路エミュレータ\n上述のように不揮発メモリ素子を用いた集積回路は高い低消費電力性を持つもの、気軽にすぐ作れるものではありません。そこで試作に先駆けた仮想的なハードウェア、すなわちエミュレータを作ることも重要です。本テーマでは不揮発メモリを記憶機能を持つ論理回路、すなわち順序回路とみなすことでFPGAなどの既存ハードウェアを用いてエミュレータの実装を行います。\n\n④不揮発エッジAIハードウェアのためのロジック回路技術\nLSIは多数のロジック回路から構成されています。したがってロジックの高性能化がエッジAIプロセッサの性能向上の要となります。そこで本研究テーマでは，不揮発記憶を機能を有する「不揮発デバイス」を活用した，新たなロジック回路について研究を行います。その一例として，不揮発デバイスとトランジスタ双方の特長を組み合わせることで記憶と演算をコンパクトに一体化する「ロジックインメモリ回路技術」が挙げられます。このロジックインメモリ回路技術を活用することで，例えばFPGAの構成要素である Lookup Table (LUT)回路の面積が7割も削減できることが示されています。こういった知見を元にエッジAIプロセッサ構成要素を作っていくのが本テーマの目的です。\n\n本研究室では特にField-Programmable Gate (FPGA)という、ユーザーが機能をプログラム可能なハードウェアを用いた実機テストに主眼を置いて研究を行っています。\n[その他備考]\n1. 大学院進学希望者を優先します。\n2. 研究室HP(https://u-aizu.ac.jp/~daisuke/)でも研究内容の紹介をする予定です。\n3. 具体的なテーマについては面談を重ねながら決めていきます。\n4. 面談は受け付けます，事前にメールでご連絡ください",
+        "prerequisites": "",
+        "room_number": "202B",
+        "student_field": [
+            "SY"
+        ]
+    },
+    {
+        "labo_id": 68,
+        "name": "多変量データ可視化のための視覚解析",
+        "professor": "高橋　成雄",
+        "professor_email": "shigeo@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "Visual Analytics of Multivariate Data\n多変量データ可視化のための視覚解析\nVisual Analytics of Multivariate Data\n\n多変量データを効果的に可視化するためのアルゴリズムを，散布図の拡張やネットワーク表現を用いて定式化します．具体的な研究テーマは以下の通り．\n* 多変量ネットワーク可視化のためのアルゴリズムの定式化\n* 高次元ベクトルデータの次元削減による可視化と検索技術\n* 実空間とデータ空間の双方向マッピングによる特徴追跡(空間線量マップの視覚的分析を含む)\n* 複数の目的関数間のトレードオフを探索するための選択的最適化\n\nThe objective of this theme is to formulate algorithms for effectively visualizing multivariate data using sophisticated scatterplots and network representations. Specific research topics include:\n* Formulating algorithms for multivariate network visualization\n* Visualization and retrieval techniques via dimensionality reduction of high-dimensional vector data\n* Feature tracking via bidirectional mapping between real and data space (including visual analysis of air dose maps)\n* Selective optimization for exploring tradeoffs between multiple objective functions\nウェブ・ページもご参照ください．\nRefer to the following web pages for example research topics:\nhttp://web-int.u-aizu.ac.jp/~shigeo/research/tvs/\nhttp://web-int.u-aizu.ac.jp/~shigeo/research/manifold/\nhttp://web-int.u-aizu.ac.jp/~shigeo/research/cpc/\nhttp://web-int.u-aizu.ac.jp/~shigeo/research/explore/\nhttp://web-int.u-aizu.ac.jp/~shigeo/research/voronoi/",
+        "prerequisites": "",
+        "room_number": "323-Ａ",
+        "student_field": [
+            "CS、IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 69,
+        "name": "信頼される画像認識AIの実現",
+        "professor": "富岡　洋一",
+        "professor_email": "ytomioka@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "近年、より少ない計算量でより高い画像認識精度を達成するディープニューラルネットワーク(DNN)モデルの開発が進んでおり、DNNに基づく画像認識AIを幅広いアプリケーションで活用していくことが期待されています。しかし、現在の画像認識ＡＩには信頼性の観点からいくつかの課題があります。\n①インフラ・医療などのミッションクリティカルシステム、宇宙などの過酷な環境で運用される人工衛星では、AI故障が人命に関わる深刻な誤動作や大きな損害に至る可能性があるため、AIシステムに故障が発生した場合も正しく動作を継続できることが必要不可欠です。しかし、既存の耐故障化技術では計算コスト、面積、消費電力が増加する問題があります。\n②人のすぐ近くで活動するロボット、自動運転や事故時の安全装置などのシステムでは処理の遅れが人命に関わるため、厳格に定められた期限（ハードデッドライン）内に認識処理を完了する必要があります。しかし、既存のAIモデル、アクセラレータは電力効率や演算性能を向上することを目的としており、平均的には短時間の推論を実現できるが、デッドラインまでに処理を完了することを保証できません。\n　我々の研究室のミッションは、高精度・耐故障・ハードリアルタイムを同時に達成する信頼できる画像認識AI技術、アクセラレータを確立し、安心・安全・便利な社会の実現に貢献することです。\n\n　また、AIは入力されたテキストに応じて、本物のような高精細かつ自然な画像を生成することができるようになっています。このような技術を画像の編集や動画の作成に活用することが期待されていますが、被写体の一貫性を保った編集に課題があります。このような技術は画像の改ざんを容易にするため、改ざんされていない画像と改ざん後の画像を見分けることも重要です。我々の研究室では、AIを用いた画像の編集の高度化と改ざんの検出にも取り組んでいます。\n\n1. 卒論テーマ説明資料 (再配布禁止) / Explanatory materials of GT thesis research (Not for redistribution) [閲覧期限: 2023/11/30]\nhttps://uaizuacjp-my.sharepoint.com/:b:/g/personal/ytomioka_o365_u-aizu_ac_jp/EWLZDtHo22tIu0q7sRcTUg0BYpRCF_yenDlf6RRsR30jfA?e=gFmWo4\n*******************************************************\n資料閲覧パスワード: haizoku\n*******************************************************\n\n卒論研究テーマ / GT Research Theme\n① 信頼できるAIモデルの実現（壊れにくい・制限時間を守るAI）\n② ハードリアルタイムAIアクセラレータ\n③ 人物の一貫性を保った画像編集及び真正性証明技術\n※　早期配属学生が１名いるため募集人数は３名です。\n※　希望しないテーマを無理やり割り当てることはありません。\n\n2. 面談日程候補 / Candidates of interview dates\nhttps://docs.google.com/spreadsheets/d/1k7-Jr03z-WbuvW4EizAZwjoBrAsdWVeZ46VIAGNGsaA/edit?usp=sharing\n\n3. 面談申し込み / Interview request\nPlease reserve an interview date at the following link. / 以下のリンクから面談日を予約してください。\nhttps://forms.gle/6mwkMxuhkFjZhNvW8\n\n4. 応募テーマの選択（複数可）\n研究室配属を希望する場合は、学務システム (CAMPUSSQUARE)からの登録に加えて、以下のリンクから希望の研究テーマを選んでください。\nhttps://forms.gle/ATn8JGkLAKJBs9tZA\n　大学院進学希望の方をある程度優先しますが、そうでない方も歓迎です。コアタイムは設けていませんが、自分のペースで良いので、わからないことは聞いたり調べたりしながら、時間をかけて勉強と研究に取り組める熱意と責任感のある人を特に歓迎します。",
+        "prerequisites": "",
+        "room_number": "222-C",
+        "student_field": [
+            "SY、IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 70,
+        "name": "Big Data for Society 5.0",
+        "professor": "チョオン　コン タン",
+        "professor_email": "thang@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "Big data means the huge amount of data collected from social networks, smart cameras, autonomous cars, drones, robots, etc. Currently, we focus on the following topics.\n\n- AI & Deep learning: you will study new methods to represent, recognize, classify the big data\n\n- Searching big data: given a text/image request, you will try to find data items (image/video), which are most similar to the request\n\n- Augmented/virtual reality (AR, VR): you will enhance the human life with information extracted from big data. Here, the data will be mixed into our life by AR/VR.  \nhttp://web-ext.u-aizu.ac.jp/~thang/research.html",
+        "prerequisites": "",
+        "room_number": "306B",
+        "student_field": [
+            "CS、SY、CN、IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 71,
+        "name": "How to create Random numbers",
+        "professor": "土屋　貴裕",
+        "professor_email": "tsuchiya@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "プログラムのライブラリーに実装されている乱数は真の意味でランダムではなく、擬似乱数を用いています。いくつか代表的なものについて勉強をしてもらい、理解を深めてます。次に計算機を使って、定量的に実験を行い、その精度と特性などを解析して纏めてもらいます。\n以下の卒検生の論文が参考になるので必ずみてください。Probability and Random numbers, Yui OSAWA s1210088\nエントリーされる方は面談の際に「乱数がどうして重要なのか」を問うので自分なりの解答を準備ください。",
+        "prerequisites": "",
+        "room_number": "203A",
+        "student_field": [
+            "CS"
+        ]
+    },
+    {
+        "labo_id": 72,
+        "name": "Complexity of Puzzles and Games",
+        "professor": "ヴィリエッタ　ジョヴァンニ",
+        "professor_email": "vigliett@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "The mathematical study of puzzles and (video) games is a research topic that is garnering considerable attention from theoretical computer scientists and mathematicians. From a game designer's perspective, proving that a game is computationally hard is often indicative that it is fun and challenging for human players. On the other hand, general efficient algorithms for solving puzzles and games have significant applications in robotics, motion planning, tile self-assembly, and more.\n\nIn this project, you will acquire powerful techniques currently employed by computer scientists to mathematically analyze puzzles and games. You will also apply these techniques to study a game or puzzle of your choice.\nReferences:\nhttp://courses.csail.mit.edu/6.892/spring19/lectures/L11.html\nhttps://giovanniviglietta.com/slides/nintendo.pdf\nhttps://giovanniviglietta.com/slides/cyclic2.pdf\nhttps://giovanniviglietta.com/slides/push.pdf",
+        "prerequisites": "",
+        "room_number": "303A",
+        "student_field": [
+            "CS"
+        ]
+    },
+    {
+        "labo_id": 73,
+        "name": "Spatial Sound",
+        "professor": "ヴィジェガス オロズコ　ジュリアン アルベルト",
+        "professor_email": "julian@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "In an age of information overload, where vision is saturated with data from daily gadgets, we seek to utilize spatial (3D) sound through loudspeakers or headphones to convey vital information. Our interests lie in spatial data compression, auditory display personalization, and the development of multi-sensory interfaces. By enriching human experiences with audio interactions, we strive to push the boundaries of human-machine communication.",
+        "prerequisites": "",
+        "room_number": "327-C",
+        "student_field": [
+            "IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 74,
+        "name": "真贋を調べる",
+        "professor": "渡部　繁",
+        "professor_email": "sigeru-w@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "川端康成の晩年の作品にはゴーストライターがいたと言われています。\nこの卒論では、文章の癖を数値化し、それを統計的手法を使って解析\nすることで、その文章は誰が書いたものか、を調べます。",
+        "prerequisites": "",
+        "room_number": "203D",
+        "student_field": [
+            "CS"
+        ]
+    },
+    {
+        "labo_id": 75,
+        "name": "計算機科学基礎",
+        "professor": "渡邊　曜大",
+        "professor_email": "yodai@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "計算機科学の基礎およびこれに関連した分野で，各自が興味をもった研究テーマに取り組みます．研究テーマを決めるにあたって，基礎学力をつけるために，まず暗号について学びます．\n暗号は，電子情報を扱うさまざまなサービスにおける安全性確保のための基盤となる重要な技術です．同時に暗号は，例えば整数論のような実用からもっとも遠いと考えられてきた純粋数学における知見を活かすことのできる，理論の立場からも大変興味深い研究対象です．実際に，基礎研究と応用研究の垣根が小さく，理論的な研究成果がそのまま特許技術として実用化されることもあり得ます．\n配属後は，研究室ミーティングに参加することにより，基本的な知識や上級生の取り組んでいる研究について学びます．その後，各自が興味をもった研究テーマに取り組みます．\n\n=== これまでの卒業論文の研究テーマの例 ===\n- 暗号 -\n視覚復号型秘密分散法，聴覚復号型秘密分散法\n- 数論アルゴリズム -\nAKS素数判定法，楕円曲線法による素因数分解\n- アルゴリズム情報理論 -\n圧縮アルゴリズムを用いたデータの類似度解析（画像，音声，ゲノム，電子ファイル）\n- 確率推論 -\n誤り訂正符号の復号アルゴリズム，変分ベイズ法によるプロ野球データ解析\n- その他 -\n画質評価指標，アルゴリズミック・デザイン，複雑ネットワーク（囲碁・将棋の棋譜，ダーツ'01ゲームのスコア，野球の配球），絶対音感の精度，入試問題の最適な難易度，等\n\n暗号に興味のある人は，「情報セキュリティ（暗号技術）」の講義資料・関連資料を参照してください．資料・関連資料は以下のアドレスから参照できます．\nhttps://web-int.u-aizu.ac.jp/~yodai/course/IS/welcome.html\nhttps://web-int.u-aizu.ac.jp/~yodai/research/ss/ss.html\n自分が面白いと思える研究に主体的に取り組みたいと考えている意欲ある学生を歓迎します．\n研究室や配属に関する質問は随時受け付けていますので，yodai@ まで連絡して下さい．配属希望者は，(1)志望動機と取り組みたい研究，(2)得意分野（学業や研究に関係しないことでも可），(3)大学院進学希望の有無（早期入学を検討している場合はその旨），を yodai@ まで連絡して下さい．大学院進学希望者を優先して受け入れます",
+        "prerequisites": "",
+        "room_number": "347C",
+        "student_field": [
+            "CS、IT-SPR、IT-CMV、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 76,
+        "name": "自由テーマ",
+        "professor": "渡部　有隆",
+        "professor_email": "yutaka@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "Free Theme\n新規性や実装能力を考慮したうえで、学生さんが自ら提案・企画・開発を行うプロジェクトを推進します。ただし、単なるアプリケーション開発ではなく、理論を検証するための実装を歓迎します。\n\n\n特に、下記の項目に関連するテーマを歓迎します。\n- LLM (大規模言語モデル)\n- データサイエンス\n- データ構造とアルゴリズム\n- スマートラーニング\n- プログラミング言語\n- オンラインジャッジシステム\n- ソフトウェア工学\n- ロボット\n- etc.\n\nWe can promote projects which are initiated by students who have strong motivation and implementation skills. Note that implementation that tests theories are welcome, not just application development. The following topics are encouraged:\n- LLM (Large Language Model)\n- Data Science\n- Data Structures and Algorithms\n- Smart Learning\n- Programming Languages\n- Online Judge Systems\n- Software Engineering\n- Robots\n- etc.",
+        "prerequisites": "",
+        "room_number": "142A",
+        "student_field": [
+            "CS、IT-SPR、IT-CMV、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 77,
+        "name": "Speech and Pronunciation Research",
+        "professor": "ウィルソン　イアン",
+        "professor_email": "wilson@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "In the CLR Phonetics Lab (room 268), the focus of research is on articulatory and acoustic phonetics. This year, I am looking for students who are interested in researching about pronunciation differences between Japanese, English, and Chinese. I am especially focused on something called \"articulatory setting\", which is the underlying setting of the jaw, tongue, lips, etc. for a given language. It is very much related to the rest position for speech, and it is language-specific.\n\nCLR音声学研究室（268号室）では、調音・音響音声学を中心に研究を行っています。今年は、日本語、英語、中国語の発音の違いについて研究したい学生を探しています。私が特に注目しているのは「調音設定」と呼ばれるもので、ある言語における顎、舌、唇などの基本的な設定です。これは発話のための休符の位置と非常に関係があり、言語特有のものです。\n\nStudents will collect phonetic data using microphones, video cameras, and an ultrasound machine. They will analyze the image and sound signals using a variety of software tools such as MATLAB and Praat. Students will have to write some scripts for MATLAB and Praat to help with the automation of data analysis.\n\n学生たちは、マイク、ビデオカメラ、超音波装置を使って音声データを収集する。MATLABやPraatなどのさまざまなソフトウェアツールを使って、画像や音声信号を分析する。学生は、データ解析の自動化に役立つMATLABやPraat用のスクリプトをいくつか作成する。\n\nPlease see our bilingual website for more details: http://clrlab1.u-aizu.ac.jp/index_j.html\n\n詳細はバイリンガル・ウェブサイト（http://clrlab1.u-aizu.ac.jp/index_j.html）をご覧ください。",
+        "prerequisites": "",
+        "room_number": "271",
+        "student_field": [
+            "IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 78,
+        "name": "AIを用いた無人航空機管制、特に戦略的・戦術的競合解決システムの考察: UAS Traffic Management System, Especially Strategic and Tactical Conflict Management System using AI",
+        "professor": "矢口　勇一",
+        "professor_email": "yaguchi@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "ChatGPTなど、大規模言語モデルによって構築されたAIを用いることによって、ロボットのタスク管理などが可能となる研究が近年出始めている。これを用いることによって、UASの航空交通管制システムの大規模化を目指す。特に、戦略的競合解決として、航路の予約管理に対する経路解決のアドバイス、また、戦術的競合解決として、有人機の航空管制と同様に、AIがリアルタイムに状況を考えて航空機に回避指示を出すといった考察・研究を行う。\n\nResearch has emerged recently on using AI built on large-scale language models, such as ChatGPT, to enable robot task management. Using this technology, we aim to develop a large-scale air traffic control system for UAS. In particular, we will consider and research route resolution advice for route reservation management as strategic and tactical conflict resolution. In the same way as air traffic control for manned aircraft, AI will consider the situation in real-time and issue avoidance instructions to aircraft.\n本研究は、科研費における研究と共に、ISO TC20/SC16への情報提示として重要な研究である。世界的に貢献したい、システムを組みたいという人にお勧めします。",
+        "prerequisites": "",
+        "room_number": "322C",
+        "student_field": [
+            "IT-SPR、IT-CMV、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 79,
+        "name": "極限環境に適用可能なロボット技術・観測技術、データ解析に関する研究",
+        "professor": "山田　竜平",
+        "professor_email": "ryamada@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "Researches of robotic and observational techniques applicable to extreme environments and data analysis obtained in the environments\n〇災害地域や事故現場、極域、活火山、海底、月惑星などのいわゆる極限環境で活用できるロボット技術の研究開発を行い、災害対応ロボット、惑星探査ロボット、または産業用・サービスロボットへの応用を目指します。\n（キーワード) 3次元地図生成(SLAM)、自律移動、遠隔通信、ロボットクラウド\n　(Keywords) 3-D map construction (SLAM), Autonomous navigation, Teleoperation, Robotic cloud\n\n〇極限環境で利用できる観測技術（地震計、カメラ撮像、LIDAR等）の開発や、観測手法や観測機器の運搬技術（ローバー、ドローン、ペネトレータ）の検討、及び関連するデータ解析等を行い、新しい観測技術・観測手法、解析技術を世の中に展開する事を目指します。\n（キーワード）地震計、カメラ、LIDAR、ローバー、ドローン、ペネトレータ、画像処理、3次元点群処理\n　(Keywords) Seismometer, Camera, LIDAR, Rover, Drone, Penetrator, Image processing, 3-D point cloud data\n\n〇国内外の月惑星探査で得られた観測データ解析を行い、月惑星の成り立ちや進化に関する新しい科学的知見を得ることや、月惑星探査における観測手法・性能の評価検証を行う事を目指します。主に、惑星（月・火星）地震データ、はやぶさ2の小惑星探査データ、月火星ローバーの画像データが研究対象になります。\n（キーワード）月惑星科学、月火星地震、はやぶさ２、ローバー画像解析\n　(Keywords)Lunar and planetary science, Lunar and Mars quake data, Hayabusa2, Images taken by planetary rover  \n\n※研究内容の詳細を知りたい学生さんは(ryamada@u-aizu.ac.jp)にご連絡ください。\n南相馬市にある福島ロボットテストフィールド(RTF)に常駐しているため、遠隔による指導と月1～2回程度の直接指導を織り交ぜて行うことになります。福島RTFの施設を使った実習や、研究テーマによっては、RTF施設を使った実験も行ってもらう予定です。",
+        "prerequisites": "",
+        "room_number": "322-A",
+        "student_field": [
+            "IT-SPR、IT-CMV"
+        ]
+    },
+    {
+        "labo_id": 80,
+        "name": "コンピュータで探る自然や社会のふしぎ",
+        "professor": "山上　雅之",
+        "professor_email": "yamagami@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "＜卒論テーマの紹介＞\n（説明会の資料）\nhttp://web-int.u-aizu.ac.jp/~yamagami/gt-yamagami.pdf\n\n自然や社会科学などからテーマを選び、\n数理モデルやシミュレーションの基礎を学びます。\nコンピュータを用いた謎解きに興味がある学生を歓迎します。\n\n３年生ではPythonなどのプログラミング言語の基礎を学び、\nシミュレーションの実習を行います。\n\n今年度は機械学習の初歩と、自然科学への応用についての\n研究室ゼミを行っています。\n\n＜研究室ゼミのテキスト＞\n[今年度]\n「これならわかる機械学習入門 (ＫＳ物理専門書)」\n富谷昭夫 (著) 講談社\n\n[昨年度]\n「Pythonコンピュータシミュレーション入門\n人文・自然・社会科学の数理モデル」\n橋本洋志, 牧野浩二  (著)　オーム社\n＜補足＞\n本研究では、大学１、２年の授業で学んだ\n数学やプログラミングなどの知識を用います",
+        "prerequisites": "",
+        "room_number": "204J",
+        "student_field": [
+            "CS"
+        ]
+    },
+    {
+        "labo_id": 81,
+        "name": "User Modeling and Mining based on User-Generated Contents",
+        "professor": "イエン　ニール ユーウェン",
+        "professor_email": "neilyyen@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "Students who are interested in user modelling, data mining and analysis, and statistics analysis are welcome to join this research theme. This theme especially concentrates on:\n\n1) Design of web crawler for universal data collection from online systems related to tourism;\n2) Design of learning algorithms for finding hidden pattern from the collected data set;\n3) Design of user model to comprehensively understand the thinking pattern, and action pattern as well, of users with different criteria and make prediction; and\n4) Fundamental database design and mining algorithms design to achieve the above mentioned tasks.\n\nThe abilities to conduct independent research, programming skills, and language are required.\nStudents who are interested in the topics above are welcome to drop a message to neilyyen@u-aizu.ac.jp for individual interview.",
+        "prerequisites": "See project description",
+        "room_number": "347B",
+        "student_field": [
+            "CS、SY、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 82,
+        "name": "知識体験を生み出す人とコンピュータの協働環境の研究",
+        "professor": "吉岡　廉太郎",
+        "professor_email": "rentaro@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "私達の日常に関わるさまざまな活動が自動化されつつあります。そのことで生活は便利になりますが、人は活動を行う過程で知識が向上するとも言われています。コンピュータによって活動が効率化すること、人ができないことができるようになることは大切ですが、大事なのはその結果だけではなく、その活動を人も体験として得られることが大事です。本研究では、このような“知識体験”に着目し、より効果的な人間とコンピュータの協働環境を実現するための研究を行います。ソフトウェアの画面に表示されたボタンを押すと結果だけが表示されるというのは、良くない知識体験といえます。人が、何を、なぜ、どのようにしたいのかをコンピュータに伝え、結果としてコンピュータが、何が、どうして、どうなったのかを人に伝えられることを良い知識体験と考えます。このような知識体験を実現することで、安心・安全で信頼できる協働環境を構築することを目指します。特にそのようなソフトウェアやシステムの設計方法と、それを誰もが実施できるようにする手法を開発します。\n\n具体的なテーマの例：\n1. 主観的情報を直感的に入力するためのユーザーインタフェースの開発\n2. センサーによる鑑賞体験の計測\n3. 組織知の可視化法と知識の入力と編集手法\n4. 知識創造を促すユーザーインタフェースの評価手法\n\nこれらのテーマは、外部機関と共同して実施する次のシステム開発の一部として取り組んでいます。\n・美術館・博物館のための観賞体験の収集・分析システム\n・中高生のためのオンライン学習システム\n独自の概念にもとづくテーマで、その成果は情報化社会における人の価値を高めるものです。デザイン思考やサービスデザインに興味あり、企業が参加する開発プロジェクトや研究に挑戦したい人を募集しています。",
+        "prerequisites": "",
+        "room_number": "145C",
+        "student_field": [
+            "CS、IT-SPR、IT-CMV、SE-DE"
+        ]
+    },
+    {
+        "labo_id": 83,
+        "name": "高齢者見守り用センサーユニット試作",
+        "professor": "趙　強福",
+        "professor_email": "qf-zhao@u-aizu.ac.jp",
+        "research_field": "",
+        "description": "プライバシー配慮型センサーユニットに関連するハードウェア（HW）とソフトウエア（SW)の開発に関する研究。\n　- HW関連：\n　　３Dプリンターを利用した外観の改善；\n　　小型マイコンを利用したセンサデータ処理・伝送モジュールの改善\n　- SW関連：\n　　センサデータ解析方法の改善\n　　センサデータ表示方法の改善\n２年後に退職するため、大学院に進学したい学生はご遠慮ください。\nモノづくりに興味がある学生が大歓迎です。",
+        "prerequisites": "",
+        "room_number": "102A",
+        "student_field": [
+            "CS、IT-SPR、IT-CMV"
+        ]
+    }
+]

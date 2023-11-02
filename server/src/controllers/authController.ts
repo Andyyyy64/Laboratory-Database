@@ -11,7 +11,7 @@ type UserType = {
   student_id: string;
   email: string;
   password: string;
-  grage: number;
+  grade: number;
   field_of_interest: string;
   labo_id: number;
   is_verified: boolean;
@@ -53,7 +53,7 @@ export const loginUser = async (req: Request, res: Response) => {
     }
 
     const user: UserType = await db.get(
-      "SELECT * FROM users WHERE email = $1",
+      "SELECT id, email, grade, labo_id, student_id, created_at, is_verified, password FROM users WHERE email = $1",
       [email]
     );
 
@@ -61,8 +61,10 @@ export const loginUser = async (req: Request, res: Response) => {
       console.log("ユーザーが見つかりませんでした。" + email);
       return res.status(400).send("ユーザーが見つかりませんでした。");
     }
-    
-    if(!user.is_verified) {
+
+    if (!user.is_verified) {
+      console.log(user.is_verified)
+
       return res.status(400).send("メールアドレスが認証されていません。");
     }
 
@@ -78,21 +80,24 @@ export const loginUser = async (req: Request, res: Response) => {
         id: user.id,
         email: user.email,
         student_id: user.student_id,
-        grade: user.grage,
+        grade: user.grade,
         labo_id: user.labo_id,
         interest: user.field_of_interest,
+        created_at: user.created_at,
       },
       secretKey,
       { expiresIn: "1w" }
     );
 
     res.cookie("token", token, {
+      domain: "http://localhost:5173/",
       httpOnly: true,
-      secure: true,
+      secure: false,
+      sameSite: "none",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
     console.log("ログイン成功" + user.email + " " + token);
-    res.status(200).send("ログイン成功");
+    res.json({ message: "ログイン成功", token: token });
   } catch (err) {
     console.log(err);
     res.status(500).send("Internal Server Error");

@@ -12,7 +12,7 @@ const app: express.Express = express();
 const PORT = Number(process.env.PORT) || 3000;
 
 app.use(cors({
-    origin: "*", // allow to server to accept request from different origin
+    origin: "http://localhost:5173", // allow to server to accept request from different origin
     credentials: true, // allow session cookie from browser to pass through
     optionsSuccessStatus: 200
 }))

@@ -1,9 +1,54 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
+
+import { getme } from "../api/user"
+
+import CircularProgress from '@mui/material/CircularProgress';
+
+import { Header } from "../components/Home/Header"
+import { DisplayLabo } from "../components/Home/DisplayLabo";
+import { Footer } from "../components/Home/Footer";
+
+type UserType = {
+    id: number;
+    student_id: string;
+    email: string;
+    grade: number;
+    field_of_interest: string;
+    labo_id: number;
+    created_at?: Date;
+};
+
+
 
 export const Home: React.FC = () => {
+    const [user, setUser] = useState<UserType>();
+
+    useEffect(() => {
+        const fetchUser = async () => {
+            try {
+                const res = await getme();
+                console.log(res.user);
+                setUser(res.user);
+            } catch (err) {
+                console.log(err);
+                alert(err);
+            }
+        }
+        fetchUser();
+    }, [])
+
+
+    if (!user) {
+        return <CircularProgress sx={{ textAlign: "center" }} />
+    }
 
     return (
         <>
+            <div className=" bg-white h-screen w-screen">
+                <Header />
+                <DisplayLabo />
+                <Footer />
+            </div>
         </>
     )
 }
