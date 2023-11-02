@@ -37,8 +37,8 @@ export const getLabosByStudentField = async (req: Request, res: Response) => {
   const { student_field } = req.params;
   try {
     const labos = await db.all(
-      "SELECT * FROM labos WHERE CONCAT(',', student_field, ',') ILIKE $1",
-      [`%,${student_field},%`]
+      "SELECT * FROM labos WHERE $1 = ANY(student_field)",
+      [student_field]
     );
 
     if (labos && labos.length > 0) {

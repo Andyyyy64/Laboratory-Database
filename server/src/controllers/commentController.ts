@@ -5,6 +5,7 @@ type CommnetType = {
     id: number;
     labo_id: number;
     user_id: number;
+    student_id: string;
     comment: string;
     timestamp: Date;
 }
@@ -12,11 +13,12 @@ type CommnetType = {
 export const addComment = async (req: Request, res: Response) => {
     const { labo_id, user_id, comment } = req.body;
     try {
+        const user = await db.get("SELECT student_id FROM users WHERE id = $1", [user_id]);
+
         const newComment = await db.run(
-            "INSERT INTO comments (labo_id, user_id, comment) VALUES ($1, $2, $3)",
-            [labo_id, user_id, comment]
+            "INSERT INTO comments (labo_id, user_id, comment, student_id) VALUES ($1, $2, $3,$4)",
+            [labo_id, user_id, comment, user.student_id]
         );
-        console.log(newComment)
         res.json({ message: "コメントを投稿しました" });
     } catch (err) {
         console.log(err);
@@ -43,7 +45,7 @@ export const getComments = async (req: Request, res: Response) => {
 export const deleteComment = async (req: Request, res: Response) => {
     const { comment_id } = req.params;
     try {
-        const comment = await db.run("DELETE FROM comments WHERE id = $1", [comment_id]);
+        await db.run("DELETE FROM comments WHERE id = $1", [comment_id]);
         res.json({ message: "コメントを削除しました" });
     } catch (err) {
         console.log(err);

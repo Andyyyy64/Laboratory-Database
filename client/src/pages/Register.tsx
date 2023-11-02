@@ -9,7 +9,7 @@ export const Register: React.FC = () => {
     const [pwd, setPwd] = useState<string>("");
     const [grade, setGrade] = useState<number>();
     const [field_of_interest, setField_of_interest] = useState<string>("");
-    const [labo_id, setLabo_id] = useState<number>();
+    const [labo_id, setLabo_id] = useState<number | null>();
     const { loading, startLoading, stopLoading } = useLoading();
     const navi = useNavigate();
 
@@ -17,8 +17,10 @@ export const Register: React.FC = () => {
         e.preventDefault();
         startLoading();
         try {
-            const res = await register(email, pwd, grade ?? 0, field_of_interest, labo_id ?? 9);
-            localStorage.setItem("email", email);
+            const res = await register(email, pwd, grade ?? 0, field_of_interest, labo_id ?? null);
+            if (localStorage.getItem("email") == null) {
+                localStorage.setItem("email", email);
+            }
             console.log(res);
             alert("認証コードをemailに送りました。認証をお願いします");
             stopLoading();
@@ -39,9 +41,9 @@ export const Register: React.FC = () => {
                     <input className="m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg" type="password" placeholder="Password" value={pwd} onChange={e => setPwd(e.target.value as string)} /><br />
                     <input className="m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg" type="grade" placeholder="grade" value={grade} onChange={e => setGrade(Number(e.target.value))} /><br />
                     {
-                        grade != undefined && grade >= 3 ? (
+                        grade != null && grade != undefined && grade >= 3 ? (
                             <>
-                                <input className="m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg" type="labo_id" placeholder="labo" value={labo_id} onChange={e => setLabo_id(Number(e.target.value))} /><br />
+                                <input className="m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg" type="number" placeholder="labo" value={labo_id ?? undefined} onChange={e => setLabo_id(Number(e.target.value))} /><br />
                             </>
                         ) : <></>
 

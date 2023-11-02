@@ -16,27 +16,10 @@ export const Login: React.FC = () => {
     try {
       const res = await login(email ?? "", pwd ?? ""); // loginAPIをたたく
       console.log(res);
-
-      // ログインで取得できたユーザーの基本情報をlocalstorageに入れる
-
-      /*
-      localStorage.setItem("user_id", res.user.id);
-      localStorage.setItem("grade", res.user.grade);
-      localStorage.setItem("email", res.user.email);
-      if (res.user.labo_id != null) {
-        localStorage.setItem("labo_id", res.user.labo_id);
-      }
-      if (res.user.field_of_interest != null) {
-        localStorage.setItem("field_of_interest", res.user.field_of_interest);
-      }
-      localStorage.setItem("created_at", res.user.created_at);
-      */
-
       localStorage.setItem("token", res.token);
       stopLoading();
       navi("/"); // ログインが成功したらhomeにリダイレクト
     } catch (err: any) {
-      console.log(err);
       alert(err.response.data);
       stopLoading();
     }
@@ -58,6 +41,7 @@ export const Login: React.FC = () => {
             }
           </form>
           {
+            // adminにアカウント削除されるとローカルストレージに情報残ってる限りCreate account 表示されないジャン　これがBANです、か。
             localStorage.getItem('email') == null ? (
               <>
                 <h3 className="p-6 bg-cyan-500 shadow-lg">Don't have an account?</h3>

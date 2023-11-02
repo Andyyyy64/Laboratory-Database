@@ -29,8 +29,9 @@ export const verifyUser = async (req: Request, res: Response) => {
       "SELECT * FROM users WHERE email = $1 AND verification_code = $2",
       [email, verificationCode]
     );
+    console.log(user)
     if (!user) {
-      return res.status(400).send("認証コードが間違っています。");
+      return res.status(400).json({ message: "認証コードが間違っています。" });
     }
 
     await db.run("UPDATE users SET is_verified = true WHERE email = $1", [

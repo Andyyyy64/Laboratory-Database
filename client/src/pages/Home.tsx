@@ -8,6 +8,7 @@ import { Header } from "../components/Home/Header"
 import { DisplayLabo } from "../components/Home/DisplayLabo";
 import { Footer } from "../components/Home/Footer";
 
+
 type UserType = {
     id: number;
     student_id: string;
@@ -27,8 +28,17 @@ export const Home: React.FC = () => {
         const fetchUser = async () => {
             try {
                 const res = await getme();
-                console.log(res.user);
                 setUser(res.user);
+                localStorage.setItem("user_id", res.user.id);
+                localStorage.setItem("grade", res.user.grade);
+                localStorage.setItem("email", res.user.email);
+                if (res.user.labo_id != null) {
+                    localStorage.setItem("labo_id", res.user.labo_id);
+                }
+                if (res.user.field_of_interest != null) {
+                    localStorage.setItem("field_of_interest", res.user.field_of_interest);
+                }
+                localStorage.setItem("created_at", res.user.created_at);
             } catch (err) {
                 console.log(err);
                 alert(err);
@@ -47,7 +57,6 @@ export const Home: React.FC = () => {
             <div className=" bg-white h-screen w-screen">
                 <Header />
                 <DisplayLabo />
-                <Footer />
             </div>
         </>
     )
