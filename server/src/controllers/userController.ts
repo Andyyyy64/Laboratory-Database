@@ -42,18 +42,22 @@ export const registerUser = async (req: Request, res: Response) => {
     }
     const student_id = email.split("@")[0];
 
-    await db.run(
-      "INSERT INTO users (student_id, email, password, grade, field_of_interest, labo_id, verification_code) VALUES ($1, $2, $3, $4, $5, $6, $7)",
-      [
-        student_id,
-        email,
-        hashedPassword,
-        grade,
-        field_of_interest,
-        labo_id,
-        verificationCode,
-      ]
-    );
+    try {
+      await db.run(
+        "INSERT INTO users (student_id, email, password, grade, field_of_interest, labo_id, verification_code) VALUES ($1, $2, $3, $4, $5, $6, $7)",
+        [
+          student_id,
+          email,
+          hashedPassword,
+          grade,
+          field_of_interest,
+          labo_id,
+          verificationCode,
+        ]
+      );
+    } catch (err) {
+      console.log(err);
+    }
 
     const transporter = nodemailer.createTransport({
       service: "Gmail",
@@ -116,3 +120,25 @@ export const deleteUser = async (req: Request, res: Response) => {
     console.log(err);
   }
 };
+
+export const getStudentIdByUserId = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  try {
+    const student_id = await db.get("SELECT student_id FROM users WHERE id = $1", [id]);
+    console.log(student_id);
+    res.status(200).json(student_id);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export const getUserById = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  try {
+    const user = await db.get("SELECT id, student_id, email, grade, field_of_interest, labo_id, created_at, liked_labos FROM users WHERE id = $1", [id]);
+    console.log(user);
+    res.status(200).json(user);
+  } catch (err) {
+    console.log(err);
+  }
+}

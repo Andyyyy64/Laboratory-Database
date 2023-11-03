@@ -11,7 +11,7 @@ db_password = os.getenv("DB_PASSWORD")
 db_host = os.getenv("DB_HOST")
 
 # open json file
-with open('../labo_data.json', 'r') as file:
+with open('../labo_data_modified.json', 'r') as file:
     data = json.load(file)
 
 # connect to db
