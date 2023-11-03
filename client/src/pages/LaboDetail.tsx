@@ -6,8 +6,20 @@ import { LaboInfo } from "../components/Labo/LaboInfo";
 
 import { getLabosById } from "../api/labo";
 
+type LaboType = {
+    labo_id: number;
+    name: string;
+    prof: string;
+    prof_email: string;
+    description: string;
+    prerequisites: string;
+    room_number: string;
+    student_field: string[];
+    liked_number: number;
+};
+
 export const LaboDetail: React.FC = () => {
-    const [labo, setLabo] = useState<any>();
+    const [labo, setLabo] = useState<LaboType>();
     const { id } = useParams<{ id: string }>();
 
     useEffect(() => {

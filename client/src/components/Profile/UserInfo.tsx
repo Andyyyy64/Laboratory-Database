@@ -10,7 +10,7 @@ type Props = {
     created_at: Date | undefined;
 };
 
-export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_of_interest, labo_id, created_at }) => {
+export const UserInfo: React.FC<Props> = ({ student_id, email, grade, field_of_interest }) => {
 
 
     return (

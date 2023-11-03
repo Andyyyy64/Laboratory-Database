@@ -6,6 +6,10 @@ import { useLoading } from "../hooks/useLoading";
 import { register } from "../api/user"
 import { getLabosByProf, getAllProfName } from "../api/labo";
 
+type ProfType = {
+    prof: string;
+}
+
 export const Register: React.FC = () => {
     const [email, setEmail] = useState<string>("");
     const [pwd, setPwd] = useState<string>("");
@@ -21,7 +25,7 @@ export const Register: React.FC = () => {
         const fetchProfessors = async () => {
             try {
                 const res = await getAllProfName();
-                const names = res.map((profData: any) => profData.prof);
+                const names = res.map((profData: ProfType) => profData.prof);
                 setProfessors(names);
             } catch (err) {
                 console.log(err);
@@ -42,9 +46,13 @@ export const Register: React.FC = () => {
             alert("認証コードをemailに送りました。認証をお願いします");
             stopLoading();
             navi("/verify");
-        } catch (err: any) {
-            console.log(err);
-            alert(err.response.data);
+        } catch (err: unknown) {
+            if (typeof err === "object" && err !== null && "response" in err) {
+                const apiError = err as { response: { data: string } };
+                alert(apiError.response.data);
+            } else {
+                alert("An error occurred.");
+            }
             stopLoading();
         }
     }

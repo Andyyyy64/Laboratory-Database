@@ -18,8 +18,13 @@ export const Login: React.FC = () => {
       localStorage.setItem("token", res.token);
       stopLoading();
       navi("/"); // ログインが成功したらhomeにリダイレクト
-    } catch (err: any) {
-      alert(err.response.data);
+    } catch (err: unknown) {
+      if (typeof err === "object" && err !== null && "response" in err) {
+        const apiError = err as { response: { data: string } };
+        alert(apiError.response.data);
+      } else {
+        alert("An error occurred.");
+      }
       stopLoading();
     }
   }
@@ -40,7 +45,7 @@ export const Login: React.FC = () => {
             }
           </form>
           {
-            // adminにアカウント削除されるとローカルストレージに情報残ってる限りCreate account 表示されないジャン　これがBANです、か。
+            // adminにアカウント削除されるとローカルストレージに情報残ってる限りCreate account 表示されないジャン これがBANです、か。
             localStorage.getItem('email') == null ? (
               <>
                 <h3 className="p-6 bg-cyan-500 shadow-lg">Don't have an account?</h3>

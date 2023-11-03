@@ -9,7 +9,6 @@ import { CircularProgress } from "@mui/material";
 
 type LaboType = {
     labo_id: number;
-    name: string;
     prof: string;
     prof_email: string;
     description: string;
@@ -27,7 +26,11 @@ type CommnetType = {
     student_id: string;
 }
 
-export const LaboInfo: React.FC<LaboType> = ({ labo_id, name, prof, prof_email, description, prerequisites, room_number, student_field }) => {
+type LikeStatus = {
+    liked: boolean;
+}
+
+export const LaboInfo: React.FC<LaboType> = ({ labo_id, prof, prof_email, description, prerequisites, room_number, student_field }) => {
     const [comments, setComments] = useState<Array<CommnetType>>([]);
     const [comment, setComment] = useState<string>("");
     const [likedNumber, setLikedNumber] = useState<number>(0);
@@ -48,7 +51,7 @@ export const LaboInfo: React.FC<LaboType> = ({ labo_id, name, prof, prof_email, 
     useEffect(() => {
         const checkLiked = async () => {
             const userId = Number(localStorage.getItem('user_id'));
-            const existingLike: any = await getLikeStatus(userId, labo_id);
+            const existingLike: LikeStatus = await getLikeStatus(userId, labo_id);
             setIsLiked(existingLike.liked);
         }
         checkLiked();
@@ -85,7 +88,7 @@ export const LaboInfo: React.FC<LaboType> = ({ labo_id, name, prof, prof_email, 
     const handleLike = async () => {
         const userId = Number(localStorage.getItem('user_id'));
         await likedLabo(userId, labo_id);
-        const existingLike: any = await getLikeStatus(userId, labo_id);
+        const existingLike: LikeStatus = await getLikeStatus(userId, labo_id);
         setIsLiked(existingLike.liked);
 
         const updatedLikedNumber = await getLaboLikedNumber(labo_id);

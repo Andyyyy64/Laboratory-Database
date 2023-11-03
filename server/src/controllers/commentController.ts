@@ -1,21 +1,12 @@
 import { Request, Response } from "express";
 import db from "../utils/database";
 
-type CommnetType = {
-    id: number;
-    labo_id: number;
-    user_id: number;
-    student_id: string;
-    comment: string;
-    timestamp: Date;
-}
-
 export const addComment = async (req: Request, res: Response) => {
     const { labo_id, user_id, comment } = req.body;
     try {
         const user = await db.get("SELECT student_id FROM users WHERE id = $1", [user_id]);
 
-        const newComment = await db.run(
+        await db.run(
             "INSERT INTO comments (labo_id, user_id, comment, student_id) VALUES ($1, $2, $3,$4)",
             [labo_id, user_id, comment, user.student_id]
         );
@@ -57,7 +48,7 @@ export const editComment = async (req: Request, res: Response) => {
     const { comment_id } = req.params;
     const { comment } = req.body;
     try {
-        const newCommnet = await db.run("UPDATE comments SET comment = $1 WHERE id = $2", [comment, comment_id]);
+        await db.run("UPDATE comments SET comment = $1 WHERE id = $2", [comment, comment_id]);
         res.json({ message: "コメントを編集しました" });
     } catch (err) {
         console.log(err);

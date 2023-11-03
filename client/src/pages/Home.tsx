@@ -6,8 +6,6 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 import { Header } from "../components/Home/Header"
 import { DisplayLabo } from "../components/Home/DisplayLabo";
-import { Footer } from "../components/Home/Footer";
-
 
 type UserType = {
     id: number;

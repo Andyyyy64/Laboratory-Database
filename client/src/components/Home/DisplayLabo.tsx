@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { getLabos } from "../../api/labo";
-import { useLoading } from "../../hooks/useLoading";
 
 import CircularProgress from '@mui/material/CircularProgress';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
@@ -26,14 +25,12 @@ export const DisplayLabo: React.FC = () => {
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [field, setField] = useState<string>("All");
     const [searchTerm, setSearchTerm] = useState(localStorage.getItem("field_of_interest") ?? "");
-    const { loading, startLoading, stopLoading } = useLoading();
 
     const itemsPerPage = 9;
     const navi = useNavigate();
 
     useEffect(() => {
         const fetchLabo = async () => {
-            startLoading();
             try {
                 const res = await getLabos(searchTerm);
                 if (field === "All" || field === "") {
@@ -46,9 +43,7 @@ export const DisplayLabo: React.FC = () => {
                 }
             } catch (err) {
                 console.log(err);
-                stopLoading();
             }
-            stopLoading();
         }
         fetchLabo();
     }, [labo]);
