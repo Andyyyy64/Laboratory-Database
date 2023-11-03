@@ -2,8 +2,9 @@ import axios from "axios";
 
 const API_URL = "http://localhost:3000/labo";
 
-export const getLabos = async () => {
+export const getLabos = async (searchTerm: string) => {
     const res = await axios.get(`${API_URL}/get/all`, {
+        params: { searchTerm },
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         }
@@ -30,10 +31,11 @@ export const getLabosByStudentField = async (student_field: string) => {
 }
 
 export const getLabosByProf = async (prof: string) => {
-    const res = await axios.get(`${API_URL}/get/prof/${prof}`, {
-        headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-        }
-    });
+    const res = await axios.get(`${API_URL}/get/prof/${prof}`);
+    return res.data;
+}
+
+export const getAllProfName = async () => {
+    const res = await axios.get(`${API_URL}/get/all/prof`);
     return res.data;
 }

@@ -5,6 +5,7 @@ import { Home } from "./pages/Home"
 import { Register } from "./pages/Register";
 import { Verify } from "./pages/Verify";
 import { LaboDetail } from "./pages/LaboDetail";
+import { Profile } from "./pages/Profile";
 import { PrivateRoute } from "./components/PrivateRoute";
 
 
@@ -21,6 +22,7 @@ export const App: React.FC = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/verify" element={<Verify />} />
         <Route path="/labo/:id" element={<LaboDetail />} />
+        <Route path="/profile/:id" element={<Profile />} />
         <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
     </Router>

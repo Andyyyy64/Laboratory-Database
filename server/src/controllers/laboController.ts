@@ -13,9 +13,23 @@ type LaboType = {
 };
 
 export const getLabos = async (req: Request, res: Response) => {
-  const labos = await db.all("SELECT * FROM labos");
-  console.log(labos);
-  res.json(labos);
+  const searchTerm = req.query.searchTerm || "";
+    const query = `
+        SELECT * FROM labos 
+        WHERE name ILIKE $1 
+        OR prof ILIKE $1 
+        OR prof_email ILIKE $1 
+        OR description ILIKE $1 
+        OR prerequisites ILIKE $1 
+        OR room_number ILIKE $1 
+    `;
+    try {
+        const labos = await db.all(query, [`%${searchTerm}%`]);
+        res.json(labos);
+    } catch (err) {
+        console.log(err);
+        res.json({ message: "データベースエラーが発生しました" });
+    }
 }
 
 export const getLabosById = async (req: Request, res: Response) => {
@@ -60,6 +74,20 @@ export const getLabosByProf = async (req: Request, res: Response) => {
       res.json(labos);
     } else {
       res.json({ message: "指定された教授のラボは見つかりませんでした" });
+    }
+  } catch (err) {
+    console.log(err);
+    res.json({ message: "データベースエラーが発生しました" });
+  }
+}
+
+export const getAllProfName = async (req: Request, res: Response) => {
+  try {
+    const profs = await db.all("SELECT DISTINCT prof FROM labos");
+    if (profs && profs.length > 0) {
+      res.json(profs);
+    } else {
+      res.json({ message: "教授名が見つかりませんでした" });
     }
   } catch (err) {
     console.log(err);

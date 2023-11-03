@@ -15,7 +15,6 @@ export const Login: React.FC = () => {
     startLoading();
     try {
       const res = await login(email ?? "", pwd ?? ""); // loginAPIをたたく
-      console.log(res);
       localStorage.setItem("token", res.token);
       stopLoading();
       navi("/"); // ログインが成功したらhomeにリダイレクト
@@ -36,7 +35,7 @@ export const Login: React.FC = () => {
               loading ? (
                 <CircularProgress sx={{ marginLeft: "40%" }} />
               ) : (
-                <button type="submit" className="m-5 pr-28 py-3 px-4 bg-cyan-400 shadow-lg">login</button>
+                <button type="submit" className="m-5 pr-28 py-3 px-4 bg-cyan-400 shadow-lg text-black">login</button>
               )
             }
           </form>

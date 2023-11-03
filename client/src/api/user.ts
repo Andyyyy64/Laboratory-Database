@@ -15,3 +15,12 @@ export const getme = async () => {
     });
     return res.data;
 }
+
+export const getUserById = async (id: number) => {
+    const res = await axios.get(`${API_URL}/get/${id}`, {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+        }
+    });
+    return res.data;
+}
