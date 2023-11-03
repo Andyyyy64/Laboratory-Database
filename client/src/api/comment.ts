@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/comment';
+const API_URL = import.meta.env.VITE_APP_SERVER_URL;
 
 export const addComment = async (labo_id: number, user_id: number, comment: string) => {
-    const res = await axios.post(`${API_URL}/add`, { labo_id, user_id, comment }, {
+    const res = await axios.post(`${API_URL}/comment/add`, { labo_id, user_id, comment }, {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         }
@@ -12,7 +12,7 @@ export const addComment = async (labo_id: number, user_id: number, comment: stri
 }
 
 export const getComments = async (labo_id: number) => {
-    const res = await axios.get(`${API_URL}/get/${labo_id}`, {
+    const res = await axios.get(`${API_URL}/comment/get/${labo_id}`, {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         }
@@ -21,7 +21,7 @@ export const getComments = async (labo_id: number) => {
 }
 
 export const deleteComment = async (comment_id: number) => {
-    const res = await axios.delete(`${API_URL}/delete/${comment_id}`, {
+    const res = await axios.delete(`${API_URL}/comment/delete/${comment_id}`, {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         }
@@ -31,7 +31,7 @@ export const deleteComment = async (comment_id: number) => {
 }
 
 export const editComment = async (comment_id: number, comment: string) => {
-    const res = await axios.put(`${API_URL}/edit/${comment_id}`, { comment }, {
+    const res = await axios.put(`${API_URL}/comment/edit/${comment_id}`, { comment }, {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         }
