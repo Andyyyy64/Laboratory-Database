@@ -39,3 +39,30 @@ export const getAllProfName = async () => {
     const res = await axios.get(`${API_URL}/get/all/prof`);
     return res.data;
 }
+
+export const likedLabo = async (user_id: number, labo_id: number) => {
+    const res = await axios.post(`${API_URL}/like`, { user_id, labo_id }, {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+        }
+    });
+    return res.data;
+}
+
+export const getLikeStatus = async (user_id: number, labo_id: number) => {
+    const res = await axios.get(`${API_URL}/isLiked/${user_id}/${labo_id}`, {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+        }
+    });
+    return res.data;
+}
+
+export const getLaboLikedNumber = async (labo_id: number) => {
+    const res = await axios.get(`${API_URL}/like/${labo_id}`, {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+        }
+    });
+    return res.data;
+}

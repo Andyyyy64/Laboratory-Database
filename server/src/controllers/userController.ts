@@ -135,7 +135,7 @@ export const getStudentIdByUserId = async (req: Request, res: Response) => {
 export const getUserById = async (req: Request, res: Response) => {
   const { id } = req.params;
   try {
-    const user = await db.get("SELECT id, student_id, email, grade, field_of_interest, labo_id, created_at FROM users WHERE id = $1", [id]);
+    const user = await db.get("SELECT id, student_id, email, grade, field_of_interest, labo_id, created_at, liked_labos FROM users WHERE id = $1", [id]);
     console.log(user);
     res.status(200).json(user);
   } catch (err) {

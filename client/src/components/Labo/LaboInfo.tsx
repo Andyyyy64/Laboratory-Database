@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-import { getComments, addComment, editComment, deleteComment } from "../../api/comment";
+import { getComments, addComment, deleteComment } from "../../api/comment";
+import { likedLabo, getLikeStatus, getLaboLikedNumber } from "../../api/labo";
 
 import { IconButton } from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
+import { CircularProgress } from "@mui/material";
 
 type LaboType = {
     labo_id: number;
@@ -28,6 +30,8 @@ type CommnetType = {
 export const LaboInfo: React.FC<LaboType> = ({ labo_id, name, prof, prof_email, description, prerequisites, room_number, student_field }) => {
     const [comments, setComments] = useState<Array<CommnetType>>([]);
     const [comment, setComment] = useState<string>("");
+    const [likedNumber, setLikedNumber] = useState<number>(0);
+    const [isLiked, setIsLiked] = useState<boolean>(false);
 
     useEffect(() => {
         const fetchComments = async () => {
@@ -40,6 +44,23 @@ export const LaboInfo: React.FC<LaboType> = ({ labo_id, name, prof, prof_email, 
         }
         fetchComments();
     }, [comments, labo_id])
+
+    useEffect(() => {
+        const checkLiked = async () => {
+            const userId = Number(localStorage.getItem('user_id'));
+            const existingLike: any = await getLikeStatus(userId, labo_id);
+            setIsLiked(existingLike.liked);
+        }
+        checkLiked();
+    }, [labo_id]);
+
+    useEffect(() => {
+        const fetchLikedNumber = async () => {
+            const res = await getLaboLikedNumber(labo_id);
+            setLikedNumber(res.liked_number);
+        }
+        fetchLikedNumber();
+    }, [labo_id, likedNumber]);
 
     const handleAddComment = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -61,6 +82,20 @@ export const LaboInfo: React.FC<LaboType> = ({ labo_id, name, prof, prof_email, 
         }
     }
 
+    const handleLike = async () => {
+        const userId = Number(localStorage.getItem('user_id'));
+        await likedLabo(userId, labo_id);
+        const existingLike: any = await getLikeStatus(userId, labo_id);
+        setIsLiked(existingLike.liked);
+
+        const updatedLikedNumber = await getLaboLikedNumber(labo_id);
+        setLikedNumber(updatedLikedNumber.liked_number);
+    }
+    
+    if (comments.length === 0) {
+        return <CircularProgress sx={{ textAlign: "center", display: "block", margin: "0 auto" }} />
+    }
+
     return (
         <>
             <div className="bg-white px-64">
@@ -79,8 +114,14 @@ export const LaboInfo: React.FC<LaboType> = ({ labo_id, name, prof, prof_email, 
                         { }
 
                     </div>
+                    <div>
+                        <button className={`${isLiked ? ' bg-pink-400' : 'bg-blue'} text-white p-2 rounded-hull mt-3 mb-2`} onClick={() => handleLike()}>
+                            {isLiked ? 'あたなはこの研究室に興味を持っています！' : 'この研究室興味あり！'}
+                        </button>
+                        <h2 className="text-black">{likedNumber}人がこの研究室に興味を持っています!</h2>
+                    </div>
                 </div>
-                <div className="mt-8">
+                <div className="mt-4">
                     <div className="flex flex-row">
                         <div className="text-xl font-medium text-black">Comments</div>
                         {
@@ -104,12 +145,12 @@ export const LaboInfo: React.FC<LaboType> = ({ labo_id, name, prof, prof_email, 
                                 >
                                     <div className="flex-none text-lg font-medium text-black">{item.student_id}</div>
                                     <div className="grow text-black ml-5 text-lg font-bold">{item.comment}</div>
-                                    <div className="flex-none text-gray-500">{new Date(item.timestamp).toDateString()}</div>
+                                    <div className="flex-none text-gray-500 text-lg mt-1.5 mr-2">{new Date(item.timestamp).toDateString()}</div>
                                     {
                                         item.user_id === Number(localStorage.getItem('user_id')) ? (
                                             <>
                                                 <IconButton onClick={() => handleDeleteComment(item.id)} className=" text-white rounded-full">
-                                                    <DeleteIcon fontSize="small" />
+                                                    <DeleteIcon color="error"/>
                                                 </IconButton>
                                             </>
                                         ) : (<> <h3 className="bg-gray-100 ml-5 p-1 text-gray-100">ni</h3></>)

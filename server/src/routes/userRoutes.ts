@@ -4,7 +4,7 @@ import {
   updateUser,
   deleteUser,
   getStudentIdByUserId,
-  getUserById
+  getUserById,
 } from "../controllers/userController";
 import { authMiddleware } from "../middleware/authMiddleware";
 import { JwtPayload } from "jsonwebtoken";

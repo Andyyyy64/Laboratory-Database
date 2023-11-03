@@ -17,6 +17,7 @@ type UserType = {
     field_of_interest: string;
     labo_id: number;
     created_at?: Date;
+    liked_labos?: number[];
 };
 
 
@@ -37,6 +38,9 @@ export const Home: React.FC = () => {
                 }
                 if (res.user.field_of_interest != null) {
                     localStorage.setItem("field_of_interest", res.user.field_of_interest);
+                }
+                if (res.user.liked_labos != null) {
+                    localStorage.setItem("liked_labos", res.user.liked_labos);
                 }
                 localStorage.setItem("created_at", res.user.created_at);
             } catch (err) {

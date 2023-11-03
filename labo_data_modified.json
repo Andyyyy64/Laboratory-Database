@@ -12,7 +12,7 @@
   },
   {
     "labo_id": 2,
-    "name": "Adaptive Neuromorphic Prosthetic Robot Hand/適応型ニューロモーフィック義手ロボット",
+    "name": "適応型ニューロモーフィック義手ロボット",
     "professor": "ベン アブダラ　アブデラゼク",
     "professor_email": "benab@u-aizu.ac.jp",
     "research_field": "義肢、センサーとメカトロニクス、筋電リアルタイムニューロモーフィック義手",
@@ -180,7 +180,7 @@
     "name": "メディアアート、XRコンテンツ関係",
     "professor": "畠 圭佑",
     "professor_email": "hata@u-aizu.ac.jp",
-    "research_field": "メディアアート、XRコンテンツ開発",
+    "research_field": "メディアアート、XRコンテンツ開発、データサイエンス",
     "description": "自由な創作活動後、展示会出展。社会におけるデジタルコンテンツの役割やニーズを研究。",
     "prerequisites": "アーティスト思考、自発的なコンテンツ開発",
     "room_number": "UBIC",
