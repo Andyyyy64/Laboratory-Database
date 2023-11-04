@@ -13,14 +13,24 @@ type ProfType = {
 export const Register: React.FC = () => {
     const [email, setEmail] = useState<string>("");
     const [pwd, setPwd] = useState<string>("");
-    const [grade, setGrade] = useState<number>();
+    const [grade, setGrade] = useState<string>();
     const [field_of_interest, setField_of_interest] = useState<string>("");
     const [labo_id, setLabo_id] = useState<number | undefined>();
     const [professors, setProfessors] = useState<string[]>([]);
     const { loading, startLoading, stopLoading } = useLoading();
-
+    const [isFormValid, setIsFormValid] = useState<boolean>(false);
+    
     const navi = useNavigate();
 
+    useEffect(() => {
+        setIsFormValid(
+          email.trim() !== "" &&
+          pwd.trim() !== "" &&
+          grade !== undefined &&
+          !isNaN(Number(grade))
+        );
+      }, [email, pwd, grade]);
+    
     useEffect(() => {
         const fetchProfessors = async () => {
             try {
@@ -36,9 +46,13 @@ export const Register: React.FC = () => {
 
     const handleRegister = async (e: FormEvent) => {
         e.preventDefault();
+        if (!isFormValid) {
+            alert("Please fill in all fields correctly.");
+            return;
+        }
         startLoading();
         try {
-            const res = await register(email, pwd, grade ?? 0, field_of_interest, labo_id ?? null);
+            const res = await register(email, pwd, Number(grade) ?? 0, field_of_interest, labo_id ?? null);
             if (localStorage.getItem("email") == null) {
                 localStorage.setItem("email", email);
             }
@@ -73,9 +87,9 @@ export const Register: React.FC = () => {
                 <form onSubmit={handleRegister} className="pt-64 pl-8 space-y-8 absolute right-32">
                     <input className="m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg" type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value as string)} /><br />
                     <input className="m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg" type="password" placeholder="Password" value={pwd} onChange={e => setPwd(e.target.value as string)} /><br />
-                    <input className="m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg" type="text" placeholder="grade" value={grade} onChange={e => setGrade(Number(e.target.value))} /><br />
+                    <input className="m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg" type="text" placeholder="grade" value={grade} onChange={e => setGrade(e.target.value)} /><br />
                     {
-                        grade != null && grade != undefined && grade >= 3 ? (
+                        grade != null && grade != undefined && Number(grade) >= 3 ? (
                             <>
                                 <select className="m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg"
                                     onChange={e => handleProfChange(e.target.value as string)}
@@ -94,7 +108,7 @@ export const Register: React.FC = () => {
                         loading ? (
                             <CircularProgress sx={{ marginLeft: "40%" }} />
                         ) : (
-                            <button className="m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg" type="submit">register</button>
+                                <button className={`m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg ${isFormValid ? "bg-teal-200" : "bg-gray text-gray-400"}`} type="submit" disabled={!isFormValid}>register</button>
                         )
                     }
                 </form>
