@@ -136,7 +136,7 @@ export const LaboInfo: React.FC<LaboType> = ({ labo_id, prof, prof_email, descri
                     <div className="mt-4">
                         <form onSubmit={handleAddComment}>
                             <textarea className="w-full h-24 p-4 border rounded-lg" placeholder="Write your comment here..." value={comment} onChange={e => setComment(e.target.value)}></textarea>
-                            <button className="bg-blue-500 text-white p-2 rounded shadow-lg ">Add Comment</button>
+                            <button className="bg-blue-500 text-white p-2 rounded shadow-lg mb-5">Add Comment</button>
                         </form>
                     </div>
                     <div className="mt-4">
@@ -144,7 +144,7 @@ export const LaboInfo: React.FC<LaboType> = ({ labo_id, prof, prof_email, descri
                             Array.isArray(comments) &&
                             comments.map((item: CommnetType, index: number) => (
                                 <div key={index}
-                                    className={`flex bg-gray-100 p-4 rounded-lg mt-4 ${item.user_id === Number(localStorage.getItem('user_id')) ? ' border-l-8 border-l-teal-400' : ''}`}
+                                    className={`flex bg-gray-100 p-4 rounded-lg mt-4${item.user_id === Number(localStorage.getItem('user_id')) ? ' border-l-8 border-l-teal-400' : ''}`}
                                 >
                                     <div className="flex-none text-lg font-medium text-black">{item.student_id}</div>
                                     <div className="grow text-black ml-5 text-lg font-bold">{item.comment}</div>
