@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { getComments, addComment, deleteComment } from "../../api/comment";
 import { likedLabo, getLikeStatus, getLaboLikedNumber } from "../../api/labo";
+import { getUserLabo, getUserIdByStudentId } from "../../api/user";
 
 import { IconButton } from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
 import { CircularProgress } from "@mui/material";
 
-type LaboType = {
+type Props = {
     labo_id: number;
     prof: string;
     prof_email: string;
@@ -30,11 +32,17 @@ type LikeStatus = {
     liked: boolean;
 }
 
-export const LaboInfo: React.FC<LaboType> = ({ labo_id, prof, prof_email, description, prerequisites, room_number, student_field }) => {
+type UserId = {
+    id: number;
+}
+
+export const LaboInfo: React.FC<Props> = ({ labo_id, prof, prof_email, description, prerequisites, room_number, student_field }) => {
     const [comments, setComments] = useState<Array<CommnetType>>([]);
     const [comment, setComment] = useState<string>("");
     const [likedNumber, setLikedNumber] = useState<number>(0);
     const [isLiked, setIsLiked] = useState<boolean>(false);
+    const [laboUsers, setLaboUsers] = useState<Array<string>>([]);
+    const navi = useNavigate();
 
     useEffect(() => {
         const fetchComments = async () => {
@@ -56,6 +64,22 @@ export const LaboInfo: React.FC<LaboType> = ({ labo_id, prof, prof_email, descri
         }
         checkLiked();
     }, [labo_id]);
+
+    useEffect(() => {
+        const fetchLaboUsers = async () => {
+            try {
+                const res = await getUserLabo(labo_id);
+                const users: string[] = [];
+                res.forEach((user: any) => {
+                    users.push(user.student_id);
+                })
+                setLaboUsers(users);
+            } catch (err) {
+                console.log(err);
+            }
+        }
+        fetchLaboUsers();
+    }, [labo_id])
 
     useEffect(() => {
         const fetchLikedNumber = async () => {
@@ -94,7 +118,12 @@ export const LaboInfo: React.FC<LaboType> = ({ labo_id, prof, prof_email, descri
         const updatedLikedNumber = await getLaboLikedNumber(labo_id);
         setLikedNumber(updatedLikedNumber.liked_number);
     }
-    
+
+    const handleSudentIdClick = async (student_id: string) => {
+        const res: UserId = await getUserIdByStudentId(student_id);
+        navi(`/profile/${res.id}`);
+    };
+
     if (comments.length === 0) {
         return <CircularProgress sx={{ textAlign: "center", display: "block", margin: "0 auto" }} />
     }
@@ -102,7 +131,6 @@ export const LaboInfo: React.FC<LaboType> = ({ labo_id, prof, prof_email, descri
     return (
         <>
             <div className="bg-white px-64">
-
                 <div className="mt-8">
                     <div className="flex">
                         <div className="flex-none text-xl font-medium text-black">Professor</div>
@@ -113,16 +141,22 @@ export const LaboInfo: React.FC<LaboType> = ({ labo_id, prof, prof_email, descri
                     <div className="mt-4 bg-gray-100 p-4 text-black">
                         {description}<br />
                         {prerequisites && "前提条件: " + prerequisites} <br />
-                        {"オフィス: " + room_number + " / " + "フィールド: " + student_field}
-                        { }
-
+                        {"オフィス: " + room_number + " / " + "フィールド: " + student_field}<br />
+                        {
+                            laboUsers ? (
+                                <div className={`${laboUsers.length > 0 ? "" : "hidden"}`}>
+                                    <div className="border-b-slate-500 border-b-2 mt-3 mb-3"></div>
+                                    <p className="font-bold">配属生徒: {laboUsers.join(", ")}</p>
+                                </div>
+                            ) : <></>
+                        }
                     </div>
-                    <div>
-                        <button className={`${isLiked ? ' bg-pink-400' : 'bg-blue'} text-white p-2 rounded-hull mt-3 mb-2`} onClick={() => handleLike()}>
-                            {isLiked ? 'あたなはこの研究室に興味を持っています！' : 'この研究室興味あり！'}
-                        </button>
-                        <h2 className="text-black">{likedNumber}人がこの研究室に興味を持っています!</h2>
-                    </div>
+                </div>
+                <div>
+                    <button className={`${isLiked ? ' bg-pink-400' : 'bg-blue'} text-white p-2 rounded-hull mt-3 mb-2`} onClick={() => handleLike()}>
+                        {isLiked ? 'あたなはこの研究室に興味を持っています！' : 'この研究室興味あり！'}
+                    </button>
+                    <h2 className="text-black">{likedNumber}人がこの研究室に興味を持っています!</h2>
                 </div>
                 <div className="mt-4">
                     <div className="flex flex-row">
@@ -144,16 +178,16 @@ export const LaboInfo: React.FC<LaboType> = ({ labo_id, prof, prof_email, descri
                             Array.isArray(comments) &&
                             comments.map((item: CommnetType, index: number) => (
                                 <div key={index}
-                                    className={`flex bg-gray-100 p-4 rounded-lg mt-4${item.user_id === Number(localStorage.getItem('user_id')) ? ' border-l-8 border-l-teal-400' : ''}`}
+                                    className={`flex bg-gray-100 p-4 rounded-lg mt-4 ${item.user_id === Number(localStorage.getItem('user_id')) ? ' border-l-8 border-l-teal-400' : ''}`}
                                 >
-                                    <div className="flex-none text-lg font-medium text-black">{item.student_id}</div>
+                                    <div className="flex-none text-lg font-medium text-black hover:cursor-pointer" onClick={() => handleSudentIdClick(item.student_id)}>{item.student_id}</div>
                                     <div className="grow text-black ml-5 text-lg font-bold">{item.comment}</div>
                                     <div className="flex-none text-gray-500 text-lg mt-1.5 mr-2">{new Date(item.timestamp).toDateString()}</div>
                                     {
                                         item.user_id === Number(localStorage.getItem('user_id')) ? (
                                             <>
                                                 <IconButton onClick={() => handleDeleteComment(item.id)} className=" text-white rounded-full">
-                                                    <DeleteIcon color="error"/>
+                                                    <DeleteIcon color="error" />
                                                 </IconButton>
                                             </>
                                         ) : (<> <h3 className="bg-gray-100 ml-5 p-1 text-gray-100">ni</h3></>)
@@ -163,7 +197,7 @@ export const LaboInfo: React.FC<LaboType> = ({ labo_id, prof, prof_email, descri
                         }
 
                     </div>
-                    <div className="mb-16"><h1></h1></div>
+                    <div className="border-b-white border-b-2 mt-8"></div>
                 </div>
             </div>
         </>

@@ -109,7 +109,7 @@ export const getLikeStatus = async (req: Request, res: Response) => {
   const { user_id, labo_id } = req.params;
   try {
     const result = await db.get("SELECT liked_labos FROM users WHERE id = $1", [user_id]);
-    const userLikedLabos: number[] = result.liked_labos;
+    const userLikedLabos: number[] = result?.liked_labos;
     if (userLikedLabos != null && userLikedLabos.includes(parseInt(labo_id))) {
       res.json({ liked: true });
     } else {

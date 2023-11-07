@@ -24,3 +24,21 @@ export const getUserById = async (id: number) => {
     });
     return res.data;
 }
+
+export const getUserLabo = async (id: number) => {
+    const res = await axios.get(`${API_URL}/user/get/labo/${id}`, {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+        }
+    });
+    return res.data;
+}
+
+export const getUserIdByStudentId = async (student_id: string) => {
+    const res = await axios.get(`${API_URL}/user/get/id/${student_id}`, {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+        }
+    });
+    return res.data;
+}
