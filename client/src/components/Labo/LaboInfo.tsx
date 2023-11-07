@@ -36,6 +36,10 @@ type UserId = {
     id: number;
 }
 
+type studentId = {
+    student_id: string;
+}
+
 export const LaboInfo: React.FC<Props> = ({ labo_id, prof, prof_email, description, prerequisites, room_number, student_field }) => {
     const [comments, setComments] = useState<Array<CommnetType>>([]);
     const [comment, setComment] = useState<string>("");
@@ -70,7 +74,7 @@ export const LaboInfo: React.FC<Props> = ({ labo_id, prof, prof_email, descripti
             try {
                 const res = await getUserLabo(labo_id);
                 const users: string[] = [];
-                res.forEach((user: any) => {
+                res.forEach((user: studentId) => {
                     users.push(user.student_id);
                 })
                 setLaboUsers(users);

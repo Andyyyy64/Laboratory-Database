@@ -33,7 +33,7 @@ export const LaboDetail: React.FC = () => {
             }
         }
         fetchLabo();
-    }, [])
+    }, [id])
 
 
     return (
