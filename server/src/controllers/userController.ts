@@ -9,11 +9,11 @@ dotenv.config();
 const saltRounds = 10;
 
 type UserType = {
-  id: number;
-  student_id: string;
-  email: string;
-  password: string;
-  grage: number;
+  id?: number;
+  student_id?: string;
+  email?: string;
+  password?: string;
+  grage?: number;
   field_of_interest?: string;
   labo_id?: number;
   is_varified: boolean;
@@ -138,6 +138,50 @@ export const getUserById = async (req: Request, res: Response) => {
     const user = await db.get("SELECT id, student_id, email, grade, field_of_interest, labo_id, created_at, liked_labos FROM users WHERE id = $1", [id]);
     console.log(user);
     res.status(200).json(user);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export const getUserLabo = async (req: Request, res: Response) => {
+  const { labo_id } = req.params;
+  try {
+    const users = await db.all("SELECT student_id FROM users WHERE labo_id = $1", [labo_id]);
+    console.log(users);
+    res.status(200).json(users);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export const getUserIdByStudentId = async (req: Request, res: Response) => {
+  const { student_id } = req.params;
+  console.log(student_id)
+  try {
+    const user = await db.get("SELECT id FROM users WHERE student_id = $1", [student_id]);
+    console.log(user);
+    res.status(200).json(user);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export const assginLabo = async (req: Request, res: Response) => { // assign the labo
+  const { id } = req.params;
+  const { labo_id } = req.body;
+  try {
+    await db.run("UPDATE users SET labo_id = $1 WHERE id = $2", [labo_id as number, Number(id)]);
+    res.status(200).json({ message: "研究室を割り当てました。" });
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export const getAssginLabo = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  try {
+    const labo_id = await db.get("SELECT labo_id FROM users WHERE id = $1", [id]);
+    res.status(200).json(labo_id);
   } catch (err) {
     console.log(err);
   }

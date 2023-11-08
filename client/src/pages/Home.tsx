@@ -5,7 +5,7 @@ import { getme } from "../api/user"
 import CircularProgress from '@mui/material/CircularProgress';
 
 import { Header } from "../components/Home/Header"
-import { DisplayLabo } from "../components/Home/DisplayLabo";
+import { DisplayLabo } from "../components/Home/DisplayLabos";
 
 type UserType = {
     id: number;

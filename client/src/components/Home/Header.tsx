@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
                 <a href="/"><h1 className="logo">LABORATORY<br /> DATABASE</h1></a>
                 <div className="flex space-x-4">
                     <a href="/" className="zoo">TOP</a>
-                    <a onClick={() => handleProfileClick(Number(localStorage.getItem('user_id')))} className="zoo">PROFILE</a>
+                    <a onClick={() => handleProfileClick(Number(localStorage.getItem('user_id')))} className="zoo cursor-pointer">PROFILE</a>
                     {
                         localStorage.getItem("labo_id") ? (
                             <a onClick={() => handleLaboClick(Number(localStorage.getItem('labo_id')))} className=" zoo text-black font-bold cursor-pointer hover:text-blue">MYLABO</a>
