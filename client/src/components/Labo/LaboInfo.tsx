@@ -7,7 +7,6 @@ import { getUserLabo, getUserIdByStudentId } from "../../api/user";
 
 import { IconButton } from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
-import { CircularProgress } from "@mui/material";
 
 type Props = {
     labo_id: number;
@@ -127,10 +126,6 @@ export const LaboInfo: React.FC<Props> = ({ labo_id, prof, prof_email, descripti
         const res: UserId = await getUserIdByStudentId(student_id);
         navi(`/profile/${res.id}`);
     };
-
-    if (comments.length === 0) {
-        return <CircularProgress sx={{ textAlign: "center", display: "block", margin: "0 auto" }} />
-    }
 
     return (
         <>

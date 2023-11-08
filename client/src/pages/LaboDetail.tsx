@@ -6,6 +6,8 @@ import { LaboInfo } from "../components/Labo/LaboInfo";
 
 import { getLabosById } from "../api/labo";
 
+import { CircularProgress } from "@mui/material";
+
 type LaboType = {
     labo_id: number;
     name: string;
@@ -34,6 +36,17 @@ export const LaboDetail: React.FC = () => {
         }
         fetchLabo();
     }, [id])
+
+    if (!labo) { // i dont know why i implemented loading like this but it works so i'll leave it as it is
+        return (
+            <>
+                <div className="bg-white h-screen w-screen">
+                    <Header />
+                    <CircularProgress sx={{ textAlign: "center", display: "block", margin: "0 auto" }} />
+                </div>
+            </>
+        )
+    }
 
     return (
         <>

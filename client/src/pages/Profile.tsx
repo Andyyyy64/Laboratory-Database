@@ -6,6 +6,8 @@ import { getUserById } from "../api/user";
 import { Header } from "../components/Home/Header";
 import { UserInfo } from "../components/Profile/UserInfo";
 
+import { CircularProgress } from "@mui/material";
+
 type UserType = {
     id: number | undefined;
     student_id: string | undefined;
@@ -31,6 +33,18 @@ export const Profile: React.FC = () => {
         }
         fetchUser();
     })
+
+    if (!user) {
+        return (
+            <>
+                <div className="bg-white h-screen w-screen">
+                    <Header />
+                    <CircularProgress sx={{ textAlign: "center", display: "block", margin: "0 auto" }} />
+                </div>
+            </>
+        )
+    }
+
     return (
         <>
             <div className="bg-white h-screen w-screen">

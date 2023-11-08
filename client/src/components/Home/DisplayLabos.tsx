@@ -155,7 +155,7 @@ export const DisplayLabo: React.FC = () => {
         {Array.from({ length: totalPages }).map((_, index) => (
           <button
             key={index}
-            className={`mr-2 bg-black text-white ${currentPage === index + 1 ? "text-blue-800" : ""
+            className={`mr-2 bg-black text-white ${currentPage === index + 1 ? "text-teal-300" : ""
               }`}
             onClick={() => setCurrentPage(index + 1)}
           >
