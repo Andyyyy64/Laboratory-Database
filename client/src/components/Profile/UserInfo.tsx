@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { getLabosById, getAllProfName, getLabosByProf } from "../../api/labo";
-import { assginLabo } from "../../api/user";
+import { assginLabo, getAssginLabo } from "../../api/user";
 
 type Props = {
     id: number | undefined;
@@ -30,19 +30,19 @@ type ProfType = {
     prof: string;
 }
 
-export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_of_interest }) => {
+export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_of_interest, labo_id }) => {
     const [labo, setLabo] = useState<LaboType>();
     const [professors, setProfessors] = useState<string[]>([]);
-    const [modalOpen, setModalOpen] = useState<boolean>(false);
-    const [labo_id, setLabo_id] = useState<number | undefined>();
+    const [modalOpen, setModalOpen] = useState<boolean>(false); // modal for assigning labo ui
+    const [laboId, setLabo_id] = useState<number | undefined>(); // labo id for assigning labo function
+    const [isAssigned, setIsAssigned] = useState<boolean>(false); // check if user is assigned to labo
 
     const navi = useNavigate();
 
     useEffect(() => {
         const fetchLabo = async () => {
-            const id = localStorage.getItem("labo_id");
             try {
-                const res = await getLabosById(Number(id));
+                const res = await getLabosById(labo_id as number);
                 setLabo(res);
             } catch (err) {
                 console.log(err);
@@ -65,15 +65,25 @@ export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_
         fetchProfessors();
     }, []);
 
+    useEffect(() => { // check if user is assigned to labo
+        const checkAssigned = async () => {
+            const assignedLabo = await getAssginLabo(id as number);
+            if (assignedLabo != undefined) {
+                setIsAssigned(true);
+            }
+        }
+        checkAssigned();
+    }, [id]);
+
     const handleLaboClick = (labo_id: number) => {
         navi(`/labo/${labo_id}`);
     };
 
-    const handleAssignLabo = async () => {
+    const handleAssignLabo = async () => { // handle the case when user is not assigned to any labo and wants to assign labo
         const userId = Number(localStorage.getItem("id"));
         try {
-            const res = await assginLabo(userId, labo_id as number);
-            localStorage.setItem("labo_id", labo_id as unknown as string);
+            const res = await assginLabo(userId, laboId as number);
+            localStorage.setItem("labo_id", laboId as unknown as string);
             console.log(res);
             alert("配属先を設定しました");
             setModalOpen(false);
@@ -87,11 +97,11 @@ export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_
         try {
             const res = await getLabosByProf(selectedProf);
             setLabo_id(res[0].labo_id);
-            console.log(labo_id);
         } catch (err) {
             console.log(err);
         }
     }
+
 
     return (
         <>
@@ -102,8 +112,10 @@ export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_
                     <h2 className="text-black text-xl mb-5">Grade: {grade}</h2>
                     <h2 className="text-black text-xl mb-5">Student ID: {student_id}</h2>
                     {
-                        localStorage.getItem("labo_id") ? (
-                            <h2 className="text-black text-xl mb-5 cursor-pointer hover:text-blue-500" onClick={() => handleLaboClick(labo?.labo_id as number)}>Labo: {labo?.prof}</h2>
+                        isAssigned ? (
+                            <h2 className="text-black text-xl mb-5 cursor-pointer hover:text-blue-500"
+                                onClick={() => handleLaboClick(labo?.labo_id as number)}>Labo: {labo?.prof}
+                            </h2>
                         ) : (
                             <div className="flex justify-center">
                                 <h2 className="text-black text-xl mt-1.5 mr-5">配属先は今はありません</h2>

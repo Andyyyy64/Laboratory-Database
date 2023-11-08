@@ -25,8 +25,8 @@ export const getUserById = async (id: number) => {
     return res.data;
 }
 
-export const getUserLabo = async (id: number) => {
-    const res = await axios.get(`${API_URL}/user/get/labo/${id}`, {
+export const getUserLabo = async (labo_id: number) => { // get all users in the labo
+    const res = await axios.get(`${API_URL}/user/get/labo/${labo_id}`, {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         }
@@ -45,6 +45,15 @@ export const getUserIdByStudentId = async (student_id: string) => {
 
 export const assginLabo = async (id: number, labo_id: number) => {
     const res = await axios.post(`${API_URL}/user/assign/${id}`, { labo_id }, {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+    });
+    return res.data;
+}
+
+export const getAssginLabo = async (id: number) => {
+    const res = await axios.get(`${API_URL}/user/get/assign/${id}`, {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
