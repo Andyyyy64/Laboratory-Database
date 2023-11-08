@@ -165,3 +165,24 @@ export const getUserIdByStudentId = async (req: Request, res: Response) => {
     console.log(err);
   }
 }
+
+export const assginLabo = async (req: Request, res: Response) => { // assign the labo
+  const { id } = req.params;
+  const { labo_id } = req.body;
+  try {
+    await db.run("UPDATE users SET labo_id = $1 WHERE id = $2", [labo_id as number, Number(id)]);
+    res.status(200).json({ message: "研究室を割り当てました。" });
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export const getAssginLabo = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  try {
+    const labo_id = await db.get("SELECT labo_id FROM users WHERE id = $1", [id]);
+    res.status(200).json(labo_id);
+  } catch (err) {
+    console.log(err);
+  }
+}

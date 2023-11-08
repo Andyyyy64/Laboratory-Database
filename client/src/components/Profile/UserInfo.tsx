@@ -36,7 +36,6 @@ export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_
     const [modalOpen, setModalOpen] = useState<boolean>(false); // modal for assigning labo ui
     const [laboId, setLabo_id] = useState<number | undefined>(); // labo id for assigning labo function
     const [isAssigned, setIsAssigned] = useState<boolean>(false); // check if user is assigned to labo
-
     const navi = useNavigate();
 
     useEffect(() => {
@@ -50,7 +49,7 @@ export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_
             }
         }
         fetchLabo();
-    }, [localStorage.getItem("labo_id")])
+    }, [labo_id])
 
     useEffect(() => {
         const fetchProfessors = async () => {
@@ -67,8 +66,9 @@ export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_
 
     useEffect(() => { // check if user is assigned to labo
         const checkAssigned = async () => {
-            const assignedLabo = await getAssginLabo(id as number);
-            if (assignedLabo != undefined) {
+            const assignedLabo: { labo_id: number } = await getAssginLabo(id as number);
+            console.log(assignedLabo.labo_id);
+            if (assignedLabo.labo_id != null) {
                 setIsAssigned(true);
             }
         }
@@ -80,13 +80,13 @@ export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_
     };
 
     const handleAssignLabo = async () => { // handle the case when user is not assigned to any labo and wants to assign labo
-        const userId = Number(localStorage.getItem("id"));
         try {
-            const res = await assginLabo(userId, laboId as number);
+            const res = await assginLabo(Number(id), laboId as number);
             localStorage.setItem("labo_id", laboId as unknown as string);
             console.log(res);
             alert("配属先を設定しました");
             setModalOpen(false);
+            setIsAssigned(true);
         } catch (err) {
             console.log(err);
             alert(err);
