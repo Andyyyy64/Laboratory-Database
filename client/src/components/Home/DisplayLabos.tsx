@@ -116,8 +116,8 @@ export const DisplayLabo: React.FC = () => {
             </Select>
           </Tooltip>
         </div>
-        {// its seems like fetching comments is longer than fetching labos so we using laboComments[51] as a proxy to check if comments are fetched
-          laboComments[35] > 0 ? (
+        {
+          labo.length > 0 ? (
             currentItems.map((item, index) => (
               <div className="flex flex-row">
                 <div
