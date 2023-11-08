@@ -35,7 +35,8 @@ export const Profile: React.FC = () => {
         <>
             <div className="bg-white h-screen w-screen">
                 <Header />
-                <UserInfo id={user?.id}
+                <UserInfo
+                    id={user?.id}
                     email={user?.email}
                     student_id={user?.student_id}
                     grade={user?.grade}

@@ -42,3 +42,12 @@ export const getUserIdByStudentId = async (student_id: string) => {
     });
     return res.data;
 }
+
+export const assginLabo = async (id: number, labo_id: number) => {
+    const res = await axios.post(`${API_URL}/user/assign/${id}`, { labo_id }, {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+    });
+    return res.data;
+}

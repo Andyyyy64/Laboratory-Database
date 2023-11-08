@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { getLabos } from "../../api/labo";
+import { getComments } from "../../api/comment";
 
 import CircularProgress from "@mui/material/CircularProgress";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
@@ -22,12 +23,13 @@ type LaboType = {
 
 export const DisplayLabo: React.FC = () => {
   const [labo, setLabo] = useState<Array<LaboType>>([]);
+  const [laboComments, setLaboComments] = useState<{ [key: number]: number }>({});
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [field, setField] = useState<string>("All");
   const [searchTerm, setSearchTerm] = useState(
     localStorage.getItem("field_of_interest") ?? ""
   );
-  
+
   const itemsPerPage = 9;
   const navi = useNavigate();
 
@@ -49,6 +51,32 @@ export const DisplayLabo: React.FC = () => {
     };
     fetchLabo();
   }, [searchTerm, field, labo.length === 0]);
+
+  useEffect(() => {
+    const fetchCommentsCount = async () => {
+      try {
+        // Map through labo and get comments for each labo_id
+        const commentsCount = await Promise.all(
+          labo.map(async (item) => {
+            const comments = await getComments(item.labo_id);
+            return { [item.labo_id]: comments.length };
+          })
+        );
+
+        // Transform the array of objects into a single object
+        const commentsCountObj = commentsCount.reduce((acc, current) => {
+          return { ...acc, ...current };
+        }, {});
+
+        setLaboComments(commentsCountObj);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    if (labo.length > 0) {
+      fetchCommentsCount();
+    }
+  }, [labo]);
 
   const handleLaboClick = (labo_id: number) => {
     navi(`/labo/${labo_id}`);
@@ -88,38 +116,47 @@ export const DisplayLabo: React.FC = () => {
             </Select>
           </Tooltip>
         </div>
-        {labo.length > 0 ? (
-          currentItems.map((item, index) => (
-            <div className="flex flex-row">
-              <div
-                key={index}
-                className="flex flex-row m-2 ml-[25%] border-4 text-center w-[50%] text-black p-2 cursor-pointer hover:bg-gray-500 hover:text-sky-200"
-                onClick={() => handleLaboClick(item.labo_id)}
-              >
-                <div className="flex-none">{item.prof}</div>
-                <div className="grow ">{item.name}</div>
-                <div className="flex-none">{item.student_field + ""}</div>
-              </div>
-              {item.liked_number > 0 && (
-                <div className="flex-none text-teal-400 mt-4 font-bold">
-                  {item.liked_number}人が興味あり
+        {// its seems like fetching comments is longer than fetching labos so we using laboComments[51] as a proxy to check if comments are fetched
+          laboComments[35] > 0 ? (
+            currentItems.map((item, index) => (
+              <div className="flex flex-row">
+                <div
+                  key={index}
+                  className="flex flex-row m-2 ml-[25%] border-4 text-center w-[50%] text-black p-2 cursor-pointer hover:bg-gray-500 hover:text-sky-200"
+                  onClick={() => handleLaboClick(item.labo_id)}
+                >
+                  <div className="flex-none">{item.prof}</div>
+                  <div className="grow ">{item.name}</div>
+                  <div className="flex-none">{item.student_field + ""}</div>
                 </div>
-              )}
-            </div>
-          ))
-        ) : (
-          <CircularProgress
-            sx={{ textAlign: "center", display: "block", margin: "0 auto" }}
-          />
-        )}
+                <div className="flex flex-row">
+                  {item.liked_number > 0 && (
+                    <div className="flex-none text-teal-400 mt-4 font-bold">
+                      {item.liked_number}人が興味あり
+                    </div>
+                  )}
+                  {
+                    laboComments[item.labo_id] > 0 && (
+                      <div className="flex-none text-green-600 mt-4 font-bold ml-4">
+                        {laboComments[item.labo_id] ?? 0}人がコメント
+                      </div>
+                    )}
+                </div>
+
+              </div>
+            ))
+          ) : (
+            <CircularProgress
+              sx={{ textAlign: "center", display: "block", margin: "0 auto" }}
+            />
+          )}
       </div>
       <div className="bg-white flex justify-center mt-4 p-2">
         {Array.from({ length: totalPages }).map((_, index) => (
           <button
             key={index}
-            className={`mr-2 bg-black text-white ${
-              currentPage === index + 1 ? "text-blue-600" : ""
-            }`}
+            className={`mr-2 bg-black text-white ${currentPage === index + 1 ? "text-blue-800" : ""
+              }`}
             onClick={() => setCurrentPage(index + 1)}
           >
             {index + 1}

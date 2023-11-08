@@ -35,7 +35,6 @@ export const LaboDetail: React.FC = () => {
         fetchLabo();
     }, [id])
 
-
     return (
         <>
             <div className=" bg-white h-screen w-screen">

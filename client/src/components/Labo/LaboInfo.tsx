@@ -58,7 +58,7 @@ export const LaboInfo: React.FC<Props> = ({ labo_id, prof, prof_email, descripti
             }
         }
         fetchComments();
-    }, [comments, labo_id])
+    }, [comments, labo_id]);
 
     useEffect(() => {
         const checkLiked = async () => {
@@ -150,7 +150,12 @@ export const LaboInfo: React.FC<Props> = ({ labo_id, prof, prof_email, descripti
                             laboUsers ? (
                                 <div className={`${laboUsers.length > 0 ? "" : "hidden"}`}>
                                     <div className="border-b-slate-500 border-b-2 mt-3 mb-3"></div>
-                                    <p className="font-bold">配属生徒: {laboUsers.join(", ")}</p>
+                                    <p className="font-bold">配属生徒</p>
+                                    {
+                                        laboUsers.map((item: string, index: number) => (
+                                            <p key={index} className="text-black font-bold hover:cursor-pointer w-[80px]" onClick={() => handleSudentIdClick(item)}>{item}</p>
+                                        ))
+                                    }
                                 </div>
                             ) : <></>
                         }
@@ -185,7 +190,7 @@ export const LaboInfo: React.FC<Props> = ({ labo_id, prof, prof_email, descripti
                                     className={`flex bg-gray-100 p-4 rounded-lg mt-4 ${item.user_id === Number(localStorage.getItem('user_id')) ? ' border-l-8 border-l-teal-400' : ''}`}
                                 >
                                     <div className="flex-none text-lg font-medium text-black hover:cursor-pointer" onClick={() => handleSudentIdClick(item.student_id)}>{item.student_id}</div>
-                                    <div className="grow text-black ml-5 text-lg font-bold">{item.comment}</div>
+                                    <div className="grow text-black ml-5 mr-5 text-lg font-bold">{item.comment}</div>
                                     <div className="flex-none text-gray-500 text-lg mt-1.5 mr-2">{new Date(item.timestamp).toDateString()}</div>
                                     {
                                         item.user_id === Number(localStorage.getItem('user_id')) ? (
@@ -199,7 +204,6 @@ export const LaboInfo: React.FC<Props> = ({ labo_id, prof, prof_email, descripti
                                 </div>
                             ))
                         }
-
                     </div>
                     <div className="border-b-white border-b-2 mt-8"></div>
                 </div>
