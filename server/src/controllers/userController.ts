@@ -186,3 +186,14 @@ export const getAssginLabo = async (req: Request, res: Response) => {
     console.log(err);
   }
 }
+
+export const updateAssginLabo = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const { labo_id } = req.body;
+  try {
+    await db.run("UPDATE users SET labo_id = $1 WHERE id = $2", [labo_id as number, Number(id)]);
+    res.status(200).json({ message: "研究室を更新しました。" });
+  } catch (err) {
+    console.log(err);
+  }
+}
