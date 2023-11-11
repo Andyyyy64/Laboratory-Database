@@ -6,6 +6,7 @@ import { Register } from "./pages/Register";
 import { Verify } from "./pages/Verify";
 import { LaboDetail } from "./pages/LaboDetail";
 import { Profile } from "./pages/Profile";
+import { Contact } from "./pages/Contact";
 import { PrivateRoute } from "./components/PrivateRoute";
 
 
@@ -23,7 +24,8 @@ export const App: React.FC = () => {
         <Route path="/verify" element={<Verify />} />
         <Route path="/labo/:id" element={<LaboDetail />} />
         <Route path="/profile/:id" element={<Profile />} />
-        <Route path="*" element={<h1>Not Found</h1>} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<h2 className="text-xl ml-10">if you have some issue, contact s1300107@u-aizu.ac.jp or s1300106@u-aizu.ac.jp</h2>} />
       </Routes>
     </Router>
   )
