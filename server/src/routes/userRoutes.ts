@@ -8,7 +8,8 @@ import {
   getUserLabo,
   getUserIdByStudentId,
   assginLabo,
-  getAssginLabo
+  getAssginLabo,
+  updateAssginLabo
 } from "../controllers/userController";
 import { authMiddleware } from "../middleware/authMiddleware";
 import { JwtPayload } from "jsonwebtoken";
@@ -28,6 +29,7 @@ userRouter.get("/get/labo/:labo_id", authMiddleware, getUserLabo);
 userRouter.get("/get/id/:student_id", authMiddleware, getUserIdByStudentId);
 userRouter.put('/assign/:id', authMiddleware, assginLabo);
 userRouter.get('/get/assign/:id', authMiddleware, getAssginLabo);
+userRouter.put('/update/assign/:id', authMiddleware, updateAssginLabo);
 userRouter.get("/me", authMiddleware, (req: DecodedRequest, res: Response) => {
   res.status(200).json({ user: req.decoded });
 });

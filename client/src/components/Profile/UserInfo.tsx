@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { getLabosById, getAllProfName, getLabosByProf } from "../../api/labo";
-import { assginLabo, getAssginLabo } from "../../api/user";
+import { assginLabo, getAssginLabo, updateAssginLabo } from "../../api/user";
 
 type Props = {
     id: number | undefined;
@@ -34,6 +34,7 @@ export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_
     const [labo, setLabo] = useState<LaboType>();
     const [professors, setProfessors] = useState<string[]>([]);
     const [modalOpen, setModalOpen] = useState<boolean>(false); // modal for assigning labo ui
+    const [updateLaboModel, setUpdateLaboModel] = useState<boolean>(false); // modal for updating labo ui
     const [laboId, setLabo_id] = useState<number | undefined>(); // labo id for assigning labo function
     const [isAssigned, setIsAssigned] = useState<boolean>(false); // check if user is assigned to labo
     const navi = useNavigate();
@@ -81,11 +82,23 @@ export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_
 
     const handleAssignLabo = async () => { // handle the case when user is not assigned to any labo and wants to assign labo
         try {
-            const res = await assginLabo(Number(id), laboId as number);
+            await assginLabo(Number(id), laboId as number);
             localStorage.setItem("labo_id", laboId as unknown as string);
-            console.log(res);
             alert("配属先を設定しました");
             setModalOpen(false);
+            setIsAssigned(true);
+        } catch (err) {
+            console.log(err);
+            alert(err);
+        }
+    }
+
+    const handleUpdateLabo = async () => {
+        try {
+            await updateAssginLabo(Number(id), laboId as number);
+            localStorage.setItem("labo_id", laboId as unknown as string);
+            alert("配属先を更新しました");
+            setUpdateLaboModel(false);
             setIsAssigned(true);
         } catch (err) {
             console.log(err);
@@ -113,9 +126,12 @@ export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_
                     <h2 className="text-black text-xl mb-5">Student ID: {student_id}</h2>
                     {
                         isAssigned ? (
-                            <h2 className="text-black text-xl mb-5 cursor-pointer hover:text-blue-500"
-                                onClick={() => handleLaboClick(labo?.labo_id as number)}>Labo: {labo?.prof}
-                            </h2>
+                            <div className="flex justify-center">
+                                <h2 className="text-black text-xl mt-1 cursor-pointer hover:text-blue-500"
+                                    onClick={() => handleLaboClick(labo?.labo_id as number)}>Labo: {labo?.prof}
+                                </h2>
+                                <button className={`text-black bg-blue-300 text-sm h-[35px] ml-3 ${updateLaboModel ? ' hidden' : ''}`} onClick={() => setUpdateLaboModel(!updateLaboModel)}>更新</button>
+                            </div>
                         ) : (
                             <div className="flex justify-center">
                                 <h2 className="text-black text-xl mt-1.5 mr-5">配属先は今はありません</h2>
@@ -127,7 +143,6 @@ export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_
                                         onClick={() => setModalOpen(!modalOpen)}>配属先を設定
                                     </button>
                                 }
-
                             </div>
                         )
                     }
@@ -145,6 +160,21 @@ export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_
                             </>
                         ) : <></>
 
+                    }
+                    {
+                        updateLaboModel ? (
+                            <>
+                                <select className="m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg"
+                                    onChange={e => handleProfChange(e.target.value as string)}
+                                >
+                                    {professors.map((professor, index) => (
+                                        <option key={index} value={professor}>{professor}</option>
+                                    ))}
+                                </select>
+                                <br />
+                                <button className="text-black bg-blue-300 text-sm" onClick={() => handleUpdateLabo()}>更新</button>
+                            </>
+                        ) : <></>
                     }
                     {
                         field_of_interest ? (

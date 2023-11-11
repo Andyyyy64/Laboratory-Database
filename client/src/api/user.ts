@@ -60,3 +60,12 @@ export const getAssginLabo = async (id: number) => {
     });
     return res.data;
 }
+
+export const updateAssginLabo = async (id: number, labo_id: number) => {
+    const res = await axios.put(`${API_URL}/user/update/assign/${id}`, { labo_id }, {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+    });
+    return res.data;
+}
