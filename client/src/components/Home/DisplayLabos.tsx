@@ -50,6 +50,7 @@ export const DisplayLabo: React.FC = () => {
       }
     };
     fetchLabo();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm, field, labo.length === 0]);
 
   useEffect(() => {
