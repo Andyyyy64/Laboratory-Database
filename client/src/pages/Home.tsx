@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react"
+import { jwtDecode } from "jwt-decode";
+import { useNavigate } from "react-router-dom";
 
 import { getme } from "../api/user"
 
@@ -22,7 +24,23 @@ type UserType = {
 
 export const Home: React.FC = () => {
     const [user, setUser] = useState<UserType>();
-
+    const navi = useNavigate();
+    
+    const isTokenExpired = (token: string) => {
+        const decoded: { exp: number } = jwtDecode(token);
+        return decoded.exp * 1000 < Date.now();
+      }
+    
+      useEffect(() => {
+        const token = localStorage.getItem("token");
+        if (token && isTokenExpired(token)) {
+          localStorage.removeItem("token");
+          localStorage.removeItem("email");
+          alert("Your session has expired. Please log in again.");
+          navi("/login");
+        }
+      }, [navi])
+    
     useEffect(() => {
         const fetchUser = async () => {
             try {
