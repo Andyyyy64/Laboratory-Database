@@ -24,6 +24,7 @@ export const Header: React.FC = () => {
                             <a onClick={() => handleLaboClick(Number(localStorage.getItem('labo_id')))} className=" zoo text-black font-bold cursor-pointer hover:text-blue">MYLABO</a>
                         ) : <></>
                     }
+                    <a href='/contact' className="zoo">CONTACT</a>
                 </div>
             </div>
         </>
