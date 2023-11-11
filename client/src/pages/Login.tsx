@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { login } from "../api/auth";
 import { Link, useNavigate } from "react-router-dom"
 import CircularProgress from '@mui/material/CircularProgress';
