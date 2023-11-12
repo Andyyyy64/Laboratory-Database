@@ -125,12 +125,21 @@ export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_
                     <h2 className="text-black text-xl mb-5">Grade: {grade}</h2>
                     <h2 className="text-black text-xl mb-5">Student ID: {student_id}</h2>
                     {
+                        field_of_interest ? (
+                            <h2 className="text-black text-xl mb-5">Field of Interest: {field_of_interest}</h2>
+                        ) : <></>
+                    }
+                    {
                         isAssigned ? (
                             <div className="flex justify-center">
                                 <h2 className="text-black text-xl mt-1 cursor-pointer hover:text-blue-500"
                                     onClick={() => handleLaboClick(labo?.labo_id as number)}>Labo: {labo?.prof}
                                 </h2>
-                                <button className={`text-black bg-blue-300 text-sm h-[35px] ml-3 ${updateLaboModel ? ' hidden' : ''}`} onClick={() => setUpdateLaboModel(!updateLaboModel)}>更新</button>
+                                {
+                                    Number(localStorage.getItem('user_id')) == id ? (
+                                        <button className={`text-black bg-blue-300 text-sm h-[35px] ml-3 ${updateLaboModel ? ' hidden' : ''}`} onClick={() => setUpdateLaboModel(!updateLaboModel)}>更新</button>
+                                    ) : <></>
+                                }
                             </div>
                         ) : (
                             <div className="flex justify-center">
@@ -174,11 +183,6 @@ export const UserInfo: React.FC<Props> = ({ id, student_id, email, grade, field_
                                 <br />
                                 <button className="text-black bg-blue-300 text-sm" onClick={() => handleUpdateLabo()}>更新</button>
                             </>
-                        ) : <></>
-                    }
-                    {
-                        field_of_interest ? (
-                            <h2 className="text-black text-xl mb-5">Field of Interest: {field_of_interest}</h2>
                         ) : <></>
                     }
                 </div>
