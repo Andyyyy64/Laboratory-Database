@@ -120,17 +120,17 @@ export const DisplayLabo: React.FC = () => {
         {
           labo.length > 0 ? (
             currentItems.map((item, index) => (
-              <div className="flex flex-row">
+              <div className="flex flex-col md:flex-row">
                 <div
                   key={index}
-                  className="flex flex-row m-2 ml-[25%] border-4 text-center w-[50%] text-black p-2 cursor-pointer hover:bg-gray-500 hover:text-sky-200"
+                  className="flex flex-col md:flex-row m-2 ml-[25%] border-4 text-center w-[50%] text-black p-2 cursor-pointer hover:bg-gray-500 hover:text-sky-200"
                   onClick={() => handleLaboClick(item.labo_id)}
                 >
                   <div className="flex-none">{item.prof}</div>
                   <div className="grow ">{item.name}</div>
                   <div className="flex-none">{item.student_field + ""}</div>
                 </div>
-                <div className="flex flex-row">
+                <div className="flex justify-end">
                   {item.liked_number > 0 && (
                     <div className="flex-none text-teal-400 mt-4 font-bold">
                       {item.liked_number}人が興味あり
@@ -167,3 +167,5 @@ export const DisplayLabo: React.FC = () => {
     </div>
   );
 };
+
+
