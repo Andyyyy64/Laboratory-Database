@@ -32,7 +32,7 @@ export const Login: React.FC = () => {
   return (
     <>
       <div className="bg-cover h-screen w-screen flex sm:flex-row space-x-72 justify-center xl:bg-[url('./assets/background.png')] relative" >
-        <div className="pt-64 pl-8 space-y-8 absolute right-32">
+        <div className="pt-64 md:pl-8 space-y-8 absolute md:right-32">
           <form onSubmit={handleLogin} className="space-y-8">
             <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value as string)} className="border rounded-lg pr-28 py-3 px-3 mt-4 bg-sky-200 border-emerald-200 placeholder-white-500 text-black shadow-lg" /><br />
             <input type="password" placeholder="Password" value={pwd} onChange={e => setPwd(e.target.value as string)} className="border rounded-lg pr-28 py-3 px-3 mt-4 bg-sky-200 border-emerald-200 placeholder-white-500 text-black shadow-lg" /><br />
