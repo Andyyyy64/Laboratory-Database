@@ -54,7 +54,7 @@ export const loginUser = async (req: Request, res: Response) => {
     }
 
     const user: UserType = await db.get(
-      "SELECT id, email, grage, labo_id, student_id, created_at, is_varified, password FROM users WHERE email = $1",
+      "SELECT id, email, grade, labo_id, student_id, created_at, is_varified, password FROM users WHERE email = $1",
       [email]
     );
 

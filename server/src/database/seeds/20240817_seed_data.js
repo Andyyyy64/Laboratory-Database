@@ -29,12 +29,12 @@ exports.seed = async function(knex) {
   );
 
   await knex('users').insert([
-    { student_id: 's12345', email: 'student1@u-aizu.ac.jp', password: '$2b$10$sQbT/fhDY6PomOBZEiVE6uGrXMmGoMcufHAG1tVVCVRq.SLcbKmnS', grage: 3, field_of_interest: 'AI', labo_id: 1, liked_labos: [1, 2], is_varified: true, verificationCode: 123456, created_at: knex.fn.now() },
-    { student_id: 's54321', email: 'student2@university.edu', password: 'password123', grage: 2, field_of_interest: 'Cybersecurity', labo_id: 2, liked_labos: [2], is_varified: true, verificationCode: 654321, created_at: knex.fn.now() },
+    { student_id: 's12345', email: 'student1@u-aizu.ac.jp', password: '$2b$10$sQbT/fhDY6PomOBZEiVE6uGrXMmGoMcufHAG1tVVCVRq.SLcbKmnS', grade: 3, field_of_interest: 'AI', labo_id: 1, liked_labos: [1, 2], is_varified: true, verificationCode: 123456, created_at: knex.fn.now() },
+    { student_id: 's54321', email: 'student2@university.edu', password: 'password123', grade: 2, field_of_interest: 'Cybersecurity', labo_id: 2, liked_labos: [2], is_varified: true, verificationCode: 654321, created_at: knex.fn.now() },
   ]);
 
   await knex("comments").insert([
-    { labo_id: 1, user_id: 1, student_id: "s12345" },
-    { labo_id: 2, user_id: 2, student_id: "s54321" },
+    { labo_id: 1, user_id: 1, student_id: "s12345", comment: "this labo is good" },
+    { labo_id: 2, user_id: 2, student_id: "s54321", comment: "this labo is aa" },
   ]);
 };

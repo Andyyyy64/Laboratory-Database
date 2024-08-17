@@ -22,7 +22,7 @@ exports.up = function(knex) {
         table.string("student_id").nullable();
         table.string("email").notNullable();
         table.string("password").notNullable();
-        table.integer("grage").nullable();
+        table.integer("grade").nullable();
         table.text("field_of_interest").nullable();
         table
           .integer("labo_id")
@@ -45,12 +45,13 @@ exports.up = function(knex) {
           .onDelete("CASCADE");
         table
           .integer("user_id")
-          .unsigned()
+          .unsigned().notNullable()
           .references("id")
           .inTable("users")
           .onDelete("CASCADE");
         table.timestamp("timestamp").defaultTo(knex.fn.now());
         table.text("student_id").notNullable();
+        table.string("comment").notNullable();
       });
   };
   
