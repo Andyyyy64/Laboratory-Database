@@ -9,10 +9,10 @@ module.exports = {
         port: process.env.DB_PORT || 5432
       },
       migrations: {
-        directory: './migrations'
+        directory: './src/database/migrations'
       },
       seeds: {
-        directory: './seeds'
+        directory: './src/database/seeds'
       }
     }
   };
