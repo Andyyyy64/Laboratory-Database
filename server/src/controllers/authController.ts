@@ -69,12 +69,10 @@ export const loginUser = async (req: Request, res: Response) => {
 
       return res.status(400).send("メールアドレスが認証されていません。");
     }
-    console.log(password + " " + user.password);
     const isPasswordCorrect = await bcrypt.compare(password, user.password);
 
     if (!isPasswordCorrect) {
       console.log("パスワードが間違っています。");
-      console.log(password);
       return res.status(400).send("パスワードが間違っています。");
     }
 
