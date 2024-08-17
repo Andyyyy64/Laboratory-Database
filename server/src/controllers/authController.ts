@@ -14,7 +14,7 @@ type UserType = {
   grade: number;
   field_of_interest: string;
   labo_id: number;
-  is_verified: boolean;
+  is_varified: boolean;
   verification_code: number;
   created_at: Date;
 };
@@ -54,7 +54,7 @@ export const loginUser = async (req: Request, res: Response) => {
     }
 
     const user: UserType = await db.get(
-      "SELECT id, email, grade, labo_id, student_id, created_at, is_verified, password FROM users WHERE email = $1",
+      "SELECT id, email, grage, labo_id, student_id, created_at, is_varified, password FROM users WHERE email = $1",
       [email]
     );
 
@@ -63,16 +63,18 @@ export const loginUser = async (req: Request, res: Response) => {
       return res.status(400).send("ユーザーが見つかりませんでした。");
     }
 
-    if (!user.is_verified) {
-      console.log(user.is_verified)
+    if (!user.is_varified) {
+      console.log(user.is_varified)
+      console.log(user.id)
 
       return res.status(400).send("メールアドレスが認証されていません。");
     }
-
+    console.log(password + " " + user.password);
     const isPasswordCorrect = await bcrypt.compare(password, user.password);
 
     if (!isPasswordCorrect) {
       console.log("パスワードが間違っています。");
+      console.log(password);
       return res.status(400).send("パスワードが間違っています。");
     }
 
