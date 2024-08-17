@@ -1,15 +1,15 @@
 # Laboratory-Database
 Database for univ-aizu Laboratory
 
-## set up
+## 環境構築
 
-1. clone project
+1. clone
 
     `git clone git@github.com:Andyyyy64/Laboratory-Database.git`
 
     `cd Laboratory-Datanbase/server`
 
-2. set env
+2. 環境変数を変更
 
     `cp .env.development.example .env.development`
 
@@ -32,11 +32,11 @@ Database for univ-aizu Laboratory
 
     NODE_ENV=development
     ```
-3. run docker
+3. dockerを実行
 
     `docker-compose --env-file .env.development up --build`
 
-4. run migration and seeds
+4. migrationとseedsを実行
 
     `docker-compose exec app sh`
 
@@ -46,8 +46,8 @@ Database for univ-aizu Laboratory
 
 5. server is running on port 3000
 
-    you could loing to site with 
+    以下の情報でログインできる
 
     email: student1@u-aizu.ac.jp
-    
+
     pass: password123
