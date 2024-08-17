@@ -11,7 +11,7 @@ exports.seed = async function(knex) {
   await knex('users').del();
   await knex('labos').del();
 
-  const jsonFilePath = path.join(__dirname, '../labo_data_modified.json');
+  const jsonFilePath = path.join(__dirname, '../../../labo_data_modified.json');
   const fileData = fs.readFileSync(jsonFilePath, 'utf8');
   const labosData = JSON.parse(fileData);
 
