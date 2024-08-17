@@ -46,6 +46,19 @@ Database for univ-aizu Laboratory
 
 5. server is running on port 3000
 
+
+6. フロント起動
+    
+    `cd ../client`
+
+    `cp .env.example .env`
+    
+    `npm i`
+
+    `npm run dev`
+
+7. ログイン
+
     以下の情報でログインできる
 
     email: student1@u-aizu.ac.jp
