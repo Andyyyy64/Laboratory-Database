@@ -25,7 +25,7 @@ Database for univ-aizu Laboratory
     DB_USER=postgres
     DB_HOST=db
     DB_NAME=labodbdev
-    DB_PASSWORD=riz7
+    DB_PASSWORD=aaaa
 
     #cors
     BASE_URL=http://localhost:5173
