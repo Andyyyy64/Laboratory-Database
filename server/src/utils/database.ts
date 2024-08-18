@@ -11,7 +11,8 @@ const pool: Pool = new Pool({
     port: 5432,
     ssl: process.env.NODE_ENV === "production" ?? false,
 });
-
+console.log(process.env.NODE_ENV);
+console.log(process.env.NODE_ENV === "production" ?? false);
 export default {
   get: async (query: string, params?: Array<string | number | boolean | null>) => {
     let db: PoolClient | null = null;
