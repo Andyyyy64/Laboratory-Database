@@ -31,7 +31,7 @@ exports.up = function(knex) {
           .inTable("labos")
           .onDelete("SET NULL");
         table.specificType("liked_labos", "integer[]").nullable();
-        table.boolean("is_varified").defaultTo(false);
+        table.boolean("is_verified").defaultTo(false);
         table.integer("verificationCode").notNullable();
         table.timestamp("created_at").defaultTo(knex.fn.now());
       })
