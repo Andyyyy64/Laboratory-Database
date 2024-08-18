@@ -9,7 +9,7 @@ const pool: Pool = new Pool({
     database: process.env.DB_NAME,
     password: process.env.DB_PASSWORD,
     port: 5432,
-    ssl: false
+    ssl: process.env.NODE_ENV === "production" ?? false,
 });
 
 export default {
