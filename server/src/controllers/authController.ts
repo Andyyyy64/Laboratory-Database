@@ -64,11 +64,10 @@ export const loginUser = async (req: Request, res: Response) => {
     }
 
     if (!user.is_verified) {
-      console.log(user.is_verified)
+      console.log(user.id)
 
       return res.status(400).send("メールアドレスが認証されていません。");
     }
-
     const isPasswordCorrect = await bcrypt.compare(password, user.password);
 
     if (!isPasswordCorrect) {

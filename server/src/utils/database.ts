@@ -9,9 +9,10 @@ const pool: Pool = new Pool({
     database: process.env.DB_NAME,
     password: process.env.DB_PASSWORD,
     port: 5432,
-    ssl: true
+    ssl: process.env.NODE_ENV === "production" ?? false,
 });
-
+console.log(process.env.NODE_ENV);
+console.log(process.env.NODE_ENV === "production" ?? false);
 export default {
   get: async (query: string, params?: Array<string | number | boolean | null>) => {
     let db: PoolClient | null = null;

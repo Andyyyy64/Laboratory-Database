@@ -25,7 +25,15 @@ export const App: React.FC = () => {
         <Route path="/labo/:id" element={<LaboDetail />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<h2 className="text-xl ml-10">if you have some issue, contact s1300107@u-aizu.ac.jp or s1300106@u-aizu.ac.jp</h2>} />
+        <Route path="*"
+          element={
+            <h2 className="text-xl ml-10">
+              if you have some issue, contact s1300107@u-aizu.ac.jp or s1300106@u-aizu.ac.jp or
+              <a href="https://twitter.com/Fukmylife44" className="ml-3">
+                DM me on twitter
+              </a>
+            </h2>}
+        />
       </Routes>
     </Router>
   )

@@ -13,10 +13,10 @@ type UserType = {
   student_id?: string;
   email?: string;
   password?: string;
-  grage?: number;
+  grade?: number;
   field_of_interest?: string;
   labo_id?: number;
-  is_varified: boolean;
+  is_verified: boolean;
   verificationCode: number;
   created_at: Date;
 };
