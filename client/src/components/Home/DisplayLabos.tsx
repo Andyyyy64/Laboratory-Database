@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { getLabos } from "../../api/labo";
 import { getComments } from "../../api/comment";
 
-import CircularProgress from "@mui/material/CircularProgress";
+
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Tooltip from "@mui/material/Tooltip";
@@ -147,9 +147,7 @@ export const DisplayLabo: React.FC = () => {
               </div>
             ))
           ) : (
-            <CircularProgress
-              sx={{ textAlign: "center", display: "block", margin: "0 auto" }}
-            />
+            <p className="text-center pt-16 pl-6 text-teal-700 text-lg font-bold"> お探しの結果が見つかりませんでした。別のキーワードを試してみてください。</p>
           )}
       </div>
       <div className="bg-white flex justify-center mt-4 p-2">
