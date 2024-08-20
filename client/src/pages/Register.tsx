@@ -140,7 +140,7 @@ export const Register: React.FC = () => {
                         <input
                             className="pr-10 bg-teal-200 border-none outline-none"
                             type={showPassword ? "text" : "password"}
-                            placeholder="New Password" 
+                            placeholder="Password" 
                             value={pwd} 
                             onChange={e => setPwd(e.target.value as string)}
                         />
@@ -155,7 +155,7 @@ export const Register: React.FC = () => {
                         <input
                             className="pr-10 bg-teal-200 border-none outline-none"
                             type={showConfirmPassword ? "text" : "password"}
-                            placeholder="Confirm New Password" 
+                            placeholder="Confirm Password" 
                             value={confirmPwd} 
                             onChange={e => {setConfirmPwd(e.target.value as string); setConfirmPwdTouched(false);}}
                             onBlur={() => setConfirmPwdTouched(true)}
