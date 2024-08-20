@@ -9,7 +9,9 @@ const pool: Pool = new Pool({
     database: process.env.DB_NAME,
     password: process.env.DB_PASSWORD,
     port: 5432,
-    ssl: process.env.NODE_ENV === "production" ?? false,
+    ssl: process.env.NODE_ENV === "production" 
+    ? { rejectUnauthorized: false }
+    : false,
 });
 console.log(process.env.NODE_ENV);
 console.log(process.env.NODE_ENV === "production" ?? false);
