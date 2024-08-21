@@ -14,7 +14,6 @@ const pool: Pool = new Pool({
     : false,
 });
 console.log(process.env.NODE_ENV);
-console.log(process.env.NODE_ENV === "production" ?? false);
 export default {
   get: async (query: string, params?: Array<string | number | boolean | null>) => {
     let db: PoolClient | null = null;

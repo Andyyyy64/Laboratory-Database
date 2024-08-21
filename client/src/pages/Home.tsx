@@ -20,8 +20,6 @@ type UserType = {
     liked_labos?: number[];
 };
 
-
-
 export const Home: React.FC = () => {
     const [user, setUser] = useState<UserType>();
     const navi = useNavigate();
@@ -39,7 +37,7 @@ export const Home: React.FC = () => {
           alert("Your session has expired. Please log in again.");
           navi("/login");
         }
-      }, [navi])
+      }, [navi]);
     
     useEffect(() => {
         const fetchUser = async () => {
@@ -65,16 +63,21 @@ export const Home: React.FC = () => {
     }, [])
 
 
-    if (!user) {
-        return <CircularProgress sx={{ textAlign: "center" }} />
-    }
-
     return (
-        <>
-            <div className=" bg-white h-screen w-screen">
-                <Header />
-                <DisplayLabo />
+      <div className=" bg-white h-screen w-screen">
+        {user !== undefined ? (
+          <>
+            <Header />
+            <DisplayLabo />
+          </>
+        ) : (
+            <div className=" text-center relative">
+                <div className=" absolute top-32 left-[45%]">
+                    <h1 className=" text-black mb-10">Now Loading...</h1>
+                    <CircularProgress />
+                </div>
             </div>
-        </>
-    )
+        )}
+      </div>
+    );
 }
