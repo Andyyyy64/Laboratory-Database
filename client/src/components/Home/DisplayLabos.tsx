@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { getLabos } from "../../api/labo";
 import { getComments } from "../../api/comment";
 
-import CircularProgress from "@mui/material/CircularProgress";
+
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Tooltip from "@mui/material/Tooltip";
@@ -30,7 +30,7 @@ export const DisplayLabo: React.FC = () => {
     localStorage.getItem("field_of_interest") ?? ""
   );
 
-  const itemsPerPage = 9;
+  const itemsPerPage = 8;
   const navi = useNavigate();
 
   useEffect(() => {
@@ -123,13 +123,14 @@ export const DisplayLabo: React.FC = () => {
               <div className="flex flex-row">
                 <div
                   key={index}
-                  className="flex flex-row m-2 ml-[25%] border-4 text-center w-[50%] text-black p-2 cursor-pointer hover:bg-gray-500 hover:text-sky-200"
+                  className="flex flex-row m-2 ml-[25%] p-2 border-4 text-center w-[50%] text-black cursor-pointer hover:bg-gray-500 hover:text-sky-200"
                   onClick={() => handleLaboClick(item.labo_id)}
                 >
                   <div className="flex-none">{item.prof}</div>
                   <div className="grow ">{item.name}</div>
                   <div className="flex-none">{item.student_field + ""}</div>
                 </div>
+                
                 <div className="flex flex-row">
                   {item.liked_number > 0 && (
                     <div className="flex-none text-teal-400 mt-4 font-bold">
@@ -147,9 +148,7 @@ export const DisplayLabo: React.FC = () => {
               </div>
             ))
           ) : (
-            <CircularProgress
-              sx={{ textAlign: "center", display: "block", margin: "0 auto" }}
-            />
+            <p className="text-center pt-16 pl-6 text-teal-700 text-lg font-bold"> お探しの結果が見つかりませんでした。別のキーワードを試してみてください。</p>
           )}
       </div>
       <div className="bg-white flex justify-center mt-4 p-2">

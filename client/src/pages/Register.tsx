@@ -1,6 +1,9 @@
 import React, { FormEvent, useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom";
 import CircularProgress from '@mui/material/CircularProgress';
+import IconButton from '@mui/material/IconButton';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 import { useLoading } from "../hooks/useLoading";
 import { register } from "../api/user"
@@ -14,11 +17,16 @@ type ProfType = {
 
 export const Register: React.FC = () => {
     const [email, setEmail] = useState<string>("");
-    const [pwd, setPwd] = useState<string>("");
     const [grade, setGrade] = useState<string>('1');
     const [field_of_interest, setField_of_interest] = useState<string>("");
     const [labo_id, setLabo_id] = useState<number | undefined>();
     const [professors, setProfessors] = useState<string[]>([]);
+    const [pwd, setPwd] = useState<string>("");
+    const [confirmPwd, setConfirmPwd] = useState("");
+    const [showPassword, setShowPassword] = useState<boolean>(false); 
+    const [showConfirmPassword, setShowConfirmPassword] = useState<boolean>(false); 
+    const [confirmPwdTouched, setConfirmPwdTouched] = useState<boolean>(false);
+
     const { loading, startLoading, stopLoading } = useLoading();
     const [isFormValid, setIsFormValid] = useState<boolean>(false);
 
@@ -27,11 +35,13 @@ export const Register: React.FC = () => {
     useEffect(() => {
         setIsFormValid(
             email.trim() !== "" &&
-            pwd.trim() !== "" &&
             grade !== undefined &&
-            !isNaN(Number(grade))
+            !isNaN(Number(grade)) &&
+            pwd.trim() !== "" &&
+            confirmPwd.trim() !== "" &&
+            pwd === confirmPwd 
         );
-    }, [email, pwd, grade]);
+    }, [email, pwd, confirmPwd, grade]);
 
     useEffect(() => {
         const fetchProfessors = async () => {
@@ -91,10 +101,6 @@ export const Register: React.FC = () => {
                         className="m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg" type="email"
                         placeholder="Email" value={email} onChange={e => setEmail(e.target.value as string)}
                     /><br />
-                    <input
-                        className="m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg" type="password"
-                        placeholder="Password" value={pwd} onChange={e => setPwd(e.target.value as string)}
-                    /><br />
                     <Tooltip title="Grade" placement="top" arrow>
                         <select
                             className="m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg w-[100px]"
@@ -130,16 +136,55 @@ export const Register: React.FC = () => {
                         placeholder="field-of-interest" value={field_of_interest}
                         onChange={e => setField_of_interest(e.target.value as string)}
                     /><br />
+                    <div className="m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg flex items-center focus-within:ring-2 focus-within:ring-black">
+                        <input
+                            className="pr-10 bg-teal-200 border-none outline-none"
+                            type={showPassword ? "text" : "password"}
+                            placeholder="Password" 
+                            value={pwd} 
+                            onChange={e => setPwd(e.target.value as string)}
+                        />
+                        <IconButton
+                            onClick={() => setShowPassword(!showPassword)}
+                            onMouseDown={(e) => e.preventDefault()}
+                        >
+                            {showPassword ? <VisibilityOff /> : <Visibility />}
+                        </IconButton>
+                    </div>
+                    <div className="m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg flex items-center focus-within:ring-2 focus-within:ring-black">
+                        <input
+                            className="pr-10 bg-teal-200 border-none outline-none"
+                            type={showConfirmPassword ? "text" : "password"}
+                            placeholder="Confirm Password" 
+                            value={confirmPwd} 
+                            onChange={e => {setConfirmPwd(e.target.value as string); setConfirmPwdTouched(false);}}
+                            onBlur={() => setConfirmPwdTouched(true)}
+                        />
+                        <IconButton
+                            onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                            onMouseDown={(e) => e.preventDefault()}
+                        >
+                            {showConfirmPassword ? <VisibilityOff /> : <Visibility />}
+                        </IconButton>
+                        
+                    </div>
+                    {pwd !== confirmPwd && confirmPwd.trim() !== "" && confirmPwdTouched && (
+                        <p className="m-5 p-2 text-red-500">パスワードが一致しません。</p>
+                    )}
+
                     {
                         loading ? (
                             <CircularProgress sx={{ marginLeft: "40%" }} />
                         ) : (
-                            <button
-                                className={`m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg ${isFormValid ? "bg-teal-200" : "bg-gray text-gray-400"}`}
-                                type="submit" disabled={!isFormValid}
-                            >
-                                register
-                            </button>
+                            <>
+                                <button
+                                    className={`m-5 p-2 bg-teal-200 rounded-lg text-black shadow-lg ${isFormValid ? "bg-teal-200" : "bg-gray text-gray-400"}`}
+                                    type="submit" disabled={!isFormValid}
+                                >
+                                    register
+                                </button>
+                                
+                            </>
                         )
                     }
                 </form>

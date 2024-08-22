@@ -32,7 +32,7 @@ export const Profile: React.FC = () => {
             }
         }
         fetchUser();
-    })
+    }, [id])
 
     if (!user) {
         return (
