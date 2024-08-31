@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { login } from "../api/auth";
 import { Link, useNavigate } from "react-router-dom"
 import CircularProgress from '@mui/material/CircularProgress';
 import { useLoading } from "../hooks/useLoading";
+import { AuthContext } from "../context/authContext";
 
 export const Login: React.FC = () => {
   const [email, setEmail] = useState<string>(localStorage.getItem("email") ?? "");
@@ -10,12 +11,20 @@ export const Login: React.FC = () => {
   const { loading, startLoading, stopLoading } = useLoading();
   const navi = useNavigate();
 
+  const authContext = useContext(AuthContext);
+  if (authContext === undefined) {
+    throw new Error("useAuth must be used within a AuthProvider");
+  }
+  const { setUser } = authContext;
+  
+
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     startLoading();
     try {
       const res = await login(email ?? "", pwd ?? ""); // loginAPIをたたく
       localStorage.setItem("token", res.token);
+      setUser(res.user);
       stopLoading();
       navi("/"); // ログインが成功したらhomeにリダイレクト
     } catch (err: unknown) {
