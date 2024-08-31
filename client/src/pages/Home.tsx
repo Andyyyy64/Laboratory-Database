@@ -1,8 +1,6 @@
-import React, { useState, useEffect, useContext } from "react"
+import React, { useEffect, useContext } from "react"
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
-
-import { getme } from "../api/user"
 
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -11,14 +9,12 @@ import { DisplayLabo } from "../components/Home/DisplayLabos";
 
 import { AuthContext } from "../context/authContext";
 
-import UserType from "../types/userType";
-
 export const Home: React.FC = () => {
     const authContext = useContext(AuthContext);
     if (authContext === undefined) {
       throw new Error("useAuth must be used within a AuthProvider");
     }
-    const { user, setUser } = authContext; 
+    const { user } = authContext; 
     const navi = useNavigate();
     
     const isTokenExpired = (token: string) => {

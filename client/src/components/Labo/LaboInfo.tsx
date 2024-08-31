@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 import { getComments, addComment, deleteComment } from '../../api/comment';
 import { likedLabo, getLikeStatus, getLaboLikedNumber } from '../../api/labo';
-import { getUserIdByStudentId, getUserLabo } from '../../api/user';
+import { getUserLabo } from '../../api/user';
 
 import { IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -32,10 +31,6 @@ type LikeStatus = {
   liked: boolean;
 };
 
-type UserId = {
-  id: number;
-};
-
 type StudentId = {
   student_id: string;
 };
@@ -50,16 +45,16 @@ export const LaboInfo: React.FC<Props> = ({
   student_field,
 }) => {
   const [comments, setComments] = useState<Array<CommentType>>([]);
-  const [comment, setComment] = useState<string>('');
+  const [comment, setComment] = useState<string>("");
   const [likedNumber, setLikedNumber] = useState<number>(0);
   const [isLiked, setIsLiked] = useState<boolean>(false);
   const [laboUsers, setLaboUsers] = useState<Array<string>>([]);
-  const navi = useNavigate();
+  //const navi = useNavigate();
   const authContext = useContext(AuthContext);
-  if(authContext === undefined) {
+  if (authContext === undefined) {
     throw new Error("useAuth must be used within a AuthProvider");
   }
-    const { user } = authContext;
+  const { user } = authContext;
 
   useEffect(() => {
     const fetchComments = async () => {
@@ -107,13 +102,13 @@ export const LaboInfo: React.FC<Props> = ({
   const handleAddComment = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!user) {
-      alert('ログインしてください。');
+      alert("ログインしてください。");
       return;
     }
     try {
       await addComment(labo_id, user.id, comment);
-      alert('コメントを追加しました');
-      setComment('');
+      alert("コメントを追加しました");
+      setComment("");
       // コメントを再フェッチ
       const res = await getComments(labo_id);
       setComments(res);
@@ -125,7 +120,7 @@ export const LaboInfo: React.FC<Props> = ({
   const handleDeleteComment = async (id: number) => {
     try {
       await deleteComment(id);
-      alert('コメントを削除しました');
+      alert("コメントを削除しました");
       // コメントを再フェッチ
       const res = await getComments(labo_id);
       setComments(res);
@@ -136,7 +131,7 @@ export const LaboInfo: React.FC<Props> = ({
 
   const handleLike = async () => {
     if (!user) {
-      alert('ログインしてください。');
+      alert("ログインしてください。");
       return;
     }
     await likedLabo(user.id, labo_id);
@@ -147,11 +142,12 @@ export const LaboInfo: React.FC<Props> = ({
     setLikedNumber(updatedLikedNumber.liked_number);
   };
 
+  /* 
   const handleStudentIdClick = async (student_id: string) => {
     const res: UserId = await getUserIdByStudentId(student_id);
     navi(`/profile/${res.id}`);
   };
-
+  */
   return (
     <div className="bg-white px-64">
       <div className="mt-8">

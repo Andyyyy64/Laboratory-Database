@@ -1,7 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { useParams } from 'react-router-dom';
-
-import { getUserById } from '../api/user';
+import React, { useContext } from 'react';
 
 import { Header } from '../components/Home/Header';
 import { UserInfo } from '../components/Profile/UserInfo';
