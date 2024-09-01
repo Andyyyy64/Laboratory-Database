@@ -16,7 +16,7 @@ type ProfType = {
 export const Register: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [grade, setGrade] = useState<string>("1");
-  const [field_of_interest, setField_of_interest] = useState<string>("");
+  // const [field_of_interest, setField_of_interest] = useState<string>("");
   const [labo_id, setLabo_id] = useState<number | undefined>();
   const [professors, setProfessors] = useState<string[]>([]);
   const [pwd, setPwd] = useState<string>("");
@@ -66,7 +66,7 @@ export const Register: React.FC = () => {
         email,
         pwd,
         Number(grade) ?? 0,
-        field_of_interest,
+        " ",
         labo_id ?? null
       );
       if (localStorage.getItem("email") == null) {
