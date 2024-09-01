@@ -89,15 +89,8 @@ export const loginUser = async (req: Request, res: Response) => {
       { expiresIn: "1w" }
     );
 
-    res.cookie("token", token, {
-      domain: "http://localhost:5173/",
-      httpOnly: true,
-      secure: false,
-      sameSite: "none",
-      maxAge: 7 * 24 * 60 * 60 * 1000,
-    });
     console.log("ログイン成功" + user.email + " " + token);
-    res.json({ message: "ログイン成功", token: token });
+    res.json({ message: "ログイン成功", token: token, user: user});
   } catch (err) {
     console.log(err);
     res.status(500).send("Internal Server Error");

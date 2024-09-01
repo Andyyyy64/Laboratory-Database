@@ -32,7 +32,7 @@ exports.up = function(knex) {
           .onDelete("SET NULL");
         table.specificType("liked_labos", "integer[]").nullable();
         table.boolean("is_verified").defaultTo(false);
-        table.integer("verificationCode").notNullable();
+        table.integer("verification_code").notNullable();
         table.timestamp("created_at").defaultTo(knex.fn.now());
       })
       .createTable("comments", function (table) {
