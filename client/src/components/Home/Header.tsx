@@ -29,7 +29,10 @@ export const Header: React.FC = () => {
     return (
       <div className="bg-cover bg-white p-4 sm:p-10 flex justify-between items-center">
         <a href="/" className="text-center sm:text-left">
-          <h1 className="text-xl sm:text-2xl font-bold">
+          <h1
+            className="text-xl sm:text-2xl font-bold"
+            style={{ color: "#1D8B9A" }}
+          >
             LABORATORY
             <br /> DATABASE
           </h1>
