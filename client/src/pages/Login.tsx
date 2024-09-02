@@ -1,12 +1,14 @@
 import React, { useState, useContext } from "react";
 import { login } from "../api/auth";
-import { Link, useNavigate } from "react-router-dom"
-import CircularProgress from '@mui/material/CircularProgress';
+import { Link, useNavigate } from "react-router-dom";
+import CircularProgress from "@mui/material/CircularProgress";
 import { useLoading } from "../hooks/useLoading";
 import { AuthContext } from "../context/authContext";
 
 export const Login: React.FC = () => {
-  const [email, setEmail] = useState<string>(localStorage.getItem("email") ?? "");
+  const [email, setEmail] = useState<string>(
+    localStorage.getItem("email") ?? ""
+  );
   const [pwd, setPwd] = useState<string>();
   const { loading, startLoading, stopLoading } = useLoading();
   const navi = useNavigate();
@@ -16,17 +18,16 @@ export const Login: React.FC = () => {
     throw new Error("useAuth must be used within a AuthProvider");
   }
   const { setUser } = authContext;
-  
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     startLoading();
     try {
-      const res = await login(email ?? "", pwd ?? ""); // loginAPIをたたく
+      const res = await login(email ?? "", pwd ?? "");
       localStorage.setItem("token", res.token);
       setUser(res.user);
       stopLoading();
-      navi("/"); // ログインが成功したらhomeにリダイレクト
+      navi("/");
     } catch (err: unknown) {
       if (typeof err === "object" && err !== null && "response" in err) {
         const apiError = err as { response: { data: string } };
@@ -36,35 +37,55 @@ export const Login: React.FC = () => {
       }
       stopLoading();
     }
-  }
+  };
 
   return (
-    <>
-      <div className="bg-cover h-screen w-screen flex sm:flex-row space-x-72 justify-center xl:bg-[url('./assets/background.png')] relative" >
-        <div className="pt-64 pl-8 space-y-8 absolute right-32">
-          <form onSubmit={handleLogin} className="space-y-8">
-            <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value as string)} className="border rounded-lg pr-28 py-3 px-3 mt-4 bg-sky-200 border-emerald-200 placeholder-white-500 text-black shadow-lg" /><br />
-            <input type="password" placeholder="Password" value={pwd} onChange={e => setPwd(e.target.value as string)} className="border rounded-lg pr-28 py-3 px-3 mt-4 bg-sky-200 border-emerald-200 placeholder-white-500 text-black shadow-lg" /><br />
-            {
-              loading ? (
-                <CircularProgress sx={{ marginLeft: "40%" }} />
-              ) : (
-                <button type="submit" className="m-5 pr-28 py-3 px-4 bg-cyan-400 shadow-lg text-black">login</button>
-              )
-            }
-          </form>
-          {
-            // adminにアカウント削除されるとローカルストレージに情報残ってる限りCreate account 表示されないジャン これがBANです、か。
-            localStorage.getItem('email') == null ? (
-              <>
-                <h3 className="p-6 bg-cyan-500 shadow-lg">Don't have an account?</h3>
-                <Link className="m-5 pr-16 py-3 px-4 bg-cyan-300 shadow-lg" to="/register">Create Account</Link>
-              </>
-            ) : <></>
-          }
+    <div className="h-screen w-screen flex justify-center items-center bg-[url('./assets/background.png')] bg-center bg-no-repeat bg-cover xl:relative">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-11/12 sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4 xl:absolute xl:right-20">
+        <form onSubmit={handleLogin} className="space-y-6">
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value as string)}
+            className="w-full border rounded-lg py-3 px-4 bg-sky-200 border-emerald-200 placeholder-white-500 text-black shadow-lg"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={pwd}
+            onChange={(e) => setPwd(e.target.value as string)}
+            className="w-full border rounded-lg py-3 px-4 bg-sky-200 border-emerald-200 placeholder-white-500 text-black shadow-lg"
+          />
+          {loading ? (
+            <div className="flex justify-center">
+              <CircularProgress />
+            </div>
+          ) : (
+            <button
+              type="submit"
+              className="w-full py-3 px-4 bg-cyan-400 text-black rounded-lg shadow-lg"
+            >
+              Login
+            </button>
+          )}
+        </form>
+        <div className="mt-8 text-center">
+          {localStorage.getItem("email") == null ? (
+            <>
+              <h3 className="p-1 text-black rounded-lg">
+                Don't have an account?
+              </h3>
+              <Link
+                className="inline-block mt-4 py-2 px-4 bg-cyan-300 shadow-lg text-black rounded-lg"
+                to="/register"
+              >
+                Create Account
+              </Link>
+            </>
+          ) : null}
         </div>
       </div>
-    </>
-
+    </div>
   );
 };
