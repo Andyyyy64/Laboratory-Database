@@ -25,7 +25,7 @@ export const DisplayLabo: React.FC = () => {
   const [field, setField] = useState<string>("All");
   const [searchTerm, setSearchTerm] = useState(localStorage.getItem("field_of_interest") ?? "");
 
-  const itemsPerPage = 8;
+  const itemsPerPage = 9;
   const navi = useNavigate();
 
   useEffect(() => {
