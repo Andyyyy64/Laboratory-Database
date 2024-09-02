@@ -1,0 +1,2 @@
+/src/database/migrations/*.js
+/src/database/seeds/*.js

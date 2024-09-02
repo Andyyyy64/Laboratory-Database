@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
-
 import { getComments, addComment, deleteComment } from '../../api/comment';
 import { likedLabo, getLikeStatus, getLaboLikedNumber } from '../../api/labo';
 import { getUserLabo } from '../../api/user';
-
 import { IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { AuthContext } from '../../context/authContext';
@@ -49,7 +47,6 @@ export const LaboInfo: React.FC<Props> = ({
   const [likedNumber, setLikedNumber] = useState<number>(0);
   const [isLiked, setIsLiked] = useState<boolean>(false);
   const [laboUsers, setLaboUsers] = useState<Array<string>>([]);
-  //const navi = useNavigate();
   const authContext = useContext(AuthContext);
   if (authContext === undefined) {
     throw new Error("useAuth must be used within a AuthProvider");
@@ -109,7 +106,6 @@ export const LaboInfo: React.FC<Props> = ({
       await addComment(labo_id, user.id, comment);
       alert("コメントを追加しました");
       setComment("");
-      // コメントを再フェッチ
       const res = await getComments(labo_id);
       setComments(res);
     } catch (err) {
@@ -121,7 +117,6 @@ export const LaboInfo: React.FC<Props> = ({
     try {
       await deleteComment(id);
       alert("コメントを削除しました");
-      // コメントを再フェッチ
       const res = await getComments(labo_id);
       setComments(res);
     } catch (err) {
@@ -142,54 +137,51 @@ export const LaboInfo: React.FC<Props> = ({
     setLikedNumber(updatedLikedNumber.liked_number);
   };
 
-  /* 
-  const handleStudentIdClick = async (student_id: string) => {
-    const res: UserId = await getUserIdByStudentId(student_id);
-    navi(`/profile/${res.id}`);
-  };
-  */
   return (
-    <div className="bg-white px-64">
+    <div className="bg-white px-4 sm:px-16 lg:px-64">
       <div className="mt-8">
-        <div className="flex">
+        <div className="flex flex-col sm:flex-row">
           <div className="flex-none text-xl font-medium text-black">
             Professor
           </div>
-          <div className="ml-4 grow text-xl font-medium text-black">{prof}</div>
-          <div className="flex-none text-xl font-medium text-black">
+          <div className="mt-2 sm:mt-0 sm:ml-4 grow text-xl font-medium text-black">
+            {prof}
+          </div>
+          <div className="flex-none text-xl font-medium text-black mt-2 sm:mt-0">
             {prof_email}
           </div>
         </div>
-        <div className="border-b-slate-800 border-b-2"></div>
+        <div className="border-b-slate-800 border-b-2 mt-4"></div>
         <div className="mt-4 bg-gray-100 p-4 text-black">
-          {description}
-          <br />
-          {prerequisites && "前提条件: " + prerequisites} <br />
-          {"オフィス: " + room_number + " / " + "フィールド: " + student_field}
-          <br />
+          <p>{description}</p>
+          <p>{prerequisites && "前提条件: " + prerequisites}</p>
+          <p>
+            {"オフィス: " +
+              room_number +
+              " / " +
+              "フィールド: " +
+              student_field.join(", ")}
+          </p>
           {laboUsers.length > 0 && (
             <div className="mt-3 mb-3">
               <div className="border-b-slate-500 border-b-2"></div>
               <p className="font-bold">配属生徒</p>
-              {laboUsers.map((item: string, index: number) => (
-                <p
-                  key={index}
-                  className="text-black font-bold w-[80px]"
-                  //className="text-black font-bold hover:cursor-pointer w-[80px]"
-                  //onClick={() => handleStudentIdClick(item)}
-                >
-                  {item}
-                </p>
-              ))}
+              <div className="flex flex-wrap gap-2">
+                {laboUsers.map((item: string, index: number) => (
+                  <p key={index} className="text-black font-bold">
+                    {item}
+                  </p>
+                ))}
+              </div>
             </div>
           )}
         </div>
       </div>
-      <div>
+      <div className="mt-4">
         <button
           className={`${
-            isLiked ? " bg-pink-400" : "bg-blue"
-          } text-white p-2 rounded-hull mt-3 mb-2`}
+            isLiked ? "bg-pink-400" : "bg-blue"
+          } text-white p-2 rounded-full mt-3 mb-2 w-full sm:w-auto`}
           onClick={handleLike}
         >
           {isLiked
@@ -201,15 +193,15 @@ export const LaboInfo: React.FC<Props> = ({
         </h2>
       </div>
       <div className="mt-4">
-        <div className="flex flex-row">
+        <div className="flex flex-col sm:flex-row sm:items-center">
           <div className="text-xl font-medium text-black">Comments</div>
           {comments.length > 0 && (
-            <div className="text-gray-500 ml-3 mt-0.5">
+            <div className="text-gray-500 mt-2 sm:mt-0 sm:ml-3">
               {comments.length} comments
             </div>
           )}
         </div>
-        <div className="border-b-slate-800 border-b-2"></div>
+        <div className="border-b-slate-800 border-b-2 mt-2"></div>
         <div className="mt-4">
           <form onSubmit={handleAddComment}>
             <textarea
@@ -219,7 +211,7 @@ export const LaboInfo: React.FC<Props> = ({
               onChange={(e) => setComment(e.target.value)}
               required
             ></textarea>
-            <button className="bg-blue-500 text-white p-2 rounded shadow-lg mb-5">
+            <button className="bg-blue-500 text-white p-2 rounded shadow-lg mb-5 w-full sm:w-auto">
               Add Comment
             </button>
           </form>
@@ -229,29 +221,25 @@ export const LaboInfo: React.FC<Props> = ({
             comments.map((item: CommentType, index: number) => (
               <div
                 key={index}
-                className={`flex bg-gray-100 p-4 rounded-lg mt-4 ${
+                className={`flex flex-col sm:flex-row bg-gray-100 p-4 rounded-lg mt-4 ${
                   user && item.user_id === user.id
-                    ? " border-l-8 border-l-teal-400"
+                    ? "border-l-8 border-l-teal-400"
                     : ""
                 }`}
               >
-                <div
-                  className="flex-none text-lg font-medium text-black"
-                  //className="flex-none text-lg font-medium text-black hover:cursor-pointer"
-                  //onClick={() => handleStudentIdClick(item.student_id)}
-                >
+                <div className="flex-none text-lg font-medium text-black">
                   {item.student_id}
                 </div>
-                <div className="grow text-black ml-5 mr-5 text-lg font-bold">
+                <div className="grow text-black mt-2 sm:mt-0 sm:ml-5 text-lg font-bold">
                   {item.comment}
                 </div>
-                <div className="flex-none text-gray-500 text-lg mt-1.5 mr-2">
+                <div className="flex-none text-gray-500 text-lg mt-2 sm:mt-1.5 sm:mr-2">
                   {new Date(item.timestamp).toDateString()}
                 </div>
                 {user && item.user_id === user.id && (
                   <IconButton
                     onClick={() => handleDeleteComment(item.id)}
-                    className="text-white rounded-full"
+                    className="mt-2 sm:mt-0 text-white rounded-full"
                   >
                     <DeleteIcon color="error" />
                   </IconButton>
