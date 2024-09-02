@@ -84,7 +84,10 @@ export const DisplayLabo: React.FC = () => {
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = labo.slice(indexOfFirstItem, indexOfLastItem);
+  let currentItems: LaboType[] = [];
+  if(labo !== null) {
+    currentItems = labo.slice(indexOfFirstItem, indexOfLastItem);
+  }
 
   const totalPages = Math.ceil(labo.length / itemsPerPage);
 
