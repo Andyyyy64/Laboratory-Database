@@ -27,8 +27,8 @@ export const Verify: React.FC = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex justify-center items-center bg-[url('./assets/background.png')] bg-center bg-no-repeat bg-cover">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-11/12 sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4 space-y-6">
+    <div className="h-screen w-screen flex justify-center items-center bg-[url('./assets/background.png')] bg-center bg-no-repeat bg-cover xl:relative">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-11/12 sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4 space-y-6 xl:absolute xl:right-20">
         <form onSubmit={handleVerify} className="space-y-6">
           {email === null && (
             <input
