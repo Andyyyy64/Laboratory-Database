@@ -135,7 +135,7 @@ export const DisplayLabo: React.FC = () => {
             </div>
           ))
         ) : (
-          <p className="text-center col-span-full text-teal-700 text-lg font-bold">
+          <p className="text-center col-span-full text-teal-700 text-lg font-bold mt-12">
             お探しの結果が見つかりませんでした。別のキーワードを試してみてください。
           </p>
         )}
