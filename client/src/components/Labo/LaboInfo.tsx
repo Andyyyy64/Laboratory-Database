@@ -153,7 +153,17 @@ export const LaboInfo: React.FC<Props> = ({
         </div>
         <div className="border-b-slate-800 border-b-2 mt-4"></div>
         <div className="mt-4 bg-gray-100 p-4 text-black">
-          <p>{description}</p>
+          <div>
+            {description
+              .replace(/\\n/g, "\n")
+              .split("\n")
+              .map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
+          </div>
           <p>{prerequisites && "前提条件: " + prerequisites}</p>
           <p>
             {"オフィス: " +
