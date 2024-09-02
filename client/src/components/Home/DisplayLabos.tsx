@@ -5,6 +5,9 @@ import { getComments } from "../../api/comment";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Tooltip from "@mui/material/Tooltip";
+import CircularProgress  from "@mui/material/CircularProgress";
+
+import { useLoading } from "../../hooks/useLoading";
 
 type LaboType = {
   labo_id: number;
@@ -24,12 +27,14 @@ export const DisplayLabo: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [field, setField] = useState<string>("All");
   const [searchTerm, setSearchTerm] = useState(localStorage.getItem("field_of_interest") ?? "");
+  const { loading, startLoading, stopLoading } = useLoading();
 
   const itemsPerPage = 9;
   const navi = useNavigate();
 
   useEffect(() => {
     const fetchLabo = async () => {
+      startLoading();
       try {
         const res = await getLabos(searchTerm);
         if (field === "All" || field === "") {
@@ -42,6 +47,8 @@ export const DisplayLabo: React.FC = () => {
         }
       } catch (err) {
         console.log(err);
+      } finally {
+        stopLoading();
       }
     };
     fetchLabo();
@@ -108,38 +115,44 @@ export const DisplayLabo: React.FC = () => {
           </Select>
         </Tooltip>
       </div>
-      <div className="m-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {labo.length > 0 ? (
-          currentItems.map((item, index) => (
-            <div
-              key={index}
-              className="border-4 p-4 text-center text-black cursor-pointer hover:bg-gray-500 hover:text-sky-200"
-            >
-              <div onClick={() => handleLaboClick(item.labo_id)}>
-                <div className="text-lg font-bold">{item.prof}</div>
-                <div className="mt-2">{item.name}</div>
-                <div className="mt-2">{item.student_field.join(", ")}</div>
+      {loading ? (
+        <div className="flex justify-center mt-16 mb-32">
+          <CircularProgress />
+        </div>
+      ) : (
+        <div className="m-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {labo.length > 0 ? (
+            currentItems.map((item, index) => (
+              <div
+                key={index}
+                className="border-4 p-4 text-center text-black cursor-pointer hover:bg-gray-500 hover:text-sky-200"
+              >
+                <div onClick={() => handleLaboClick(item.labo_id)}>
+                  <div className="text-lg font-bold">{item.prof}</div>
+                  <div className="mt-2">{item.name}</div>
+                  <div className="mt-2">{item.student_field.join(", ")}</div>
+                </div>
+                <div className="mt-4 flex justify-between">
+                  {item.liked_number > 0 && (
+                    <div className="text-teal-400 font-bold">
+                      {item.liked_number}人が興味あり
+                    </div>
+                  )}
+                  {laboComments[item.labo_id] > 0 && (
+                    <div className="text-green-600 font-bold">
+                      {laboComments[item.labo_id] ?? 0}人がコメント
+                    </div>
+                  )}
+                </div>
               </div>
-              <div className="mt-4 flex justify-between">
-                {item.liked_number > 0 && (
-                  <div className="text-teal-400 font-bold">
-                    {item.liked_number}人が興味あり
-                  </div>
-                )}
-                {laboComments[item.labo_id] > 0 && (
-                  <div className="text-green-600 font-bold">
-                    {laboComments[item.labo_id] ?? 0}人がコメント
-                  </div>
-                )}
-              </div>
-            </div>
-          ))
-        ) : (
-          <p className="text-center col-span-full text-teal-700 text-lg font-bold mt-12">
-            お探しの結果が見つかりませんでした。別のキーワードを試してみてください。
-          </p>
-        )}
-      </div>
+            ))
+          ) : (
+            <p className="text-center col-span-full text-teal-700 text-lg font-bold mt-12">
+              お探しの結果が見つかりませんでした。別のキーワードを試してみてください。
+            </p>
+          )}
+        </div>
+      )}
       <div className="mt-4 flex flex-wrap justify-center gap-2">
         {Array.from({ length: totalPages }).map((_, index) => (
           <button
