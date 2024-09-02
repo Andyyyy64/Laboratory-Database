@@ -85,11 +85,11 @@ export const DisplayLabo: React.FC = () => {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   let currentItems: LaboType[] = [];
+  let totalPages = 0;
   if(labo !== null) {
     currentItems = labo.slice(indexOfFirstItem, indexOfLastItem);
+    totalPages = Math.ceil(labo.length / itemsPerPage);
   }
-
-  const totalPages = Math.ceil(labo.length / itemsPerPage);
 
   return (
     <div className="bg-white p-4">
