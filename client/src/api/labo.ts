@@ -2,7 +2,7 @@ import axios from "axios";
 
 const API_URL = import.meta.env.VITE_APP_SERVER_URL;
 
-export const getLabos = async (searchTerm: string) => {
+export const getLabos = async (searchTerm?: string) => {
     const res = await axios.get(`${API_URL}/labo/get/all`, {
         params: { searchTerm },
         headers: {

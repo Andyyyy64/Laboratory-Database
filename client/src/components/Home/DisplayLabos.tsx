@@ -6,6 +6,8 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Tooltip from "@mui/material/Tooltip";
 import CircularProgress  from "@mui/material/CircularProgress";
+import IconButton  from "@mui/material/IconButton";
+import SearchIcon from '@mui/icons-material/Search';
 
 import { useLoading } from "../../hooks/useLoading";
 
@@ -26,7 +28,7 @@ export const DisplayLabo: React.FC = () => {
   const [laboComments, setLaboComments] = useState<{ [key: number]: number }>({});
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [field, setField] = useState<string>("All");
-  const [searchTerm, setSearchTerm] = useState(localStorage.getItem("field_of_interest") ?? "");
+  const [searchTerm, setSearchTerm] = useState("");
   const { loading, startLoading, stopLoading } = useLoading();
 
   const itemsPerPage = 9;
@@ -36,7 +38,7 @@ export const DisplayLabo: React.FC = () => {
     const fetchLabo = async () => {
       startLoading();
       try {
-        const res = await getLabos(searchTerm);
+        const res = await getLabos();
         if (field === "All" || field === "") {
           setLabo(res);
         } else {
@@ -52,7 +54,7 @@ export const DisplayLabo: React.FC = () => {
       }
     };
     fetchLabo();
-  }, [searchTerm, field]);
+  }, [field, searchTerm == ""]);
 
   useEffect(() => {
     const fetchCommentsCount = async () => {
@@ -78,6 +80,28 @@ export const DisplayLabo: React.FC = () => {
     }
   }, [labo]);
 
+  const handleSearchClick = () => {
+    startLoading();
+    const fetchLabo = async () => {
+      try {
+        const res = await getLabos(searchTerm);
+        if (field === "All" || field === "") {
+          setLabo(res);
+        } else {
+          const filteredLabo = res.filter((item: LaboType) => {
+            return item.student_field.includes(field);
+          });
+          setLabo(filteredLabo);
+        }
+      } catch (err) {
+        console.log(err);
+      } finally {
+        stopLoading();
+      }
+    }
+    fetchLabo();
+  }
+
   const handleLaboClick = (labo_id: number) => {
     navi(`/labo/${labo_id}`);
   };
@@ -94,19 +118,28 @@ export const DisplayLabo: React.FC = () => {
   return (
     <div className="bg-white p-4">
       <div className="flex flex-col items-center sm:flex-row sm:justify-center sm:space-x-3">
-        <input
-          type="text"
-          placeholder="Search..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full sm:w-1/4 p-2 rounded-full border bg-gray-300 text-black mb-4 sm:mb-0"
-        />
+        <div className="flex w-full sm:w-auto items-center space-x-2 mb-4 sm:mb-0">
+          <input
+            type="text"
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleSearchClick()}
+            className="w-full sm:w-96 p-2 rounded-full border bg-gray-300 text-black"
+          />
+          <IconButton
+            onClick={handleSearchClick}
+            sx={{ backgroundColor: "lightgray" }}
+          >
+            <SearchIcon />
+          </IconButton>
+        </div>
         <Tooltip title="Search by field" placement="top" arrow>
           <Select
             value={field}
             label="Field"
             onChange={(e: SelectChangeEvent) => setField(e.target.value)}
-            className="w-32 h-12 p-2 rounded-full border bg-gray-300 text-black"
+            className="w-24 h-12 p-2 rounded-full border bg-gray-300 text-black"
           >
             <MenuItem value="All">All</MenuItem>
             <MenuItem value="CS">CS</MenuItem>
