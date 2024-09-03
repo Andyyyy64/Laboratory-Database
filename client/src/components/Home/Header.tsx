@@ -38,7 +38,10 @@ export const Header: React.FC = () => {
           </h1>
         </a>
         <div className="sm:hidden relative">
-          <button onClick={toggleMenu} className="focus:outline-none">
+          <button
+            onClick={toggleMenu}
+            className="focus:outline-none absolute -bottom-7 right-3"
+          >
             {menuOpen ? (
               <CloseIcon fontSize="large" />
             ) : (
@@ -46,27 +49,27 @@ export const Header: React.FC = () => {
             )}
           </button>
           {menuOpen && (
-            <div className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg z-10">
-              <a href="/" className="block px-4 py-2 text-black font-medium">
+            <div className="absolute top-7 right-0 mt-2 w-24 bg-gray-300 shadow-lg rounded-lg z-10">
+              <a href="/" className="block px-4 py-2 text-black font-normal">
                 TOP
               </a>
               <a
                 onClick={handleProfileClick}
-                className="block px-4 py-2 text-black font-medium cursor-pointer"
+                className="block px-4 py-2 text-black font-normal cursor-pointer"
               >
                 PROFILE
               </a>
               {user?.labo_id && (
                 <a
                   onClick={() => handleLaboClick(user.labo_id)}
-                  className="block px-4 py-2 text-black font-bold cursor-pointer hover:text-blue"
+                  className="block px-4 py-2 text-black font-normal cursor-pointer hover:text-blue"
                 >
                   MYLABO
                 </a>
               )}
               <a
                 href="/contact"
-                className="block px-4 py-2 text-black font-medium"
+                className="block px-4 py-2 text-black font-normal"
               >
                 CONTACT
               </a>
