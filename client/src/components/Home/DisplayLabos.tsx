@@ -35,26 +35,28 @@ export const DisplayLabo: React.FC = () => {
   const navi = useNavigate();
 
   useEffect(() => {
-    const fetchLabo = async () => {
-      startLoading();
-      try {
-        const res = await getLabos();
-        if (field === "All" || field === "") {
-          setLabo(res);
-        } else {
-          const filteredLabo = res.filter((item: LaboType) => {
-            return item.student_field.includes(field);
-          });
-          setLabo(filteredLabo);
+    if (searchTerm === "") {
+      const fetchLabo = async () => {
+        startLoading();
+        try {
+          const res = await getLabos();
+          if (field === "All" || field === "") {
+            setLabo(res);
+          } else {
+            const filteredLabo = res.filter((item: LaboType) => {
+              return item.student_field.includes(field);
+            });
+            setLabo(filteredLabo);
+          }
+        } catch (err) {
+          console.log(err);
+        } finally {
+          stopLoading();
         }
-      } catch (err) {
-        console.log(err);
-      } finally {
-        stopLoading();
-      }
-    };
-    fetchLabo();
-  }, [field, searchTerm == ""]);
+      };
+      fetchLabo();
+    }
+  }, [field, searchTerm]);
 
   useEffect(() => {
     const fetchCommentsCount = async () => {
