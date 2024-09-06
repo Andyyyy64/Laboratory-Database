@@ -192,6 +192,7 @@ export const updateAssginLabo = async (req: Request, res: Response) => {
   const { labo_id } = req.body;
   try {
     await db.run("UPDATE users SET labo_id = $1 WHERE id = $2", [labo_id as number, Number(id)]);
+    console.log(labo_id);
     res.status(200).json({ message: "研究室を更新しました。" });
   } catch (err) {
     console.log(err);
