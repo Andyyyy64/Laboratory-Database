@@ -190,7 +190,7 @@ export const LaboInfo: React.FC<Props> = ({
       <div className="mt-4">
         <button
           className={`${
-            isLiked ? "bg-pink-400" : "bg-blue"
+            isLiked ? "bg-pink-400" : "bg-blue-500"
           } text-white p-2 rounded-full mt-3 mb-2 w-full sm:w-auto`}
           onClick={handleLike}
         >
